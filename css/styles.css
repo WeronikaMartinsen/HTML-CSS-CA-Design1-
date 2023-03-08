@@ -1,0 +1,14 @@
+#logo {
+  max-width: 183px;
+  height: auto;
+  color: white;
+}
+
+#navbar {
+  background-color: hsba(337, 17%, 60%, 1);
+}
+
+.nav-list {
+  display: inline;
+  padding: 0px 40px;
+}
