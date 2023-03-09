@@ -62,7 +62,12 @@ a {
   background-color: brown;
 }
 
+
+ 
+
+
 .nav-icons {
+  align-self: center;
   display: inline-block;
   width: 21px;
   height: 21px;
@@ -100,4 +105,75 @@ h1 {
   border-style: none;
   
   
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  height: 100px;
+  align-items: center;
+  gap: 70px;
+  justify-content: center;
+}
+
+.feature-icon {
+  margin-top: 40px;
+  
+  width: 27px;
+  height: 27px;
+  background-color: rgba(217, 217, 217);
+ 
+  border: 5px solid rgba(217, 217, 217);
+  border-radius: 100%;
+  padding: 5px;
+  align-self: center;
+
+}
+.feature-box {
+
+  align-self: center;
+}
+
+.feature-paragraph {
+  font-size: 12px;
+  align-self: center;
+  
+}
+
+.component1 {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  width: max-width;
+  height: 330px;
+  background-color:rgba(217, 217, 217);
+  gap:70px;
+}
+.component-text {
+  align-self: center;
+}
+
+h2 {
+   font-family: ibarra real nova;
+   font-size: 70px;
+   margin: 0;
+}
+   .button-shop-now {
+    width: 182px;
+    height: 54px;
+    border-radius: 17px;
+   font-size: 18px;
+   
+
+
+   }
+
+
+.assets-jacket {
+  width: 193px;
+  height: 246px;
 }
