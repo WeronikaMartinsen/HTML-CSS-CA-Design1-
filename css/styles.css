@@ -4,6 +4,13 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+header {
+  background-image: src="images/woman-sitting-mountain-top.jpg"
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 #logo {
   max-width: 183px;
   height: auto;
@@ -26,6 +33,7 @@ a {
   margin-right: 20px;
   margin-left: 20px;
   font-size: 18px;
+ 
 }
 
 .home-link {
@@ -33,6 +41,7 @@ a {
 }
 
 .search-bar {
+  padding-left: 40px;
   width: 568px;
   height: 50px;
   position: absolute;
@@ -43,4 +52,52 @@ a {
   border-radius: 5px;
   outline: none;
   border-style: none;
+}
+
+.search-icon {
+  display: inline-block;
+  stroke: rgb(74, 74, 74);
+  height: 15px;
+  width: auto;
+  background-color: brown;
+}
+
+.nav-icons {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  stroke: white;
+  color: white;
+  float: right;
+
+  margin-right: 70px;
+  margin-top: 20px;
+}
+
+
+
+h1 {
+  font-family: ibarra real nova;
+  font-weight: 700;
+  position: absolute;
+  left: 200px;
+  top:400px;
+  font-size: 64px;
+  text-align: center;
+}
+
+.CTA-button {
+  width: 261px;
+  height: 67px;
+  position: absolute;
+  left:400px;
+  top: 800px;
+  border-radius: 25px;
+  font-size: 20px;
+ font-family: roboto;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-style: none;
+  
+  
 }
