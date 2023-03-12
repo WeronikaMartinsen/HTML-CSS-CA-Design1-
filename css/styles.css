@@ -3,7 +3,11 @@ html {
   font-family: "Raleway", sans-serif;
   font-family: "Roboto", sans-serif;
 }
-
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 header {
   background-image: src= "images/woman-sitting-mountain-top.jpg";
 }
@@ -17,6 +21,27 @@ header {
   align-content: stretch;
   gap: 20px;
 }
+
+.nav-div1 {
+  align-self: center;
+  margin-left: 40px;
+}
+
+.nav-div2 {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.nav-div3 {
+  align-self: flex-end;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.nav-div4 {
+  margin-right: 40px;
+}
+
 #logo {
   max-width: 183px;
   height: auto;
@@ -37,17 +62,26 @@ header {
   flex-grow: 3;
   justify-content: center;
 }
+.nav-links:hover {
+  color: rgb(100, 79, 87);
+}
 
 .search-bar {
   width: 400px;
   height: 50px;
-
   border-radius: 5px;
-  outline: none;
   border-style: none;
-  justify-content: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
   flex-grow: 8;
-  align-self: flex-end;
+  color: gray;
+  padding-left: 60px;
+}
+.search-icon {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  color: gray;
 }
 
 .nav-icons {
@@ -58,6 +92,9 @@ header {
   stroke: white;
   color: white;
   flex-shrink: 0;
+}
+.nav-icons:hover {
+  color: rgb(100, 79, 87);
 }
 
 h1 {
@@ -76,12 +113,15 @@ h1 {
   position: absolute;
   left: 400px;
   top: 800px;
-  border-radius: 25px;
+  border-radius: 17px;
   font-size: 20px;
   font-family: roboto;
   font-weight: 500;
   text-transform: uppercase;
   border-style: none;
+}
+.CTA-button:hover {
+  background-color: rgb(225, 154, 151);
 }
 
 .feature {
@@ -92,27 +132,24 @@ h1 {
   align-items: center;
   gap: 70px;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .feature-icon {
-  margin-top: 40px;
-
   width: 27px;
   height: 27px;
   background-color: rgba(217, 217, 217);
 
   border: 5px solid rgba(217, 217, 217);
+  color: grey;
   border-radius: 100%;
   padding: 5px;
   align-self: center;
 }
 .feature-box {
   text-align: center;
-  height: 180px;
   padding: 40px;
-  margin-top: 40px;
-
   justify-items: center;
   align-self: center;
 }
@@ -120,6 +157,7 @@ h1 {
 .feature-paragraph {
   font-size: 12px;
   align-self: center;
+  color: rgb(76, 75, 75);
 }
 
 .component1 {
@@ -169,6 +207,10 @@ h2 {
   width: 270px;
   height: auto;
 }
+.assets-jacket-1 {
+  width: auto;
+  height: 283px;
+}
 
 .component1-paragraph {
   text-align: right;
@@ -186,24 +228,51 @@ h2 {
   color: rgb(216, 38, 38);
   margin: 0;
   text-align: end;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .discount-box {
   display: flex;
   justify-content: center;
   width: 154px;
   height: 39px;
-  left: 1292.58px;
+
   position: absolute;
-  left: 89.39%;
+
   right: 0%;
   top: 0%;
   bottom: 88.18%;
-  background-color: rgb(216, 38, 38);
+  background-color: rgb(225, 136, 133);
 }
 .discount-paragraph {
   text-align: center;
+  align-self: center;
 
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
+}
+
+.section-break {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  gap: 80px;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+}
+
+.section-break-box1 {
+  align-self: center;
+}
+.section-break-box2 {
+  align-self: center;
+}
+.section-break-box3 {
+  align-self: center;
+}
+.section-break-icon {
+  color: rgb(225, 136, 133);
+  width: 22px;
+  height: 22px;
+  align-self: center;
 }
