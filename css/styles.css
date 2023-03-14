@@ -385,3 +385,47 @@ h3 {
 .payment-icon {
   width: 33px;
 }
+
+/************************JACKETS STYLE*************************/
+
+.jackets-layout {
+  height: 500px;
+  width: 100%;
+  background-color: red;
+  position: relative;
+}
+
+.jackets-layout-box-2 {
+  align-self: flex-start;
+}
+
+.jackets-layout-box-1 {
+  position: absolute;
+  font-family: ibarra real nova;
+  font-weight: 700;
+
+  font-size: 64px;
+  text-align: center;
+
+  left: 30%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.assets-man {
+  height: 370px;
+  width: auto;
+}
+
+.extra-box {
+  height: 50px;
+  width: 100%;
+  background-color: #484848;
+  color: white;
+  font-family: roboto;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
