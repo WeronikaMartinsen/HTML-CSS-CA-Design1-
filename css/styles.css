@@ -17,12 +17,12 @@ header {
 
 #navbar {
   display: flex;
+
   background-color: rgb(152, 126, 136);
   width: 100%;
-  height: 142px;
+  height: 120px;
   justify-content: space-between;
-  align-content: stretch;
-  gap: 20px;
+
   position: sticky;
   top: 0;
   position: fixed;
@@ -31,7 +31,6 @@ header {
 
 .nav-div1 {
   align-self: center;
-  margin-left: 40px;
 }
 
 .nav-div2 {
@@ -41,16 +40,17 @@ header {
 }
 
 .nav-div3 {
+  display: flex;
   align-self: flex-start;
-  margin-bottom: 20px;
-  position: relative;
+  flex-direction: column;
 }
 
 .nav-div4 {
-  margin-right: 400px;
   display: flex;
   align-items: flex-end;
   margin-left: 80px;
+
+  margin-top: 5px;
 }
 .div-3-and-div-4 {
   display: flex;
@@ -58,10 +58,10 @@ header {
 }
 
 #logo {
-  max-width: 183px;
+  max-width: 150px;
   height: auto;
   stroke: white;
-  margin-left: 200px;
+  margin-left: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
   flex-shrink: 0;
@@ -84,25 +84,38 @@ header {
 
 .search-bar {
   width: 250px;
-  height: 40px;
+  height: 30px;
   border-radius: 5px;
   border-style: none;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  padding-left: 60px;
+  padding-left: 40px;
+  margin-top: 0;
   color: gray;
+  margin-right: 40px;
+
+  align-self: flex-start;
 }
+
 .search-icon {
-  position: absolute;
-  bottom: 13px;
-  left: 20px;
   color: gray;
+  align-self: flex-start;
+  position: absolute;
+  left: 10px;
+  top: 8px;
 }
 .nav-icon-box {
   flex-direction: column;
-  padding: 10px;
+  padding-right: 20px;
 }
 .nav-link-svg {
   text-align: center;
+}
+.icon-and-search-bar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+
+  position: relative;
 }
 .nav-icons {
   margin-top: 8px;
@@ -206,18 +219,19 @@ h1 {
 .component1 {
   position: relative;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: stretch;
+
   align-items: center;
   align-content: center;
-  width: max-width;
+  width: 100%;
   height: 330px;
   background-color: rgba(217, 217, 217);
-  gap: 70px;
+  gap: 40px;
   padding-top: 40px;
 }
 
 .component-text {
+  margin: 20px;
   text-align: center;
   font-weight: 500;
 
@@ -227,12 +241,13 @@ h1 {
 
 h2 {
   font-family: ibarra real nova;
-  font-size: 96px;
+  font-size: 48px;
+  font-weight: 800;
   margin: 0;
 }
 .button-shop-now {
   width: 182px;
-  height: 54px;
+  height: 50px;
   border-radius: 17px;
   font-size: 18px;
   border: 1px solid transparent;
@@ -433,42 +448,14 @@ h3 {
 }
 
 /************************JACKETS STYLE*************************/
-.jacket-layout {
-  height: 430px;
-  width: 100%;
-  background-image: src= "images/background tress.jpg";
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-.image-2 {
-  width: 100%;
-  height: 430px;
-  object-fit: fill;
-  text-align: flex-start;
-}
-
-.jackets-layout-box-1 {
-  display: flex;
-  text-align: center;
-  align-self: flex-start;
-}
-.jackets-layout-box-2 {
-  align-self: flex-end;
-}
-
-.assets-man {
-  height: 300px;
-  width: 100%;
-}
 
 .extra-box {
-  height: 50px;
+  height: 40px;
   max-width: 100%;
-  background-color: rgb(152, 126, 136);
+  background-color: rgb(106, 104, 105);
   color: white;
   font-family: roboto;
-
+  margin-top: 120px;
   font-weight: 400;
   display: flex;
   justify-content: center;
@@ -477,32 +464,42 @@ h3 {
 .jacket-heading {
   height: 40px;
   width: auto;
-  margin-left: 220px;
-  margin-top: 60px;
+  margin-left: 40px;
+  margin-top: 40px;
   font-size: 28px;
-  font-family: iberra real nova;
+  font-family: ibarra real nova;
   font-weight: 700;
-  color: #484848;
+  color: gray;
 }
 
 .grid-container {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
-  margin: 20px 200px 60px 200px;
-  row-gap: 40px;
+  gap: 40px;
   justify-content: center;
   justify-items: center;
   align-items: center;
-  padding: 0;
 }
 .grid-item {
-  height: 470px;
-  width: 350px;
+  height: 340px;
+  width: 220px;
   background-color: rgba(228, 219, 219, 0.696);
   border-radius: 5px;
   justify-self: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item:hover {
+  height: 340px;
+  width: 220px;
+  opacity: 70%;
+  background-color: white;
+}
+.cart {
+  justify-self: center;
 }
 
 h7 {
@@ -535,24 +532,10 @@ h7 {
   margin: 0;
 }
 .jackets-for-grid {
-  height: 270px;
+  height: 200px;
   width: auto;
-  padding-top: 20px;
-}
-
-.btn-add-to-cart {
-  width: 350px;
-  height: 50px;
-  background-color: #484848;
-  border-style: none;
-  color: white;
-  text-transform: uppercase;
-  border-radius: 0 0 5px 5px;
-  align-self: flex-end;
-  margin-top: 30px;
-}
-.btn-add-to-cart:hover {
-  background-color: #6b6a6a;
+  align-self: center;
+  justify-items: center;
 }
 
 .heart-icon {
