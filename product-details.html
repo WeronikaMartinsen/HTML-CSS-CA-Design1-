@@ -101,29 +101,39 @@
       </nav>
     </header>
     <main>
+      <h4>Product details</h4>
       <div class="checkout-stage">
-        <ion-icon
+        <div class="checkout-box-column">
+          <ion-icon
           class="checkout-icon circle-1"
-          name="checkmark-circle-outline"
+          name="checkmark-circle"
         ></ion-icon>
-        <hr class="horizontal-line"></hr>
-        <div class="arrow-box">
-          <ion-icon  class="arrow-icon" name="caret-forward-outline"></ion-icon>
+        <span class="checkout-paragraph">Shopping Cart</span>
+
         </div>
-       
-        <ion-icon
+        
+        <hr class="horizontal-line"></hr>
+        
+        <div class="checkout-box-column">
+          <ion-icon
           class="checkout-icon"
           name="checkmark-circle-outline"
         ></ion-icon>
-        <hr class="horizontal-line"></hr>
-        <div class="arrow-box">
-          <ion-icon  class="arrow-icon" name="caret-forward-outline"></ion-icon>
+        <span class="checkout-paragraph">Payment information</span>
+
         </div>
+        
+        <hr class="horizontal-line"></hr>
        
-        <ion-icon
+        <div class="checkout-box-column">
+          <ion-icon
           class="checkout-icon"
           name="checkmark-circle-outline"
         ></ion-icon>
+        <span class="checkout-paragraph">Confirmation</span>
+
+        </div>
+        
       </div>
       <section class="product-detail">
         <div class="product-cart">
@@ -132,14 +142,14 @@
         <div class="product-info">
           <h1 class="product-details-heading">Mountain Cosmos Jacket</h1>
           <p class="product-details-paragraph">Senja Whn Jacket Sigma</p>
-          <p>Select color:</p>
+          <p class="select-paragraph">Select color:</p>
           <div class="product-colors">
-            <div class="colors color-1"></div>
-            <div class="colors color-2"></div>
-            <div class="colors color-3"></div>
-            <div class="colors color-4"></div>
+            <div class="color-1"></div>
+            <div class="color-2"></div>
+            <div class="color-3"></div>
+            <div class="color-4"></div>
           </div>
-          <p>Select size:</p>
+          <p class="select-paragraph">Select size:</p>
           <div class="product-size">
             <div class="size">S</div>
             <div class="size">M</div>
@@ -156,11 +166,78 @@
           <div class="washing-icon"></div>
           <p class="jacket-price-old-grid"><s>1 999,-</s></p>
           <p class="jacket-price-new-grid">1 499,-</p>
-          <button class="btn-buy-now">Buy now</button>
-         
-        
+          <button class="CTA-button buy-now">Buy now</button>
         </div>
       </section>
+        <section class="sign-up-break">
+          <h5 class="h5-product-details-page">Sign up and save 25%</h5>
+          <span class="sign-up-text">Subscribe to our newsletter and get 15% off on your first order</span>
+          <div class="btn-input-div">
+            <input type="text" name="" id="" placeholder="Enter your Email">
+          <button class="btn-sign-up">Sign up</button></div>
+          <p class="sign-up-paragraph">You will be able to unsubscribe any time. Read our policy.</p>
+        </section>
+
+        <section class="carts-examples">
+          
+          <div class="flex-3-carts">
+            <div class="cart-1">
+              <div class="cart">
+                <ion-icon class="heart-icon" name="heart-outline"></ion-icon>
+                <img
+                  class="jackets-for-grid"
+                  src="assets/Asset 1.png"
+                  alt="jacket-example"
+                />
+              </div>
+              <div>
+                <h7>Mountain cosmos Jacket</h7>
+                <p class="grid-item-paragraph">Senja Winn Jacket Sigma</p>
+                <p class="jacket-price-old-grid"><s>1 999,-</s></p>
+                <p class="jacket-price-new-grid">1 499,-</p>
+              </div>
+            </div>
+            <div class="cart-2">
+              <div class="cart">
+                <ion-icon class="heart-icon" name="heart-outline"></ion-icon>
+                <img
+                  class="jackets-for-grid"
+                  src="assets/Asset 1.png"
+                  alt="jacket-example"
+                />
+              </div>
+              <div>
+                <h7>Mountain cosmos Jacket</h7>
+                <p class="grid-item-paragraph">Senja Winn Jacket Sigma</p>
+                <p class="jacket-price-old-grid"><s>1 999,-</s></p>
+                <p class="jacket-price-new-grid">1 499,-</p>
+              </div>
+            </div>
+            <div class="cart-3">
+              <div class="cart">
+                <ion-icon class="heart-icon" name="heart-outline"></ion-icon>
+                <img
+                  class="jackets-for-grid"
+                  src="assets/Asset 1.png"
+                  alt="jacket-example"
+                />
+              </div>
+              <div>
+                <h7>Mountain cosmos Jacket</h7>
+                <p class="grid-item-paragraph">Senja Winn Jacket Sigma</p>
+                <p class="jacket-price-old-grid"><s>1 999,-</s></p>
+                <p class="jacket-price-new-grid">1 499,-</p>
+              </div>
+            </div>
+  
+          </div>
+  
+
+
+        </section>
+        
+
+
     </main>
   </body>
 </html>
