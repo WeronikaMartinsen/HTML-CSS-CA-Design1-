@@ -602,6 +602,8 @@ h4 {
   flex-direction: row;
   justify-content: center;
   margin-top: 60px;
+  margin-bottom: 80px;
+  gap: 40px;
 }
 .product-cart-asset {
   height: 450px;
@@ -609,10 +611,6 @@ h4 {
   background-color: #f7f7f7;
 }
 .product-info {
-  padding-left: 10px;
-  padding-right: 10px;
-  box-shadow: 0 0 0 1px #e6e6e6;
-  border-radius: 5px;
 }
 .product-details-heading {
   font-size: 28px;
@@ -710,12 +708,14 @@ li {
   margin-top: 20px;
   border-radius: 5px;
   margin-left: 30px;
+  background-color: gray;
+  color: white;
 }
 .sign-up-break {
   margin-top: 60px;
   height: 200px;
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: rgb(203, 202, 202);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -739,11 +739,29 @@ li {
 .sign-up-paragraph {
   margin: 0;
   font-size: 12px;
-  color: #6b6a6a;
+  color: grey;
 }
-
-.flex-3-carts {
+.unique-h4 {
+  margin-top: 80px;
+  margin-left: 270px;
+}
+.cart-container {
   display: flex;
-  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  gap: 30px;
   justify-content: center;
+}
+.load-more-paragraph {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.icon-arrow-paragraph {
+  align-self: center;
+}
+.load-more-link {
+  text-decoration: none;
+  color: black;
 }
