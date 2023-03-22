@@ -31,6 +31,7 @@
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
     <script defer src="js/script.js"></script>
+    <img src="https://img.icons8.com/color/48/null/visa.png"/>
   </head>
   <body>
     <header>
@@ -50,31 +51,135 @@
           <a class="nav-links" href="contact.html">CONTACT</a>
         </div>
 
-        <div class="nav-div3">
-          <ion-icon class="search-icon" name="search"></ion-icon>
-          <input
-            class="search-bar"
-            name="q"
-            type="text"
-            role="combobox"
-            placeholder="Search the product name, inspiration"
-          />
-        </div>
+        <div class="div-3-and-div-4">
+          <div class="nav-div4">
+            <div class="nav-icon-box">
+              <div class="nav-link-svg">
+                <a href="shopping-bag.html">
+                  <ion-icon class="nav-icons" name="person-outline"></ion-icon>
+                </a>
+              </div>
+              <div>
+                <span class="icon-text">Log inn</span>
+              </div>
+            </div>
 
-        <div class="nav-div4">
-          <a href="shopping-bag.html">
-            <ion-icon class="nav-icons" name="person-outline"></ion-icon>
-          </a>
+            <div class="nav-icon-box">
+              <div class="nav-link-svg">
+                <a href="#"
+                  ><ion-icon class="nav-icons" name="heart-outline"></ion-icon
+                ></a>
+              </div>
+              <div>
+                <span class="icon-text">Favourites</span>
+              </div>
+            </div>
+            <div class="nav-icon-box">
+              <div class="nav-link-svg">
+                <a href="product-details.html">
+                  <ion-icon class="nav-icons" name="bag-outline"></ion-icon
+                ></a>
+              </div>
+              <div>
+                <span class="icon-text">Add to cart</span>
+              </div>
+            </div>
+          </div>
 
-          <a href="#"
-            ><ion-icon class="nav-icons" name="heart-outline"></ion-icon
-          ></a>
-
-          <a href="product-details.html">
-            <ion-icon class="nav-icons" name="bag-outline"></ion-icon
-          ></a>
+          <div class="nav-div3">
+            <div class="icon-and-search-bar">
+              <ion-icon class="search-icon" name="search"></ion-icon>
+              <input
+                class="search-bar"
+                name="q"
+                type="text"
+                role="combobox"
+                placeholder="Search the product name, inspiration"
+              />
+            </div>
+          </div>
         </div>
       </nav>
     </header>
+    <main>
+      <section class="payment-progress">
+      
+      <h4>Checkout</h4>
+      <div class="checkout-stage">
+        <div class="checkout-box-column">
+          <ion-icon
+          class="checkout-icon circle-1"
+          name="checkmark-circle"
+        ></ion-icon>
+        <span class="checkout-paragraph">Shopping Cart</span>
+
+        </div>
+        
+        <hr class="horizontal-line"></hr>
+        
+        <div class="checkout-box-column">
+          <ion-icon
+          class="checkout-icon"
+          name="checkmark-circle"
+        ></ion-icon>
+        <span class="checkout-paragraph">Payment information</span>
+
+        </div>
+        
+        <hr class="horizontal-line"></hr>
+       
+        <div class="checkout-box-column">
+          <ion-icon
+          class="checkout-icon"
+          name="checkmark-circle-outline"
+        ></ion-icon>
+        <span class="checkout-paragraph">Confirmation</span>
+        </div>
+      </section>
+
+<section class="payment-information">
+  <div class="payment-container">
+    <div class="payment-item-1">
+      <h6>Select Payment Method</h6>
+<div class="icon-payment">
+  <a target="_blank" href="https://icons8.com/icon/13608/visa"></a>
+  <a target="_blank" href="https://icons8.com/icon/13608/visa"></a>
+  <a target="_blank" href="https://icons8.com/icon/13608/visa"></a>
+</div>
+<div class="input-order">
+<label for="Card Number">Card number:</label>
+<input class="payment-input" type="text" name="" id="" placeholder="3536 4565 6567 3543">
+<label for="Card Number">Cardholder Name:</label>
+<input class="payment-input" type="text" name="" id="" placeholder="Weronika Martinsen">
+<div class="input-two-in-one">
+  <label for="Card Number">Valid Throught:</label>
+<input class="payment-input-short" type="text" name="" id="" placeholder="12/26">
+<label for="Card Number">CVV:</label>
+<input class="payment-input-short" type="text" name="" id="" placeholder="...">
+</div>
+</div>
+<div class="payment-paragraph">
+  <div class="quadrat"></div>
+  <span class="save-details-text">Save my payment details for my feature purchases</span>
+</div>
+<a href="confirmation.html"><button class="btn-confirm">Confirm your order</button></a>
+
+</div>
+    </div>
+    <div class="payment-item-2">
+      <h6>Order summary</h6>
+      <div class="payment-part-1">
+        <img class="small-asset"src="assets/Asset 1.png" alt="Picture of jacket.">
+      </div>
+   <div class="payment-part-2">
+    <h7>Mountain cosmos Jacket</h7>
+              <p class="grid-item-paragraph">Senja Winn Jacket Sigma</p>
+              <p class="jacket-price-old-grid"><s>1 999,-</s></p>
+              <p class="jacket-price-new-grid">1 499,-</p>
+   </div>
+
+    </div>
+  </div>
+</section>
   </body>
 </html>
