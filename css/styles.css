@@ -485,13 +485,7 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.hidden-button {
-  display: none;
-}
-.hidden-button:hover {
-  display: inline-block;
-  visibility: visible;
-}
+
 .grid-item {
   padding-top: 10px;
   padding-bottom: 0;
@@ -503,6 +497,25 @@ h3 {
   text-align: center;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.grid-item:hover .hidden-button {
+  display: block;
+}
+.hidden-button {
+  display: none;
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  width: 160px;
+  height: 50px;
+  background-color: gray;
+  color: white;
+  border-radius: 17px;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 2;
+  border-style: none;
 }
 
 .cart {
@@ -905,6 +918,9 @@ li {
   font-size: 14px;
   padding: 5px;
 }
+.checkout-span {
+  font-size: 12px;
+}
 .btn-confirm {
   margin: 20px 20px 40px 20px;
   height: 40px;
@@ -1002,4 +1018,41 @@ li {
 }
 .shipping-one {
   margin-bottom: 15px;
+}
+
+/************************Confirmation*************************/
+.unique-h1 {
+  font-size: 42px;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+.confirmation-div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.big {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  color: rgb(100, 79, 87);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.confirmation-paragraph {
+  text-align: center;
+  margin: 5px;
+  font-family: roboto;
+  color: gray;
+}
+.one {
+  font-weight: 700;
+  font-family: 24px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.btn-link {
+  align-self: center;
+  margin-top: 20px;
 }
