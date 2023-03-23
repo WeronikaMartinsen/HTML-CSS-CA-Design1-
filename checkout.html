@@ -104,7 +104,7 @@
     <main>
       <section class="payment-progress">
       
-      <h4>Checkout</h4>
+      <h4 class="unique-h4">Checkout</h4>
       <div class="checkout-stage">
         <div class="checkout-box-column">
           <ion-icon
@@ -140,14 +140,71 @@
 <section class="payment-information">
   <div class="payment-container">
     <div class="payment-item-1">
+    
       <h6 class="unique-h6">Select Payment Method</h6>
 <div class="icon-payment">
-  <ion-icon class="icon-payment-1" name="card-outline"></ion-icon>
-  <ion-icon class="icon-payment-1" name="logo-paypal"></ion-icon>
-  <ion-icon class="icon-payment-1" name="wallet-outline"></ion-icon>
+  <div class="icon-div-1">
+  <ion-icon class="icon-payment-1" name="card-outline"></ion-icon>  <span class="payment-span">Visa</span></div>
+
+  <div class="icon-div-1"> <ion-icon class="icon-payment-1" name="logo-paypal"></ion-icon><span class="payment-span">PayPay</span></div>
+    <div class="icon-div-1"><ion-icon class="icon-payment-1" name="wallet-outline"></ion-icon><span class="payment-span">Master Card</span></div>
 </div>
+<div class="input-order">
+  <label class="label-text" for="Card Number">Card number:</label>
+  <input class="payment-input" type="text" name="" id="" placeholder="3536 4565 6567 3543">
+  <label class="label-text" for="Card Number">Cardholder Name:</label>
+  <input class="payment-input" type="text" name="" id="" placeholder="Weronika Martinsen">
+    <label class="label-text" for="Card Number">Valid Throught:</label>
+  <input class="payment-input-short" type="text" name="" id="" placeholder="12/26">
+  <label class="label-text" for="Card Number">CVV:</label>
+  <input class="payment-input-short" type="text" name="" id="" placeholder=" &#8226; &#8226; &#8226; ">
+</div><a href="confirmation.html"><button class="btn-confirm">Confirm your order</button></a>
+</div>
+
+
+    <div class="payment-item-2">
+      <div class="bigger-box">
+        <h6 class="unique-h6">Order summary</h6>
+        <hr class="horizontal-line-2"></hr>
+        <div class="image-text">
+        <div class="image-asset-small">
+          <img class="small-asset"src="assets/Asset 1.png" alt="Picture of jacket.">
+        </div>
+       
+        <div class="image-text-small">
+          <h7 class="unique-7">Mountain Jacket</h7>
+    <p class="grid-item-paragraph small">Senja Winn Jacket Sigma</p>
+    <p class="order-paragraph">Quanity: 1</p>
+    <p class="order-paragraph">Size: XL</p>
+    <p class="order-paragraph">Color:</p>
+    <p class="order-paragraph">Price:1 499,-</p>      
+  </div>
+        </div>
+        <div class="order-details">
+          <div class="details-1">
+          <p class="order-details">Subtotal</p>
+          <p class="order-details">VAT (15%)</p>
+          <p class="order-details">Shipping Charges</p>
+          <p class="order-details"><b>Total</b></p>
+        </div>
+        <div class="details-2">
+          <p class="order-details-2">1 499,-</p>
+          <p class="order-details-2">54 NOK</p>
+          <p class="order-details-2">FREE</p>
+          <hr class="horizontal-line-3"></hr>
+          <p class="order-details-2"><b>NOK 1 533.00</b></p>
+        </div>
+        </div>
+      </div>
+      <div class="smaller-box">
+        <h6 class="unique-h6">Shipping address</h6>
+        <hr class="horizontal-line-2 shipping-one"></hr>
+        <p class="order-details shipping-address">Martin Mabalaja</p>
+        <p class="order-details shipping-address">Valvatne 11b</p>
+        <p class="order-details shipping-address">5412 Stord</p>
+        <p class="order-details shipping-address">Vestland, Norway</p>
+      </div>
     </div>
-    <div class="payment-item-2"></div>
 </section>
   </body>
 </html>
