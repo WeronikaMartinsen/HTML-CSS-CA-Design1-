@@ -1057,7 +1057,7 @@ li {
   margin-top: 20px;
 }
 
-/************************Confirmation*************************/
+/************************About us*************************/
 
 .grid-gallery {
   display: grid;
@@ -1067,7 +1067,7 @@ li {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  margin: 200px;
+  margin: 0 200px 0 200px;
   position: relative;
 }
 .image-box {
@@ -1158,4 +1158,80 @@ li {
   font-family: iberra real nova;
   left: 33%;
   top: 211%;
+}
+/************************Contact*************************/
+
+.contact-container {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.contact-box-1 {
+  width: 450px;
+  height: 730px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.contact-box-2 {
+  width: 450px;
+  height: 700px;
+  padding-left: 30px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  background-color: rgba(217, 217, 217);
+  border-radius: 5px;
+}
+.contact-h6 {
+  font-size: 24px;
+  font-family: iberra real nova;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-left: 0;
+  text-align: center;
+}
+.contact-paragraph {
+  margin: 8px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+.bold {
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+.mapa-div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  margin-left: 30px;
+}
+.mapa {
+  border-radius: 17px;
+}
+.column-2-h6 {
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  font-family: iberra real nova;
+  font-size: 24px;
+  font-weight: 700;
+}
+.message-input {
+  height: 200px;
+}
+.contact-inputs {
+  margin-top: 10px;
+}
+.btn-contact {
+  align-self: center;
+  margin-top: 30px;
+  padding-left: 0;
+  margin-left: 0;
+}
+.label-text-contact {
+  margin-top: 20px;
 }
