@@ -1022,7 +1022,7 @@ li {
 
 /************************Confirmation*************************/
 .unique-h1 {
-  font-size: 42px;
+  font-size: 36px;
   margin-top: 60px;
   margin-bottom: 0;
 }
@@ -1055,4 +1055,107 @@ li {
 .btn-link {
   align-self: center;
   margin-top: 20px;
+}
+
+/************************Confirmation*************************/
+
+.grid-gallery {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 400px 400px 400px;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin: 200px;
+  position: relative;
+}
+.image-box {
+  justify-self: center;
+  align-self: start;
+}
+.image-gallery-1 {
+  max-width: 400px;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+.image-1 {
+  padding-top: 40px;
+  padding-left: 100px;
+}
+.image-2 {
+  padding-top: 20px;
+  padding-left: 60px;
+}
+.image-3 {
+  padding-top: 40px;
+}
+.image-4 {
+  padding-left: 150px;
+}
+.image-6 {
+  padding-right: 80px;
+}
+.image-7 {
+  padding-top: 40px;
+  padding-left: 150px;
+}
+.image-8 {
+  padding-left: 40px;
+}
+.image-9 {
+  padding-top: 40px;
+}
+.overlay-text-box {
+  width: 430px;
+  height: 400px;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: iberra real nova;
+  left: 35%;
+  top: 85%;
+}
+.unique-5 {
+  padding: 0;
+  margin: 10px;
+  font-size: 28px;
+}
+.overlay-text-box-2 {
+  width: 460px;
+  height: 250px;
+  background-color: white;
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  font-family: iberra real nova;
+  left: 33%;
+  top: 160%;
+}
+.overlay-paragraph {
+  padding-left: 20px;
+  margin: 5px;
+  font-size: 18px;
+  text-align: start;
+}
+.overlay-text-box-3 {
+  width: 460px;
+  height: 250px;
+  background-color: white;
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  font-family: iberra real nova;
+  left: 33%;
+  top: 211%;
 }
