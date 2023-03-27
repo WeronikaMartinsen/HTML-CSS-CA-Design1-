@@ -1366,9 +1366,12 @@ li {
   .h1 {
     font-size: 16px;
   }
+
   .feature {
     gap: 25px;
+    justify-content: center;
   }
+
   .feature-paragraph {
     display: none;
   }
