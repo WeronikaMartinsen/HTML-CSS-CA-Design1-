@@ -1262,38 +1262,26 @@ li {
   margin-top: 10px;
 }
 
-@media (max-width: 940px) {
-  html {
-    font-size: 50%;
-  }
+@media (max-width: 1050px) {
   .nav-links {
     font-size: 15px;
     padding-right: 15px;
   }
-  .nav-links {
-    font-size: 12px;
-    padding-right: 10px;
+  #navbar {
+    justify-content: space-between;
+    row-gap: 0;
   }
+
   #logo {
     max-width: 120px;
     height: auto;
   }
-  .icon-text {
-    display: none;
-  }
-  .nav-div4 {
-    justify-content: end;
-    margin-left: 0;
-  }
-  .nav-div2 {
-    justify-content: center;
+  .div-3-and-div-4 {
+    align-self: flex-start;
   }
 }
 
 @media (max-width: 780px) {
-  html {
-    font-size: 50%;
-  }
   #navbar {
     display: flex;
     justify-content: flex-start;
@@ -1313,9 +1301,15 @@ li {
   .search-bar {
     margin: 0;
   }
+  .icon-text {
+    display: none;
+  }
 }
 
 @media (max-width: 499px) {
+  #header {
+    font-size: 50%;
+  }
   .nav-div1,
   .nav-div3,
   .icon-text {
@@ -1334,8 +1328,7 @@ li {
   #navbar {
     width: 100%;
     display: flex;
-    gap: 200px;
-    justify-content: flex-start;
+    justify-content: space-between;
     height: 100px;
     padding-top: 10px;
     padding-left: 20px;
@@ -1347,10 +1340,8 @@ li {
   #header {
     position: relative;
   }
-
-  .search-bar {
-    align-self: center;
-    margin: 0;
+  .nav-div4 {
+    padding-right: 20px;
   }
   .nav-links {
     display: block;
