@@ -14,8 +14,10 @@ body {
 header {
   background-image: src= "images/woman-sitting-mountain-top.jpg";
 }
-#menu-checkbox {
-  display: none;
+.menu-icon {
+  color: white;
+  width: 45px;
+  height: 45px;
 }
 #navbar {
   display: flex;
@@ -147,6 +149,7 @@ h1 {
   font-weight: 700;
   font-size: 42px;
   text-align: center;
+  color: rgb(74, 74, 74);
 }
 
 .CTA-button {
@@ -159,9 +162,11 @@ h1 {
   font-weight: 500;
   text-transform: uppercase;
   border-style: none;
+  color: rgb(74, 74, 74);
 }
 .CTA-button:hover {
-  background-color: rgb(225, 154, 151);
+  background-color: rgb(74, 74, 74);
+  color: white;
 }
 .hero-header-wrapper {
   position: absolute;
@@ -1250,8 +1255,7 @@ li {
   background-color: rgb(245, 245, 245);
 }
 /************************Contact Confirmation*************************/
-.contact-confirmation {
-}
+
 .contact-con-div {
   margin-top: 200px;
 }
@@ -1281,20 +1285,44 @@ li {
     justify-content: end;
   }
 }
-@media only screen and (max-width: 760px) {
-  #logo {
+@media (max-width: 600px) {
+  #logo,
+  .nav-div2,
+  #menu-checkbox {
+    display: none;
+  }
+  #menu-checkbox:checked ~ .nav-div2 {
+    display: block;
+  }
+  .icon-text {
+    display: none;
+  }
+  #navbar {
+    display: flex;
+    justify-content: stretch;
+    height: 100px;
+    gap: 50px;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+  #header {
+    position: relative;
+  }
+  .search-bar {
     display: none;
   }
   .nav-links {
-    display: none;
-  }
-  #menu-checkbox:checked ~ nav {
     display: block;
+    margin: 50px;
+    font-size: 18px;
+  }
+  .nav-div2 {
+    align-self: start;
+    position: absolute;
+    background-color: gray;
+    top: 0;
+    left: 30px;
   }
   .nav-div4 {
-    padding-right: 30px;
-  }
-  .nav-links {
-    display: block;
   }
 }
