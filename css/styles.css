@@ -23,6 +23,7 @@ header {
 #menu-checkbox {
   display: none;
 }
+
 #navbar {
   display: flex;
   background-color: rgb(152, 126, 136);
@@ -36,26 +37,21 @@ header {
 }
 
 .nav-div1 {
-  align-self: center;
+  align-self: flex-start;
 }
 
 .nav-div2 {
-  margin-top: 40px;
   align-self: flex-end;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
-
 .nav-div3 {
-  display: flex;
   align-self: flex-start;
-  flex-direction: column;
 }
 
 .nav-div4 {
   display: flex;
-  align-items: flex-end;
-  margin-left: 80px;
-  margin-top: 5px;
+  flex-direction: row;
+  align-self: flex-end;
 }
 .div-3-and-div-4 {
   display: flex;
@@ -68,7 +64,7 @@ header {
   stroke: white;
   margin-top: 20px;
   margin-bottom: 20px;
-  flex-shrink: 0;
+
   filter: invert(99%) sepia(6%) saturate(3%) hue-rotate(155deg) brightness(105%)
     contrast(100%);
 }
@@ -1266,7 +1262,10 @@ li {
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 940px) {
+@media (max-width: 940px) {
+  html {
+    font-size: 50%;
+  }
   .nav-links {
     font-size: 15px;
     padding-right: 15px;
@@ -1284,16 +1283,21 @@ li {
   }
   .nav-div4 {
     justify-content: end;
+    margin-left: 0;
+  }
+  .nav-div2 {
+    justify-content: center;
   }
 }
 
-@media only screen and (max-width: 780px) {
-  .search-bar {
-    display: none;
+@media (max-width: 780px) {
+  html {
+    font-size: 50%;
   }
   #navbar {
     display: flex;
-    align-items: stretch;
+    justify-content: flex-start;
+    gap: 30px;
   }
   #logo {
     height: 50px;
@@ -1301,27 +1305,38 @@ li {
     align-self: flex-start;
   }
   .nav-div4 {
-    width: max-content;
+    align-self: flex-end;
+  }
+  .nav-div3 {
+    align-self: flex-end;
+  }
+  .search-bar {
+    margin: 0;
   }
 }
 
-@media (max-width: 500px) {
-  #logo,
-  .nav-div2,
-  #menu-checkbox {
+@media (max-width: 499px) {
+  .nav-div1,
+  .nav-div3,
+  .icon-text {
     display: none;
+  }
+  .nav-div2 {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
   }
   #menu-checkbox:checked ~ .nav-div2 {
     display: block;
   }
-  .icon-text {
-    display: none;
-  }
+
   #navbar {
+    width: 100%;
     display: flex;
-    justify-content: stretch;
+    gap: 200px;
+    justify-content: flex-start;
     height: 100px;
-    gap: 50px;
     padding-top: 10px;
     padding-left: 20px;
     position: sticky;
@@ -1332,8 +1347,10 @@ li {
   #header {
     position: relative;
   }
+
   .search-bar {
-    display: none;
+    align-self: center;
+    margin: 0;
   }
   .nav-links {
     display: block;
@@ -1343,9 +1360,9 @@ li {
   .nav-div2 {
     align-self: start;
     position: absolute;
-    background-color: gray;
-    top: 0;
-    left: 30px;
+    background-color: rgb(152, 126, 136);
+    top: 20px;
+    left: 50px;
   }
   .hero-image {
     margin-top: 140px;
