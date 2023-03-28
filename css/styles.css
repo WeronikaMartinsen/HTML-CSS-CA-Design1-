@@ -1379,11 +1379,6 @@ li {
 /***********************Small tablet*******************************/
 
 @media (max-width: 680px) {
-  #logo {
-    display: none;
-  }
-
-  .nav-div1,
   .nav-div3,
   .icon-text {
     display: none;
@@ -1495,11 +1490,10 @@ li {
 
 /***********************Small mobile*******************************/
 
-@media (max-width: 540px) {
-  #header {
-    font-size: 50%;
+@media (max-width: 375px) {
+  .nav-div1 {
   }
-  .nav-div1,
+
   .nav-div3,
   .icon-text {
     display: none;
@@ -1545,9 +1539,8 @@ li {
     left: 50px;
   }
   .hero-image {
-    margin-top: 140px;
-    height: 400px;
-    width: auto;
+    height: 70%;
+    margin-top: 240px;
   }
   .hero-header {
     margin: 0;
@@ -1557,7 +1550,6 @@ li {
     gap: 25px;
     justify-content: center;
   }
-
   .feature-paragraph {
     display: none;
   }
@@ -1587,9 +1579,6 @@ li {
   .sign-up-box {
     width: max-content;
     margin: 0;
-  }
-  h3 {
-    font-size: 22px;
   }
   .sign-up-box {
     height: 300px;
