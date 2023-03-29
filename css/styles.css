@@ -16,8 +16,8 @@ header {
 }
 .menu-icon {
   color: white;
-  width: 45px;
-  height: 45px;
+  width: 2.8em;
+  height: 2.8em;
   display: none;
 }
 #menu-checkbox {
@@ -28,7 +28,7 @@ header {
   display: flex;
   background-color: rgb(152, 126, 136);
   width: 100%;
-  height: 120px;
+  height: 7.5em;
   justify-content: space-between;
   position: sticky;
   top: 0;
@@ -42,7 +42,7 @@ header {
 
 .nav-div2 {
   align-self: flex-end;
-  padding-bottom: 20px;
+  padding-bottom: 1.25em;
 }
 .nav-div3 {
   align-self: flex-start;
@@ -59,11 +59,11 @@ header {
 }
 
 #logo {
-  max-width: 150px;
+  max-width: 9.3em;
   height: auto;
   stroke: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
 
   filter: invert(99%) sepia(6%) saturate(3%) hue-rotate(155deg) brightness(105%)
     contrast(100%);
@@ -75,23 +75,23 @@ header {
   font-weight: 300;
   letter-spacing: 2;
   font-family: roboto;
-  padding-right: 20px;
-  font-size: 16px;
+  padding-right: 1.25em;
+  font-size: 1em;
 }
 .nav-links:hover {
   color: rgb(100, 79, 87);
 }
 
 .search-bar {
-  width: 250px;
-  height: 30px;
-  border-radius: 5px;
+  width: 15.6em;
+  height: 1.8em;
+  border-radius: 0.3em;
   border-style: none;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  padding-left: 40px;
+  box-shadow: 0 0.125em 0.25em 0 rgba(0, 0, 0, 0.2);
+  padding-left: 2.5em;
   margin-top: 0;
   color: gray;
-  margin-right: 40px;
+  margin-right: 2.5em;
   align-self: flex-start;
 }
 
@@ -99,12 +99,12 @@ header {
   color: gray;
   align-self: flex-start;
   position: absolute;
-  left: 10px;
-  top: 8px;
+  left: 0.62em;
+  top: 0.5em;
 }
 .nav-icon-box {
   flex-direction: column;
-  padding-right: 20px;
+  padding-right: 1.25em;
 }
 .nav-link-svg {
   text-align: center;
@@ -112,14 +112,14 @@ header {
 .icon-and-search-bar {
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
+  margin-top: 0.62em;
 
   position: relative;
 }
 .nav-icons {
-  margin-top: 8px;
-  width: 23px;
-  height: 23px;
+  margin-top: 0.5em;
+  width: 1.43em;
+  height: 1.43em;
   text-align: center;
   justify-self: center;
 
@@ -129,7 +129,7 @@ header {
   color: rgb(100, 79, 87);
 }
 .icon-text {
-  font-size: 12px;
+  font-size: 0.75em;
   text-align: center;
   color: white;
   font-weight: 300;
@@ -146,17 +146,16 @@ header {
 h1 {
   font-family: ibarra real nova;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 2.62em;
   text-align: center;
   color: rgb(74, 74, 74);
 }
 
 .CTA-button {
-  width: 200px;
-  height: 50px;
-
-  border-radius: 17px;
-  font-size: 16px;
+  width: 12.5em;
+  height: 3.12em;
+  border-radius: 1.063em;
+  font-size: 1em;
   font-family: roboto;
   font-weight: 500;
   text-transform: uppercase;
@@ -181,8 +180,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 80px;
-  margin-top: 80px;
+  margin-left: 5em;
+  margin-top: 5em;
 }
 
 .feature {
@@ -192,21 +191,21 @@ h1 {
   height: 100px;
   min-width: 100%;
   align-items: center;
-  gap: 70px;
+  gap: 4.37em;
   justify-content: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 1.25em;
+  margin-top: 1.25em;
 }
 
 .feature-icon {
-  width: 27px;
-  height: 27px;
+  width: 1.68em;
+  height: 1.68em;
   background-color: rgba(217, 217, 217);
 
-  border: 5px solid rgba(217, 217, 217);
+  border: 0.313em solid rgba(217, 217, 217);
   color: grey;
   border-radius: 100%;
-  padding: 5px;
+  padding: 0.313em;
   align-self: center;
 }
 .feature-box {
@@ -214,7 +213,7 @@ h1 {
 }
 
 .feature-paragraph {
-  font-size: 12px;
+  font-size: 0.75em;
   align-self: center;
   color: rgb(76, 75, 75);
 }
@@ -223,57 +222,52 @@ h1 {
   position: relative;
   display: flex;
   justify-content: space-between;
-
   align-items: center;
   align-content: center;
   max-width: 100%;
-  height: 330px;
+  height: 16.87em;
   background-color: rgba(217, 217, 217);
-  gap: 10px;
-  padding: 60px;
+  gap: 0.62em;
+  padding: 3.75em;
 }
 
 .component-text {
   text-align: center;
   font-weight: 500;
-  font-size: 20px;
-  padding: 0px;
+  font-size: 1.25em;
+  padding: 0em;
 }
 
 h2 {
   font-family: ibarra real nova;
-  font-size: 48px;
+  font-size: 3em;
   font-weight: 800;
   margin: 0;
 }
 .button-shop-now {
-  width: 182px;
-  height: 50px;
-  border-radius: 17px;
-  font-size: 18px;
+  width: 11.37em;
+  height: 3.1em;
+  border-radius: 1.06em;
+  font-size: 1.125em;
   border: 1px solid transparent;
   background-color: rgb(225, 136, 133);
   color: white;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 0.62em;
+  margin-bottom: 1.25em;
 }
 .button-shop-now:hover {
   background-color: rgb(225, 154, 151);
 }
 
 .assets-jacket {
-  width: 270px;
+  width: 16.87em;
   height: auto;
-}
-.assets-jacket-1 {
-  width: auto;
-  height: 283px;
 }
 
 .component1-paragraph {
   text-align: right;
-  padding: 0px;
+  padding: 0em;
 }
 
 .jacket-price-old {
@@ -283,7 +277,7 @@ h2 {
 
 .jacket-price-new {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5em;
   color: rgb(216, 38, 38);
   margin: 0;
   text-align: end;
@@ -291,8 +285,8 @@ h2 {
 .discount-box {
   display: flex;
   justify-content: center;
-  width: 154px;
-  height: 39px;
+  width: 9.62em;
+  height: 2.43em;
 
   position: absolute;
 
@@ -306,14 +300,14 @@ h2 {
   align-self: center;
 
   font-weight: 700;
-  font-size: 28px;
+  font-size: 1.75em;
 }
 
 .section-break {
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  gap: 80px;
+  gap: 3.125em;
   height: 100px;
   width: 100%;
   justify-content: center;
@@ -332,46 +326,53 @@ h2 {
 }
 .section-break-icon {
   color: rgb(225, 136, 133);
-  width: 22px;
-  height: 22px;
+  width: 1.375em;
+  height: 1.375em;
   align-self: center;
 }
 .span-paragraph {
   text-decoration: underline;
   text-decoration-color: rgb(225, 136, 133);
-  text-decoration-thickness: 4px;
   text-underline-position: under;
 }
 
-.image-1 {
-  width: 100%;
-  height: 330px;
-  object-fit: none;
+.image-1-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 3.75em;
+  gap: 1.25em;
+  justify-content: center;
 }
+.image-1 {
+  width: 18.75em;
+  height: auto;
+  border-radius: 0.313em;
+}
+
 .container-sign-up-box {
   display: flex;
   justify-content: center;
-  margin: 30px;
+  margin: 1.87em;
 }
 .sign-up-box {
   display: flex;
   align-items: center;
   background-color: #484848;
-  height: 400px;
-  width: 500px;
-  border-radius: 15px;
+  height: 25em;
+  width: 31.25em;
+  border-radius: 0.93em;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  gap: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  gap: 1.25em;
+  padding-left: 1.87em;
+  padding-right: 1.87em;
 }
 
 #name {
-  width: 400px;
-  height: 48px;
-  border-radius: 10px;
+  width: 25em;
+  height: 3em;
+  border-radius: 0.625em;
   border-style: none;
 }
 .input-sing-up-box {
@@ -1379,7 +1380,7 @@ li {
 /***********************Small tablet*******************************/
 
 @media (max-width: 680px) {
-  .nav-div3,
+  #logo,
   .icon-text {
     display: none;
   }
@@ -1408,6 +1409,7 @@ li {
   #header {
     position: relative;
   }
+
   .nav-div4 {
     padding-right: 20px;
   }
@@ -1429,6 +1431,9 @@ li {
   }
   .buy-now {
     width: 200px;
+  }
+  .nav-div3 {
+    margin-right: 40px;
   }
 }
 
@@ -1491,9 +1496,7 @@ li {
 /***********************Small mobile*******************************/
 
 @media (max-width: 375px) {
-  .nav-div1 {
-  }
-
+  .nav-div1,
   .nav-div3,
   .icon-text {
     display: none;
@@ -1561,10 +1564,11 @@ li {
   }
   .component-cart {
     background-color: white;
-    border-radius: 17px;
+    border-radius: 5px;
     border: 1px solid white;
     padding: 20px;
   }
+
   .section-break {
     gap: 20px;
     margin-top: 30px;
