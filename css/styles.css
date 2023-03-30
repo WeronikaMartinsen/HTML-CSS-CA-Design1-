@@ -1608,7 +1608,21 @@ li {
     width: 14em;
     height: 2em;
   }
-}
+  .section-break {
+    gap: 1.8em;
+  }
+  #name {
+    width: 17em;
+    height: 2.4em;
+  }
+  .feature-paragraph {
+    font-size: 0.7em;
+  }
+  .component1 {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
+  
 
 /***********************Small mobile*******************************/
 
