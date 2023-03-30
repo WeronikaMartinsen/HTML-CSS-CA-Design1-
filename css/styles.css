@@ -83,15 +83,16 @@ header {
 }
 
 .search-bar {
-  width: 15.6em;
+  width: 12em;
   height: 1.8em;
   border-radius: 0.3em;
   border-style: none;
   box-shadow: 0 0.125em 0.25em 0 rgba(0, 0, 0, 0.2);
-  padding-left: 2.5em;
-  margin-top: 0;
+  padding-left: 2.9em;
+  padding-right: 2.5em;
+  margin-top: 0.5em;
   color: gray;
-  margin-right: 2.5em;
+  margin-right: 1.8em;
   align-self: flex-start;
 }
 
@@ -100,7 +101,7 @@ header {
   align-self: flex-start;
   position: absolute;
   left: 0.62em;
-  top: 0.5em;
+  top: 0.7em;
 }
 .nav-icon-box {
   flex-direction: column;
@@ -152,7 +153,7 @@ h1 {
 }
 
 .CTA-button {
-  width: 12.5em;
+  width: 10.5em;
   height: 3.12em;
   border-radius: 1.063em;
   font-size: 1em;
@@ -245,23 +246,26 @@ h2 {
   margin: 0;
 }
 .button-shop-now {
-  width: 11.37em;
-  height: 3.1em;
-  border-radius: 1.06em;
-  font-size: 1.125em;
-  border: 1px solid transparent;
-  background-color: rgb(225, 136, 133);
+  width: 8em;
+  height: 2.5em;
+  border-radius: 1.063em;
+  font-size: 1em;
+  font-family: roboto;
+  font-weight: 500;
+
+  border-style: none;
+  background-color: rgb(152, 126, 136);
   color: white;
   text-align: center;
   margin-top: 0.62em;
   margin-bottom: 1.25em;
 }
 .button-shop-now:hover {
-  background-color: rgb(225, 154, 151);
+  background-color: rgb(74, 74, 74);
 }
 
 .assets-jacket {
-  width: 16.87em;
+  width: 15em;
   height: auto;
 }
 
@@ -311,7 +315,6 @@ h2 {
   height: 100px;
   width: 100%;
   justify-content: center;
-  min-width: 100%;
 }
 
 .section-break-box1 {
@@ -339,14 +342,19 @@ h2 {
 .image-1-box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 3.75em;
   gap: 1.25em;
+  align-items: center;
   justify-content: center;
+  margin-left: 1.25em;
+  margin-right: 1.25em;
+  margin-bottom: 2.25em;
 }
 .image-1 {
   width: 18.75em;
   height: auto;
+  object-fit: cover;
   border-radius: 0.313em;
+  align-self: center;
 }
 
 .container-sign-up-box {
@@ -1267,15 +1275,30 @@ li {
   margin-top: 10px;
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1280px) {
   .assets-jacket {
     width: 200px;
     height: auto;
   }
   .component1 {
-    font-size: 50%;
-    padding-top: 0;
-    padding-bottom: 0;
+    height: 20em;
+    gap: 0.5em;
+    padding: 1.5em;
+  }
+  .image-1-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 1em;
+  }
+}
+
+@media (max-width: 960px) {
+  .image-1-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 1em;
   }
 }
 
@@ -1283,12 +1306,12 @@ li {
 
 @media (max-width: 1050px) {
   .component1 {
-    font-size: 50%;
-    padding-top: 0;
-    padding-bottom: 0;
+    height: 18em;
+    gap: 0.5em;
+    padding: 1.5em;
   }
   .assets-jacket {
-    width: 170px;
+    width: 10.6em;
     height: auto;
   }
   .nav-links {
@@ -1316,11 +1339,10 @@ li {
 
 @media (max-width: 810px) {
   .component1 {
-    font-size: 50%;
+    font-size: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat 2 (1fr);
-    gap: 20px;
+    grid-template-rows: 1fr 1fr;
     height: max-content;
     justify-items: center;
   }
@@ -1329,11 +1351,19 @@ li {
     border-radius: 17px;
     border: 1px solid white;
     padding: 20px;
-    margin: 20px;
+  }
+  .assets-jacket {
+    width: 15.6em;
   }
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+  .search-icon {
+    top: 0.7em;
+  }
+  .search-bar {
+    padding-right: 0.2em;
   }
 
   .discount-box {
@@ -1349,7 +1379,7 @@ li {
     justify-content: center;
   }
   #logo {
-    height: 50px;
+    height: 4.3em;
     width: auto;
     align-self: flex-start;
   }
@@ -1359,13 +1389,10 @@ li {
   .nav-div3 {
     align-self: flex-end;
   }
-  .search-bar {
-    margin: 0;
-  }
+
   .icon-text {
     display: none;
   }
-
   .nav-links {
     font-size: 13px;
   }
@@ -1398,9 +1425,9 @@ li {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 100px;
-    padding-top: 10px;
-    padding-left: 20px;
+    height: 6.25em;
+    padding-top: 0.625em;
+    padding-left: 1.25em;
     position: sticky;
     top: 0;
     position: fixed;
@@ -1411,62 +1438,92 @@ li {
   }
 
   .nav-div4 {
-    padding-right: 20px;
+    padding-right: 1.25em;
   }
   .nav-links {
     display: block;
-    margin: 50px;
-    font-size: 18px;
+    margin: 3.125em;
+    font-size: 1.125em;
   }
   .nav-div2 {
     align-self: start;
     position: absolute;
     background-color: rgb(152, 126, 136);
-    top: 20px;
-    left: 50px;
+    top: 1.25em;
+    left: 3.125em;
   }
   .product-details-heading {
-    font-size: 22px;
+    font-size: 1.37;
     text-align: start;
   }
   .buy-now {
-    width: 200px;
+    width: 12.5;
   }
   .nav-div3 {
-    margin-right: 40px;
+    margin-right: 2.5em;
+  }
+  .sign-up-box {
+    padding: 0;
+    width: 30em;
+    height: 22em;
+  }
+  h1 {
+    font-size: 2em;
+    color: rgb(74, 74, 74);
+  }
+  .CTA-button {
+    font-size: 1em;
+  }
+  .image-1-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 1em;
+  }
+  .image-1 {
+    width: 16em;
+    height: auto;
+  }
+  .assets-jacket {
+    width: 13em;
+    height: auto;
   }
 }
 
 @media (max-width: 600px) {
+  h1 {
+    font-size: 1.75em;
+    color: rgb(74, 74, 74);
+  }
+  .CTA-button {
+    font-size: 0.9em;
+  }
   .component1 {
-    font-size: 50%;
+    font-size: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat 2 (1fr);
-    gap: 20px;
     height: max-content;
     justify-items: center;
-    padding: 10px;
+    padding: 0.6em;
   }
   .component-cart {
     background-color: white;
-    border-radius: 17px;
-    border: 1px solid white;
-    padding: 10px;
-    margin: 10px;
+    border-radius: 1.06em;
+    border: 0.06em solid white;
+    padding: 0.6em;
+    margin: 0.6em;
   }
   .span-paragraph {
-    font-size: 13px;
+    font-size: 0.8em;
   }
   .icon-inner {
     width: 50%;
   }
-  .container-sign-up-box {
-    font-size: 50%;
-    padding: 0;
-  }
   .sign-up-box {
     padding: 0;
+    width: 27em;
+    height: 20em;
   }
   h3 {
     font-size: 22px;
@@ -1491,8 +1548,30 @@ li {
   .checkout-paragraph {
     display: none;
   }
+  .image-1-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 1em;
+  }
+  .image-1 {
+    width: 14em;
+  }
 }
 
+@media (max-width: 500px) {
+  .image-1-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 1em;
+  }
+  .image-1 {
+    justify-content: center;
+    align-self: center;
+    width: 22em;
+  }
+}
 /***********************Small mobile*******************************/
 
 @media (max-width: 375px) {
@@ -1515,9 +1594,9 @@ li {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 100px;
-    padding-top: 10px;
-    padding-left: 20px;
+    height: 5em;
+    padding-top: 0.625em;
+    padding-left: 1.25em;
     position: sticky;
     top: 0;
     position: fixed;
