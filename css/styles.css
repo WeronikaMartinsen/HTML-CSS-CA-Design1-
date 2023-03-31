@@ -101,7 +101,7 @@ header {
   align-self: flex-start;
   position: absolute;
   left: 0.62em;
-  top: 0.7em;
+  top: 0.8em;
 }
 .nav-icon-box {
   flex-direction: column;
@@ -587,12 +587,13 @@ h7 {
 
 /************************PRODUCT DETAILS*************************/
 .h4-margin-top {
-  margin-top: 3.75em;
+  margin-top: 2.5em;
 }
 h4 {
+  color: gray;
   margin-left: 10em;
   font-size: 1.5em;
-  margin-top: 9.37em;
+  margin-top: 6.37em;
   font-family: iberra real nova;
 }
 .checkout-stage {
@@ -609,6 +610,7 @@ h4 {
 .checkout-paragraph {
   align-items: center;
   font-size: 0.75em;
+  color: gray;
 }
 
 .checkout-icon {
@@ -653,8 +655,7 @@ h4 {
   width: auto;
   background-color: #f7f7f7;
 }
-.product-info {
-}
+
 .product-details-heading {
   font-size: 1.75em;
   margin: 0;
@@ -1291,6 +1292,12 @@ li {
     justify-content: center;
     gap: 1em;
   }
+  .jacket-heading {
+    margin: 0;
+    margin-left: 1.25em;
+    margin-top: 1.25em;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1299,6 +1306,14 @@ li {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 1em;
+  }
+  .search-icon {
+    top: 0.8em;
+  }
+  .jacket-heading {
+    margin: 0;
+    margin-left: 1.25em;
+    margin-top: 1.25em;
   }
 }
 
@@ -1332,6 +1347,17 @@ li {
   }
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .search-icon {
+    top: 0.8em;
+  }
+  .jacket-heading {
+    margin: 0;
+    margin-left: 1.25em;
+    margin-top: 1.25em;
+  }
+  .h4 {
+    margin-left: 0;
   }
 }
 
@@ -1406,6 +1432,20 @@ li {
   .search-bar {
     width: 16em;
     height: 2.2em;
+  }
+  .search-icon {
+    top: 0.8em;
+  }
+  .extra-box {
+    margin-top: 7.5em;
+  }
+  .jacket-heading {
+    margin: 0;
+    margin-left: 1.25em;
+    margin-top: 1.25em;
+  }
+  .horizontal-line {
+    width: 7em;
   }
 }
 /***********************Small tablet*******************************/
@@ -1500,8 +1540,20 @@ li {
     margin-right: 0.6em;
   }
   .search-bar {
-    width: 13em;
+    width: 12em;
     height: 2em;
+  }
+  .extra-box {
+    margin-top: 6.8em;
+  }
+  .jacket-heading {
+    margin: 0;
+    margin-left: 1.25em;
+    margin-top: 1.25em;
+    font-size: 1.5em;
+  }
+  .product-details-heading {
+    font-size: 1.5em;
   }
 }
 
@@ -1547,6 +1599,18 @@ li {
     width: 300px;
     height: 40px;
   }
+  .product-cart-asset {
+    width: 15em;
+  }
+  .product-cart {
+    margin-left: 1.75em;
+  }
+  .product-details-heading {
+    margin-top: 0;
+  }
+  .jacket-price-new-grid {
+    font-size: 1.25em;
+  }
   .footer-box {
     height: max-content;
     display: flex;
@@ -1557,8 +1621,7 @@ li {
   .checkout-stage {
     display: flex;
     justify-content: center;
-    width: 75%;
-    align-content: center;
+    align-items: center;
   }
   .checkout-paragraph {
     display: none;
@@ -1588,9 +1651,19 @@ li {
   .feature-paragraph {
     font-style: 0.5em;
   }
+  .jacket-heading {
+  }
+  .h4 {
+    justify-content: start;
+  }
 }
 
 @media (max-width: 500px) {
+  .checkout-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .image-1-box {
     display: grid;
     grid-template-columns: 1fr;
@@ -1649,6 +1722,57 @@ li {
     font-size: 1.2em;
     padding-right: 0.8em;
   }
+  .product-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+  .product-cart {
+    align-self: center;
+    margin-top: 1.25em;
+  }
+  .product-cart-asset {
+    width: 20em;
+  }
+  .product-info {
+    align-self: center;
+  }
+  .product-details-heading {
+    font-size: 1.8em;
+  }
+  .select-paragraph {
+    font-size: 1.25em;
+  }
+  .color {
+    width: 2em;
+    height: 2em;
+  }
+  .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+  }
+
+  .wash-instruction {
+    font-style: 1.5em;
+  }
+  .div-for-buy-now {
+    display: flex;
+    justify-content: center;
+  }
+  .CTA-button {
+    width: 14em;
+  }
+
+  .checkout-stage {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 434px) {
@@ -1659,6 +1783,12 @@ li {
   .h8 {
     font-size: 1em;
     margin-left: 2em;
+  }
+  .jacket-heading {
+    margin: 0;
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 1.5em;
   }
 }
 /***********************Small mobile*******************************/
@@ -1775,5 +1905,13 @@ li {
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+  }
+  .extra-box {
+    margin-top: 5.5em;
+  }
+  .jacket-heading {
+    margin-bottom: 0;
+    margin-left: 1.7em;
+    font-size: 1.4em;
   }
 }
