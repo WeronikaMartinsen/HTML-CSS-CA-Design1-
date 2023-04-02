@@ -536,12 +536,6 @@ h3 {
 .cart {
   justify-self: center;
 }
-.jackets-text {
-  padding: 1em;
-  display: flex;
-  justify-content: flex-end;
-  text-align: flex-end;
-}
 
 .grid-item-paragraph {
   color: #6b6a6a;
@@ -1257,6 +1251,11 @@ li {
 /***********************Small laptop*******************************/
 
 @media (max-width: 1050px) {
+  .image-1-box {
+    margin-left: 8em;
+    margin-right: 8em;
+    justify-items: center;
+  }
   .contact-container {
     display: flex;
     flex-direction: column;
@@ -1539,7 +1538,6 @@ li {
     width: 16em;
     height: 2.2em;
   }
-
   #navbar {
     width: 100%;
     display: flex;
@@ -1569,7 +1567,7 @@ li {
     position: absolute;
     background-color: rgb(152, 126, 136);
     top: 1.25em;
-    left: 3.125em;
+    left: 1.5em;
   }
   .product-details-heading {
     font-size: 1.37;
@@ -1733,6 +1731,12 @@ li {
     justify-content: center;
     align-items: center;
   }
+  .horizontal-line {
+    width: 5em;
+  }
+  .checkout-icon {
+    width: 3em;
+  }
   .checkout-paragraph {
     display: none;
   }
@@ -1773,13 +1777,19 @@ li {
     grid-template-columns: 1fr;
   }
   .image-gallery-1 {
-    width: 26em;
+    width: 24em;
   }
   .btn-contact-conf {
     width: 20em;
   }
 }
 @media (max-width: 540px) {
+  .checkout-icon {
+    width: 2.7em;
+  }
+  .horizontal-line {
+    width: 4em;
+  }
   .payment-item-1,
   .payment-item-2 {
     align-self: center;
@@ -1810,9 +1820,21 @@ li {
   .btn-contact-conf {
     width: 20em;
   }
+  .image-gallery-1 {
+    width: 21em;
+  }
+  .about-us-item-2 {
+    margin: 0;
+  }
 }
 
 @media (max-width: 500px) {
+  .checkout-icon {
+    width: 2.7em;
+  }
+  .horizontal-line {
+    width: 4em;
+  }
   .grid-item-2 {
     height: 24em;
   }
@@ -1977,6 +1999,15 @@ li {
 }
 
 @media (max-width: 434px) {
+  .image-gallery-1 {
+    width: 19em;
+  }
+  .checkout-icon {
+    width: 2.7em;
+  }
+  .horizontal-line {
+    width: 4em;
+  }
   .checkout-span {
     font-size: 0.6em;
   }
@@ -2040,10 +2071,10 @@ li {
     width: 5em;
   }
   .contact-input {
-    width: 17em;
+    width: 18em;
   }
   .btn-contact {
-    width: 17em;
+    width: 18em;
   }
   .contact-box-1 {
     width: 20em;
@@ -2059,6 +2090,12 @@ li {
 /***********************Small mobile*******************************/
 
 @media (max-width: 375px) {
+  .checkout-icon {
+    width: 2.7em;
+  }
+  .horizontal-line {
+    width: 4em;
+  }
   .nav-div1,
   .nav-div3,
   .icon-text {
