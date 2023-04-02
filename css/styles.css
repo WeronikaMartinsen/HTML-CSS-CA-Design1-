@@ -1080,35 +1080,26 @@ li {
   margin-left: 2.5em;
   margin-right: 2.5em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2.5em;
 }
 .about-us-item-1 {
-  max-width: 50%;
 }
 .about-us-item-2 {
   display: grid;
-  max-width: 50%;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 1em;
   justify-content: center;
   align-items: center;
   justify-items: center;
 }
-.image-box {
-  justify-self: center;
-  align-self: start;
-}
+
 .image-gallery-1 {
   width: 100%;
   object-fit: cover;
   height: auto;
   justify-self: center;
   align-self: center;
-}
-.image-1-about {
-  padding-top: 2.5em;
-  padding-left: 6.25;
 }
 
 /************************Contact*************************/
@@ -1266,6 +1257,23 @@ li {
 /***********************Small laptop*******************************/
 
 @media (max-width: 1050px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-box-1 {
+    width: 35em;
+  }
+  .contact-box-2 {
+    width: 33em;
+  }
+  .contact-input {
+    width: 35em;
+  }
+  .btn-contact {
+    width: 35em;
+    height: 4em;
+  }
   .component1 {
     height: 18em;
     gap: 0.5em;
@@ -1453,9 +1461,7 @@ li {
     width: 35em;
   }
   .image-gallery-1 {
-    height: auto;
-    width: 10em;
-    margin-left: 2.5em;
+    width: 35em;
   }
   .about-us-item-2 {
     margin-left: 2.5em;
@@ -1469,6 +1475,9 @@ li {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+  }
+  .btn-contact-conf {
+    width: 20em;
   }
 }
 @media (max-width: 720px) {
@@ -1500,10 +1509,19 @@ li {
   .image-display-none {
     display: none;
   }
+  .btn-contact-conf {
+    width: 20em;
+  }
 }
 /***********************Small tablet*******************************/
 
 @media (max-width: 680px) {
+  .contact-box-1 {
+    width: 30em;
+  }
+  .contact-box-2 {
+    width: 28em;
+  }
   #logo,
   .icon-text {
     display: none;
@@ -1629,6 +1647,18 @@ li {
   .btn-confirm {
     width: 32em;
   }
+  .image-gallery-1 {
+    width: 30em;
+  }
+  .contact-input {
+    width: 29em;
+  }
+  .btn-contact {
+    width: 30em;
+  }
+  .btn-contact-conf {
+    width: 20em;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1743,8 +1773,10 @@ li {
     grid-template-columns: 1fr;
   }
   .image-gallery-1 {
-    height: auto;
-    width: 30em;
+    width: 26em;
+  }
+  .btn-contact-conf {
+    width: 20em;
   }
 }
 @media (max-width: 540px) {
@@ -1762,6 +1794,21 @@ li {
   }
   .grid-item-2 {
     height: 20em;
+  }
+  .contact-input {
+    width: 25em;
+  }
+  .btn-contact {
+    width: 25em;
+  }
+  .contact-box-1 {
+    width: 27em;
+  }
+  .contact-box-2 {
+    width: 25em;
+  }
+  .btn-contact-conf {
+    width: 20em;
   }
 }
 
@@ -1906,9 +1953,33 @@ li {
     margin-left: 1.25em;
     font-size: 1.25em;
   }
+  .contact-input {
+    width: 22em;
+  }
+  .btn-contact {
+    width: 22em;
+  }
+  .contact-box-1 {
+    width: 24em;
+  }
+  .contact-box-2 {
+    width: 22em;
+  }
+  .checkout-span {
+    font-size: 0.6em;
+  }
+  .btn-contact-conf {
+    width: 20em;
+  }
+  .contact-conf-h1 {
+    font-size: 2em;
+  }
 }
 
 @media (max-width: 434px) {
+  .checkout-span {
+    font-size: 0.6em;
+  }
   .jackets-item {
     height: 20em;
   }
@@ -1967,6 +2038,22 @@ li {
   }
   .horizontal-line {
     width: 5em;
+  }
+  .contact-input {
+    width: 17em;
+  }
+  .btn-contact {
+    width: 17em;
+  }
+  .contact-box-1 {
+    width: 20em;
+  }
+  .contact-box-2 {
+    width: 18em;
+  }
+  .maps {
+    width: 20em;
+    height: auto;
   }
 }
 /***********************Small mobile*******************************/
