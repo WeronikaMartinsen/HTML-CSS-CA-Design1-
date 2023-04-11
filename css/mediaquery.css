@@ -23,8 +23,19 @@
   #navbar {
     gap: 4em;
   }
+  .contact-container {
+    gap: 3em;
+  }
 }
 @media (max-width: 960px) {
+  .contact-container {
+    margin-top: 8em;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .image-1-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -162,7 +173,6 @@
   .search-bar {
     padding-right: 0.2em;
   }
-
   .discount-box {
     display: none;
   }
@@ -186,7 +196,6 @@
   .nav-div3 {
     align-self: flex-end;
   }
-
   .icon-text {
     display: none;
   }
@@ -303,7 +312,6 @@
   #header {
     position: relative;
   }
-
   .nav-div4 {
     padding-right: 1.25em;
   }
@@ -339,7 +347,6 @@
     display: grid;
     grid-template-columns: 1fr;
   }
-
   .image-display-none {
     display: none;
   }
@@ -353,17 +360,11 @@
 /***********************Small tablet*******************************/
 
 @media (max-width: 680px) {
-  .contact-box-1 {
-    width: 30em;
-  }
   .contact-box-2 {
     width: 28em;
   }
   #logo,
-  .icon-text {
-    display: none;
-  }
-  .nav-div2 {
+  .nav-div2 .icon-text {
     display: none;
   }
   .menu-icon {
@@ -372,7 +373,6 @@
   #menu-checkbox:checked ~ .nav-div2 {
     display: block;
   }
-
   #navbar {
     width: 100%;
     display: flex;
@@ -388,7 +388,6 @@
   #header {
     position: relative;
   }
-
   .nav-div4 {
     padding-right: 1.25em;
   }
@@ -400,7 +399,7 @@
   .nav-div2 {
     align-self: start;
     position: absolute;
-    background-color: rgb(152, 126, 136);
+    background-color: var(background-color);
     top: 1.25em;
     left: 1.5em;
   }
@@ -442,7 +441,6 @@
   .nav-div3 {
     margin-right: 0.6em;
   }
-
   .extra-box {
     margin-top: 6.8em;
   }
@@ -643,9 +641,6 @@
   .btn-contact {
     width: 25em;
   }
-  .contact-box-1 {
-    width: 27em;
-  }
   .contact-box-2 {
     width: 25em;
   }
@@ -667,7 +662,6 @@
   .horizontal-line {
     width: 4em;
   }
-
   .checkout-stage {
     display: flex;
     justify-content: center;
@@ -684,7 +678,6 @@
     align-self: center;
     width: 22em;
   }
-
   .hero-image {
     object-fit: 100%;
   }
