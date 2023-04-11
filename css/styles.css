@@ -1,3 +1,20 @@
+:root {
+  --background-color: rgb(152, 126, 136);
+  --hover-color: rgb(100, 79, 87);
+  --active-color: rgb(74, 74, 74);
+  --headings-color: rgb(74, 74, 74);
+  --paragraph-color: rgb(76, 75, 75);
+  --background-color-default: rgba(217, 217, 217);
+  --heading-family: "Ibarra Real Nova", serif;
+  --paragraph-family: "Roboto", sans-serif;
+
+  /*Button*/
+  --button-font-family: "Roboto", sans-serif;
+  --button-width-default: 10.5em;
+  --button-height-default: 3.12em;
+  --button-border-radius-default: 1.063em;
+  --button-font-size: 1em;
+}
 html {
   font-family: "Ibarra Real Nova", serif;
   font-family: "Raleway", sans-serif;
@@ -65,9 +82,11 @@ header {
   stroke: white;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
-
   filter: invert(99%) sepia(6%) saturate(3%) hue-rotate(155deg) brightness(105%)
     contrast(100%);
+}
+#logo:hover {
+  color: var(--hover-color);
 }
 
 .nav-links {
@@ -80,7 +99,7 @@ header {
   font-size: 1em;
 }
 .nav-links:hover {
-  color: rgb(100, 79, 87);
+  color: var(--hover-color);
 }
 
 .search-bar {
@@ -92,13 +111,13 @@ header {
   padding-left: 2.9em;
   padding-right: 2.5em;
   margin-top: 0.5em;
-  color: gray;
+  color: var(--paragraph-color);
   margin-right: 1.8em;
   align-self: flex-start;
 }
 
 .search-icon {
-  color: gray;
+  color: var(--paragraph-color);
   align-self: flex-start;
   position: absolute;
   left: 0.62em;
@@ -115,7 +134,6 @@ header {
   display: flex;
   flex-direction: row;
   margin-top: 0.62em;
-
   position: relative;
 }
 .nav-icons {
@@ -124,11 +142,10 @@ header {
   height: 1.43em;
   text-align: center;
   justify-self: center;
-
   color: white;
 }
 .nav-icons:hover {
-  color: rgb(100, 79, 87);
+  color: var(--hover-color);
 }
 .icon-text {
   font-size: 0.75em;
@@ -136,6 +153,9 @@ header {
   color: white;
   font-weight: 300;
   letter-spacing: 1.6;
+}
+.icon-text:hover {
+  color: var(--hover-color);
 }
 .hero-image-wrapper {
   position: relative;
@@ -150,22 +170,26 @@ h1 {
   font-weight: 700;
   font-size: 2.62em;
   text-align: center;
-  color: rgb(74, 74, 74);
+  color: var(--headings-color);
 }
 
 .CTA-button {
-  width: 10.5em;
-  height: 3.12em;
-  border-radius: 1.063em;
+  width: var(--button-width-default);
+  height: var(--button-height-default);
+  border-radius: var(--button-border-radius-default);
   font-size: 1em;
-  font-family: roboto;
+  font-family: var(--button-font-family);
   font-weight: 500;
   text-transform: uppercase;
   border-style: none;
-  color: rgb(74, 74, 74);
+  color: var(--headings-color);
 }
 .CTA-button:hover {
-  background-color: rgb(74, 74, 74);
+  background-color: var(--hover-color);
+  color: white;
+}
+.CTA-button:active {
+  background-color: var(--active-color);
   color: white;
 }
 .hero-header-wrapper {
@@ -202,10 +226,9 @@ h1 {
 .feature-icon {
   width: 1.68em;
   height: 1.68em;
-  background-color: rgba(217, 217, 217);
-
+  background-color: var(--background-color-default);
   border: 0.313em solid rgba(217, 217, 217);
-  color: grey;
+  color: var(--paragraph-color);
   border-radius: 100%;
   padding: 0.313em;
   align-self: center;
@@ -217,9 +240,8 @@ h1 {
 .feature-paragraph {
   font-size: 0.75em;
   align-self: center;
-  color: rgb(76, 75, 75);
+  color: var(--paragraph-color);
 }
-
 .component1 {
   position: relative;
   display: flex;
@@ -228,7 +250,7 @@ h1 {
   align-content: center;
   max-width: 100%;
   height: 16.87em;
-  background-color: rgba(217, 217, 217);
+  background-color: var(--background-color-default);
   gap: 0.62em;
   padding: 3.75em;
 }
@@ -238,44 +260,46 @@ h1 {
   font-weight: 500;
   font-size: 1.25em;
   padding: 0em;
+  color: var(--paragraph-color);
 }
-
 h2 {
-  font-family: ibarra real nova;
+  font-family: var(--heading-family);
+  color: var(--headings-color);
   font-size: 3em;
   font-weight: 800;
   margin: 0;
 }
 .button-shop-now {
-  width: 8em;
-  height: 2.5em;
-  border-radius: 1.063em;
+  width: var(--button-width-default);
+  height: var(--button-height-default);
+  border-radius: var(--button-border-radius-default);
   font-size: 1em;
-  font-family: roboto;
-  font-weight: 500;
-
+  font-family: var(--button-font-family);
   border-style: none;
-  background-color: rgb(152, 126, 136);
+  background-color: var(--background-color);
   color: white;
   text-align: center;
   margin-top: 0.62em;
   margin-bottom: 1.25em;
 }
 .button-shop-now:hover {
-  background-color: rgb(74, 74, 74);
+  background-color: var(--hover-color);
 }
-
+.button-shop-now:active {
+  background-color: var(--active-color);
+}
 .assets-jacket {
   width: 15em;
   height: auto;
 }
-
 .component1-paragraph {
   text-align: right;
   padding: 0em;
+  color: var(--paragraph-color);
 }
 
 .jacket-price-old {
+  color: var(--paragraph-color);
   text-align: end;
   margin: 0;
 }
@@ -292,22 +316,19 @@ h2 {
   justify-content: center;
   width: 9.62em;
   height: 2.43em;
-
   position: absolute;
-
   right: 0%;
   top: 0%;
   bottom: 88.18%;
-  background-color: rgb(225, 136, 133);
+  background-color: var(--background-color);
 }
 .discount-paragraph {
+  color: white;
   text-align: center;
   align-self: center;
-
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.75em;
 }
-
 .section-break {
   display: flex;
   flex-direction: row;
@@ -326,7 +347,7 @@ h2 {
 }
 
 .section-break-icon {
-  color: rgb(225, 136, 133);
+  color: var(--background-color);
   width: 1.375em;
   height: 1.375em;
   align-self: center;
@@ -334,10 +355,9 @@ h2 {
 .span-paragraph {
   padding-left: 0.4em;
   text-decoration: underline;
-  text-decoration-color: rgb(225, 136, 133);
+  text-decoration-color: var(--background-color);
   text-underline-position: under;
 }
-
 .image-1-box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -355,7 +375,6 @@ h2 {
   border-radius: 0.313em;
   align-self: center;
 }
-
 .container-sign-up-box {
   display: flex;
   justify-content: center;
@@ -364,7 +383,7 @@ h2 {
 .sign-up-box {
   display: flex;
   align-items: center;
-  background-color: #484848;
+  background-color: var(--headings-color);
   height: 25em;
   width: 31.25em;
   border-radius: 0.93em;
@@ -386,11 +405,11 @@ h2 {
   padding-left: 1.25em;
 }
 input:hover {
-  border-color: rgb(225, 136, 133);
+  border-color: var(--hover-color);
 }
 h3 {
   font-size: 1.75em;
-  font-family: roboto;
+  font-family: var(--heading-family);
   color: white;
   font-weight: 400;
   margin: 0;
@@ -398,7 +417,7 @@ h3 {
 }
 
 .footer-box {
-  background-color: rgb(152, 126, 136);
+  background-color: var(--background-color);
   height: 18em;
   min-width: 100%;
   display: flex;
@@ -408,27 +427,24 @@ h3 {
   margin-top: 4.37em;
   gap: 5em;
   color: white;
-  font-family: Roboto;
+  font-family: var(--paragraph-family);
   font-weight: 300;
 }
 .button-shop-now {
   margin-bottom: 0;
 }
-
 .footer-box-1 {
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
 }
-
 .footer-logo {
   height: 4em;
   width: 7.4em;
   filter: invert(99%) sepia(6%) saturate(3%) hue-rotate(155deg) brightness(105%)
     contrast(100%);
 }
-
 .footer-box-2 {
   display: flex;
   flex-direction: column;
@@ -471,7 +487,7 @@ h3 {
 .extra-box {
   height: 2.5em;
   max-width: 100%;
-  background-color: rgb(106, 104, 105);
+  background-color: var(--heading-family);
   color: white;
   font-family: roboto;
   margin-top: 7.5em;
