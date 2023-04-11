@@ -24,7 +24,6 @@
     gap: 4em;
   }
 }
-
 @media (max-width: 960px) {
   .image-1-box {
     display: grid;
@@ -62,23 +61,6 @@
     margin-left: 8em;
     margin-right: 8em;
     justify-items: center;
-  }
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .contact-box-1 {
-    width: 35em;
-  }
-  .contact-box-2 {
-    width: 33em;
-  }
-  .contact-input {
-    width: 35em;
-  }
-  .btn-contact {
-    width: 35em;
-    height: 4em;
   }
   .component1 {
     height: 18em;
@@ -773,7 +755,6 @@
     width: 2em;
     height: 2em;
   }
-
   .wash-instruction {
     font-style: 1.5em;
   }
