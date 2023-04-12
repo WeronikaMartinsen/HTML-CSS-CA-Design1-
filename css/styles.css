@@ -576,17 +576,17 @@ h3 {
   float: right;
 }
 .heart-icon:hover {
-  color: var(--hover-color);
+  color: var(--background-color);
   transition: 0.3s;
 }
 .heart-icon:active {
-  color: var(--active-color);
+  color: white;
   transition: 0.3s;
 }
 
 /************************PRODUCT DETAILS*************************/
 .product-detail-h4 {
-  margin-top: 6em;
+  margin-top: 7em;
   margin-left: 2.5em;
 }
 h4 {
@@ -648,8 +648,6 @@ h4 {
 }
 .product-cart-asset {
   height: 28.125em;
-  width: auto;
-  background-color: var(--background-color-default);
 }
 .product-details-heading {
   font-size: 1.75em;
@@ -840,7 +838,7 @@ li {
   margin-top: 3.75em;
 }
 .payment-item-1 {
-  background-color: #eae9e9;
+  background-color: var(--background-color-default);
   width: 25em;
   height: 35.6em;
   border-radius: var(--button-border-radius-default);
@@ -850,7 +848,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #eae9e9;
+  background-color: var(--background-color-default);
   width: 25em;
   height: 35.6em;
   border-radius: var(--button-border-radius-default);
@@ -883,7 +881,7 @@ li {
   flex-direction: column;
 }
 .icon-div-1:hover {
-  background-color: var(--hover-color);
+  background-color: var(--background-color);
   color: white;
 }
 .icon-div-1:active {
@@ -916,24 +914,18 @@ li {
 .payment-input-short {
   height: 25px;
   width: 350px;
-  border-radius: 5px;
+  border-radius: var(--button-border-radius-default);
   border-style: none;
   margin-bottom: 10px;
   padding: 5px;
-}
-.payment-input-short:hover {
-  background-color: var(--hover-color);
 }
 .payment-input {
   padding: 5px;
   height: 25px;
   width: 350px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: var(--button-border-radius-default);
   border-style: none;
-}
-.payment-input:hover {
-  background-color: var(--hover-color);
 }
 .input-order {
   display: flex;
@@ -951,7 +943,7 @@ li {
   margin: 20px 20px 40px 20px;
   height: 40px;
   width: 360px;
-  border-radius: 5px;
+  border-radius: var(--button-border-radius-default);
   border-style: none;
   background-color: var(--headings-color);
   color: white;
@@ -1205,4 +1197,16 @@ li {
 }
 .contact-con-paragraph {
   margin-top: 10px;
+}
+
+/************************Log in*************************/
+.container-for-sign-in-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login {
+  display: flex;
+  align-self: center;
+  margin-top: 10em;
 }

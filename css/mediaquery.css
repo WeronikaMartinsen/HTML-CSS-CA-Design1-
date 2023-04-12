@@ -86,7 +86,6 @@
     font-size: 0.8em;
     padding-right: 0.6em;
   }
-
   #logo {
     max-width: 120px;
     height: auto;
@@ -206,7 +205,7 @@
     margin-top: 110px;
   }
   .product-cart-asset {
-    width: 280px;
+    width: 18em;
     height: auto;
   }
   .search-bar {
@@ -356,6 +355,47 @@
   .nav-links {
     font-size: 0.7em;
   }
+
+  .product-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+  .product-cart {
+    align-self: center;
+    margin-top: 1.25em;
+    margin-left: 0;
+  }
+  .btn-sign-up {
+    width: 7em;
+  }
+  .product-cart-asset {
+    width: 18em;
+  }
+  .product-info {
+    align-self: center;
+  }
+  .product-details-heading {
+    font-size: 1.8em;
+  }
+  .select-paragraph {
+    font-size: 1.25em;
+  }
+  .color {
+    width: 2em;
+    height: 2em;
+  }
+  .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+  }
+  .wash-instruction {
+    font-style: 1.5em;
+  }
 }
 /***********************Small tablet*******************************/
 
@@ -414,7 +454,7 @@
   }
   .sign-up-box {
     padding: 0;
-    width: 30em;
+    width: 28em;
     height: 22em;
   }
   h1 {
@@ -529,10 +569,6 @@
   }
   h3 {
     font-size: 22px;
-  }
-  #name {
-    width: 300px;
-    height: 40px;
   }
   .product-cart-asset {
     width: 15em;
@@ -700,56 +736,12 @@
   .section-break {
     gap: 1.6em;
   }
-  #name {
-    width: 17em;
-    height: 2.4em;
-  }
   .feature-paragraph {
     font-size: 0.7em;
   }
   .component1 {
     padding-left: 1.25em;
     padding-right: 1.25em;
-  }
-  .product-detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-  }
-  .product-cart {
-    align-self: center;
-    margin-top: 1.25em;
-    margin-left: 0;
-  }
-  .btn-sign-up {
-    width: 7em;
-  }
-  .product-cart-asset {
-    width: 18em;
-  }
-  .product-info {
-    align-self: center;
-  }
-  .product-details-heading {
-    font-size: 1.8em;
-  }
-  .select-paragraph {
-    font-size: 1.25em;
-  }
-  .color {
-    width: 2em;
-    height: 2em;
-  }
-  .size {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2em;
-    height: 2em;
-  }
-  .wash-instruction {
-    font-style: 1.5em;
   }
   .div-for-buy-now {
     display: flex;
@@ -758,7 +750,6 @@
   .CTA-button {
     width: 14em;
   }
-
   .checkout-stage {
     display: flex;
 
@@ -768,7 +759,6 @@
   .h4 {
     margin-left: 0;
   }
-
   .sign-up-text {
     font-size: 0.8em;
   }
@@ -785,7 +775,6 @@
   .payment-container {
     margin-top: 19em;
   }
-
   .product-detail-h4 {
     margin-top: 6.2em;
     margin-left: 1.7em;
@@ -813,6 +802,12 @@
     font-size: 2em;
   }
   .buy-now {
+    width: 20em;
+  }
+  .sign-up-box {
+    width: 20em;
+  }
+  #name {
     width: 20em;
   }
 }
@@ -915,7 +910,6 @@
   #menu-checkbox:checked ~ .nav-div2 {
     display: block;
   }
-
   #navbar {
     width: 100%;
     display: flex;
@@ -983,19 +977,6 @@
   }
   .h3 {
     font-size: 18px;
-  }
-  .sign-up-box {
-    width: max-content;
-    margin: 0;
-  }
-  .sign-up-box {
-    height: 300px;
-    padding: 30px;
-    padding-bottom: 0;
-  }
-  #name {
-    width: 250px;
-    height: 35px;
   }
   .footer-box {
     display: flex;
