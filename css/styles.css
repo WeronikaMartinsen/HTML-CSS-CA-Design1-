@@ -40,7 +40,6 @@ header {
 #menu-checkbox {
   display: none;
 }
-
 #navbar {
   display: flex;
   background-color: rgb(152, 126, 136);
@@ -53,11 +52,9 @@ header {
   position: fixed;
   z-index: 1 !important;
 }
-
 .nav-div1 {
   align-self: flex-start;
 }
-
 .nav-div2 {
   align-self: flex-end;
   padding-bottom: 1.25em;
@@ -65,7 +62,6 @@ header {
 .nav-div3 {
   align-self: flex-start;
 }
-
 .nav-div4 {
   display: flex;
   flex-direction: row;
@@ -75,7 +71,6 @@ header {
   display: flex;
   flex-direction: column;
 }
-
 #logo {
   max-width: 9.3em;
   height: auto;
@@ -88,7 +83,6 @@ header {
 #logo:hover {
   color: var(--hover-color);
 }
-
 .nav-links {
   text-decoration: none;
   color: white;
@@ -101,7 +95,6 @@ header {
 .nav-links:hover {
   color: var(--hover-color);
 }
-
 .search-bar {
   width: 17em;
   height: 2.2em;
@@ -115,7 +108,6 @@ header {
   margin-right: 1.8em;
   align-self: flex-start;
 }
-
 .search-icon {
   color: var(--paragraph-color);
   align-self: flex-start;
@@ -168,7 +160,7 @@ header {
 h1 {
   font-family: ibarra real nova;
   font-weight: 700;
-  font-size: 2.62em;
+  font-size: 3em;
   text-align: center;
   color: var(--headings-color);
 }
@@ -206,10 +198,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 5em;
-  margin-top: 5em;
+  margin-left: 2em;
 }
-
 .feature {
   display: flex;
   flex-direction: row;
@@ -222,7 +212,6 @@ h1 {
   margin-bottom: 1.25em;
   margin-top: 1.25em;
 }
-
 .feature-icon {
   width: 1.68em;
   height: 1.68em;
@@ -236,25 +225,60 @@ h1 {
 .feature-box {
   text-align: center;
 }
-
 .feature-paragraph {
   font-size: 0.75em;
   align-self: center;
   color: var(--paragraph-color);
 }
+.component-cart {
+  background-color: white;
+  border: 0.1em solid white;
+  padding: 1em;
+  border-radius: var(--button-border-radius-default);
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+}
 .component1 {
+  background-color: rgb(241, 241, 241);
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
   max-width: 100%;
-  height: 16.87em;
-  background-color: var(--background-color-default);
+  height: 14em;
   gap: 0.62em;
   padding: 3.75em;
 }
-
+.heart-icon-home-page {
+  position: absolute;
+  right: -2%;
+  top: 3%;
+}
+.jacket-name {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+.color-choice {
+  display: flex;
+  justify-content: flex-start;
+}
+.box-for-asset {
+  background-color: rgb(241, 241, 241);
+  border-radius: var(--button-border-radius-default);
+  width: 13em;
+  height: 14em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.color-choice {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
 .component-text {
   text-align: center;
   font-weight: 500;
@@ -281,6 +305,7 @@ h2 {
   text-align: center;
   margin-top: 0.62em;
   margin-bottom: 1.25em;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 .button-shop-now:hover {
   background-color: var(--hover-color);
@@ -289,7 +314,7 @@ h2 {
   background-color: var(--active-color);
 }
 .assets-jacket {
-  width: 15em;
+  width: 10em;
   height: auto;
 }
 .component1-paragraph {
@@ -297,13 +322,13 @@ h2 {
   padding: 0em;
   color: var(--paragraph-color);
 }
-
 .jacket-price-old {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  margin-top: 0;
   color: var(--paragraph-color);
-  text-align: end;
-  margin: 0;
 }
-
 .jacket-price-new {
   font-weight: 700;
   font-size: 1.5em;
@@ -337,15 +362,15 @@ h2 {
   height: 100px;
   width: 100%;
   justify-content: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
-
 .section-break-box {
   display: flex;
   justify-content: center;
   align-self: center;
   text-align: center;
 }
-
 .section-break-icon {
   color: var(--background-color);
   width: 1.375em;
@@ -393,8 +418,8 @@ h2 {
   gap: 1.25em;
   padding-left: 1.87em;
   padding-right: 1.87em;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
-
 #name {
   width: 25em;
   height: 3em;
@@ -669,9 +694,9 @@ h4 {
   margin-top: 0;
 }
 .color-1 {
-  width: 1.37em;
-  height: 1.37em;
-  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 25%;
   background-color: red;
 }
 .color-1:hover {
@@ -679,9 +704,9 @@ h4 {
   box-shadow: 0 0 0 0.125em red;
 }
 .color-2 {
-  width: 1.375em;
-  height: 1.375em;
-  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 25%;
   background-color: gray;
 }
 .color-2:hover {
@@ -689,9 +714,9 @@ h4 {
   box-shadow: 0 0 0 0.125em grey;
 }
 .color-3 {
-  width: 1.375em;
-  height: 1.375em;
-  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 25%;
   background-color: darkblue;
 }
 .color-3:hover {
@@ -699,9 +724,9 @@ h4 {
   box-shadow: 0 0 0 0.125em darkblue;
 }
 .color-4 {
-  width: 1.375em;
-  height: 1.375em;
-  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 25%;
   background-color: black;
 }
 .color-4:hover {
