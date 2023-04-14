@@ -531,6 +531,9 @@
   .product-details-heading {
     font-size: 1.6em;
   }
+  .hero-header {
+    margin-left: 2em;
+  }
 }
 
 @media (max-width: 600px) {
@@ -551,7 +554,6 @@
   }
   h1 {
     font-size: 1.5em;
-    color: var(--hover-color);
     text-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
   }
   .component1 {

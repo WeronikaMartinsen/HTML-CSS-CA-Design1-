@@ -194,7 +194,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 3em;
+  margin-left: 6em;
 }
 .feature {
   display: flex;
@@ -231,7 +231,7 @@ h1 {
   border: 0.1em solid white;
   padding: 1em;
   border-radius: var(--button-border-radius-default);
-  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
 .component1 {
   background-color: rgb(241, 241, 241);
@@ -436,7 +436,7 @@ h3 {
   font-size: 1.75em;
   font-family: var(--heading-family);
   color: var(--headings-color);
-  font-weight: 400;
+  font-weight: 700;
   margin: 0;
   margin-bottom: 1.25em;
 }
