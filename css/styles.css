@@ -10,8 +10,8 @@
 
   /*Button*/
   --button-font-family: "Roboto", sans-serif;
-  --button-width-default: 10.5em;
-  --button-height-default: 3.12em;
+  --button-width-default: 9em;
+  --button-height-default: 2.8em;
   --button-border-radius-default: 1.063em;
   --button-font-size: 1em;
 }
@@ -160,7 +160,7 @@ header {
 h1 {
   font-family: ibarra real nova;
   font-weight: 700;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
   color: var(--headings-color);
 }
@@ -172,7 +172,6 @@ h1 {
   font-size: 1em;
   font-family: var(--button-font-family);
   font-weight: 500;
-  text-transform: uppercase;
   border-style: none;
   color: var(--headings-color);
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
@@ -401,6 +400,9 @@ h2 {
   border-radius: 0.313em;
   align-self: center;
 }
+.image-1:hover {
+  transform: scale(1.1);
+}
 .container-sign-up-box {
   display: flex;
   justify-content: center;
@@ -441,7 +443,6 @@ h3 {
   margin: 0;
   margin-bottom: 1.25em;
 }
-
 .footer-box {
   background-color: var(--background-color);
   height: 18em;
@@ -482,7 +483,7 @@ h3 {
   gap: 0.6em;
 }
 .sosial-media-icons {
-  padding-top: 0.8em;
+  padding-top: 1.2em;
   transform: scale(1.6);
   padding-right: 0.5em;
 }
@@ -521,6 +522,11 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.jacket-image {
+  height: auto;
+  width: 100%;
+  object-fit: 100%;
 }
 .h4-jackets {
   margin-top: 0;
@@ -1109,7 +1115,6 @@ li {
 /************************Confirmation*************************/
 .unique-h1 {
   font-size: 36px;
-  margin-top: 60px;
   margin-bottom: 0;
 }
 .confirmation-div {
@@ -1143,6 +1148,15 @@ li {
 }
 
 /************************About us*************************/
+h4 {
+  margin-left: 2em;
+}
+.star-icon {
+  padding-right: 0.8em;
+}
+.about-us-text-item-1 {
+  color: var(--paragraph-color);
+}
 .about-container {
   margin-left: 2.5em;
   margin-right: 2.5em;
@@ -1167,13 +1181,45 @@ li {
 }
 
 /************************Contact*************************/
-
+.contact-h4 {
+  font-size: 2em;
+  margin-left: 1.2em;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
 .contact-container {
   display: flex;
-  margin-top: 200px;
+  margin-top: 2em;
   justify-content: center;
   gap: 5em;
 }
+.contact-span {
+  font-size: 0.9em;
+  padding-left: 0.6em;
+  padding-right: 5em;
+}
+.contact-span-2 {
+  font-size: 0.9em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.live-icon {
+  padding-left: 5em;
+}
+.btn-chat {
+  font-size: 0.8em;
+  width: 6.8em;
+  height: 1.9em;
+  border-radius: 5px;
+  font-family: var(--button-font-family);
+  font-weight: 500;
+  border-style: none;
+  color: var(--headings-color);
+}
+.btn-chat:hover {
+  background-color: var(--background-color-default);
+}
+
 .contact-box-1 {
   width: max-content;
   height: 730px;

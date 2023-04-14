@@ -26,8 +26,6 @@
 }
 @media (max-width: 960px) {
   .contact-container {
-    margin-top: 8em;
-    gap: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -493,9 +491,6 @@
     font-size: 2em;
     color: rgb(74, 74, 74);
   }
-  .CTA-button {
-    font-size: 1em;
-  }
   .image-1-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -559,15 +554,37 @@
   .btn-contact-conf {
     width: 20em;
   }
+  .contact-h4 {
+    font-size: 1.6em;
+  }
+  .live-icon {
+    padding-left: 3em;
+  }
+  .contact-span {
+    padding-right: 3em;
+  }
 }
 
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.75em;
-    color: rgb(74, 74, 74);
+  .live-icon {
+    padding-left: 0;
   }
-  .CTA-button {
-    font-size: 0.9em;
+  .contact-span {
+    padding-right: 2em;
+  }
+  .at-circle {
+    display: none;
+  }
+  .email {
+    display: none;
+  }
+  .hero-header {
+    margin-left: 0.6em;
+  }
+  h1 {
+    font-size: 1.5em;
+    color: var(--hover-color);
+    text-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
   }
   .component1 {
     font-size: 75%;
@@ -746,6 +763,14 @@
 }
 
 @media (max-width: 500px) {
+  .contact-span {
+    font-size: 0.8em;
+    padding-right: 3em;
+  }
+  .contact-span-2 {
+    font-size: 0.8em;
+    padding-right: 1em;
+  }
   .section-break {
     margin-top: 2em;
     margin-bottom: 2em;
@@ -766,6 +791,7 @@
   .component1 {
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
   .assets-jacket {
     width: 18em;
@@ -794,7 +820,7 @@
   .image-1 {
     justify-content: center;
     align-self: center;
-    width: 22em;
+    width: 21em;
   }
   .hero-image {
     object-fit: 100%;
@@ -804,9 +830,6 @@
   }
   .feature-paragraph {
     font-style: 0.5em;
-  }
-  .hero-header {
-    margin-left: 3em;
   }
   .nav-div3 {
     margin-right: 0.6em;
@@ -824,9 +847,6 @@
   .div-for-buy-now {
     display: flex;
     justify-content: center;
-  }
-  .CTA-button {
-    width: 14em;
   }
   .checkout-stage {
     display: flex;
@@ -872,7 +892,7 @@
     width: 20em;
   }
   .contact-conf-h1 {
-    font-size: 2em;
+    font-size: 1.7em;
   }
   .buy-now {
     width: 20em;
