@@ -344,7 +344,7 @@
   .nav-div2 {
     align-self: start;
     position: absolute;
-    background-color: rgb(152, 126, 136);
+    background-color: var(--headings-color);
     top: 1.25em;
     left: 1.5em;
     z-index: 1;
@@ -407,6 +407,11 @@
   .wash-instruction {
     font-style: 1.5em;
   }
+  .nav-links {
+    display: block;
+    margin: 4em;
+    font-size: 1.125em;
+  }
 }
 /***********************Small tablet*******************************/
 
@@ -441,18 +446,6 @@
   }
   .nav-div4 {
     padding-right: 1.25em;
-  }
-  .nav-links {
-    display: block;
-    margin: 3.125em;
-    font-size: 1.125em;
-  }
-  .nav-div2 {
-    align-self: start;
-    position: absolute;
-    background-color: var(background-color);
-    top: 1.25em;
-    left: 1.5em;
   }
   .buy-now {
     width: 12em;
@@ -979,18 +972,6 @@
   }
   .nav-div4 {
     padding-right: 20px;
-  }
-  .nav-links {
-    display: block;
-    margin: 50px;
-    font-size: 18px;
-  }
-  .nav-div2 {
-    align-self: start;
-    position: absolute;
-    background-color: rgb(152, 126, 136);
-    top: 20px;
-    left: 50px;
   }
   .hero-image {
     height: 70%;
