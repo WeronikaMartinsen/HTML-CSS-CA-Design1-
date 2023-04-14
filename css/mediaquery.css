@@ -204,9 +204,6 @@
   .discount-box {
     display: none;
   }
-  .h2 {
-    font-size: 32px;
-  }
   #navbar {
     gap: 1.5em;
   }
@@ -230,9 +227,6 @@
   .nav-links {
     font-size: 13px;
   }
-  .extra-box {
-    margin-top: 110px;
-  }
   .product-cart-asset {
     width: 18em;
     height: auto;
@@ -243,9 +237,6 @@
   }
   .search-icon {
     top: 0.8em;
-  }
-  .extra-box {
-    margin-top: 7.5em;
   }
   .jacket-heading {
     margin: 0;
@@ -303,8 +294,25 @@
   .btn-contact-conf {
     width: 20em;
   }
+  .grid-item-2 {
+    width: 11em;
+    height: 17em;
+  }
+  .jackets-for-grid.jacket-others {
+    width: 8em;
+    height: auto;
+  }
+  h7 {
+    font-size: 0.9em;
+  }
+  .grid-item-paragraph {
+    font-size: 0.8em;
+  }
 }
 @media (max-width: 724px) {
+  .extra-box {
+    margin-top: 6.8em;
+  }
   .footer-box {
     gap: 4em;
   }
@@ -554,9 +562,6 @@
 }
 
 @media (max-width: 600px) {
-  .grid-item-2 {
-    height: 20em;
-  }
   h1 {
     font-size: 1.75em;
     color: rgb(74, 74, 74);
@@ -693,7 +698,7 @@
     width: 25em;
   }
   .grid-item-2 {
-    height: 20em;
+    height: 13em;
   }
   .contact-input {
     width: 25em;
@@ -712,6 +717,31 @@
   }
   .about-us-item-2 {
     margin: 0;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid-item {
+    width: 15em;
+    height: 26em;
+  }
+  .jackets-for-grid {
+    width: 13em;
+    height: auto;
+  }
+  .jackets-for-grid.jacket-others {
+    width: 12em;
+    padding-bottom: 2em;
+  }
+
+  h7 {
+    font-size: 1.2em;
+  }
+  .cart-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1em;
   }
 }
 
@@ -810,11 +840,6 @@
   .sign-up-text {
     font-size: 0.8em;
   }
-  .cart-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 1em;
-  }
   .div-text-product-others {
     display: flex;
     flex-direction: column;
@@ -872,16 +897,6 @@
   }
   .checkout-span {
     font-size: 0.6em;
-  }
-  .jackets-item {
-    height: 20em;
-  }
-  #h7 {
-    padding-left: 2em;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
   }
   .h8 {
     font-size: 1em;

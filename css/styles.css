@@ -175,6 +175,7 @@ h1 {
   text-transform: uppercase;
   border-style: none;
   color: var(--headings-color);
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 .CTA-button:hover {
   background-color: var(--hover-color);
@@ -535,8 +536,9 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-
 .grid-item {
+  width: 13em;
+  height: 22em;
   background-color: white;
   border: 0.1em solid white;
   padding: 1em;
@@ -575,14 +577,30 @@ h3 {
 .color-grid-.brown {
   background-color: brown;
 }
+.color-grid-.brown:hover {
+  background: brown;
+  box-shadow: 0 0 0 0.125em brown;
+}
 .color-grid-.red {
   background-color: red;
+}
+.color-grid-.red:hover {
+  background: red;
+  box-shadow: 0 0 0 0.125em red;
 }
 .color-grid-.gray {
   background-color: gray;
 }
+.color-grid-.gray:hover {
+  background: gray;
+  box-shadow: 0 0 0 0.125em gray;
+}
 .color-grid-.blue {
   background-color: blue;
+}
+.color-grid-.blue:hover {
+  background: blue;
+  box-shadow: 0 0 0 0.125em blue;
 }
 .color-grid- {
   width: 1.3em;
