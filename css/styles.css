@@ -169,9 +169,8 @@ h1 {
   width: var(--button-width-default);
   height: var(--button-height-default);
   border-radius: var(--button-border-radius-default);
-  font-size: 1em;
+  font-size: 1.1em;
   font-family: var(--button-font-family);
-  font-weight: 500;
   border-style: none;
   color: var(--headings-color);
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
@@ -198,7 +197,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 2em;
+  margin-left: 3em;
 }
 .feature {
   display: flex;
@@ -297,7 +296,7 @@ h2 {
   width: var(--button-width-default);
   height: var(--button-height-default);
   border-radius: var(--button-border-radius-default);
-  font-size: 1em;
+  font-size: 0.8em;
   font-family: var(--button-font-family);
   border-style: none;
   background-color: var(--background-color);
@@ -902,6 +901,7 @@ li {
 /************************Checkout Page*************************/
 .product-detail-h4 {
   margin-left: 3.75em;
+  color: var(--headings-color);
 }
 .payment-container {
   width: 100%;
@@ -913,21 +913,23 @@ li {
   margin-top: 3.75em;
 }
 .payment-item-1 {
-  background-color: var(--background-color-default);
-  width: 25em;
-  height: 35.6em;
-  border-radius: var(--button-border-radius-default);
+  border: 1px solid var(--background-color-default);
+  width: 30em;
+  height: 38em;
+  border-radius: 0.313em;
+  box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
 .payment-item-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color-default);
+  border: 1px solid var(--background-color-default);
   width: 25em;
-  height: 35.6em;
-  border-radius: var(--button-border-radius-default);
+  height: 38em;
+  border-radius: 0.313em;
   gap: 1.25em;
+  box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
 .unique-h6 {
   font-family: var(--heading-family);
@@ -954,10 +956,10 @@ li {
   align-self: center;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--background-color-default);
 }
 .icon-div-1:hover {
-  background-color: var(--background-color);
-  color: white;
+  box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
 .icon-div-1:active {
   background-color: var(--active-color);
@@ -987,20 +989,26 @@ li {
   margin-left: 20px;
 }
 .payment-input-short {
-  height: 25px;
-  width: 350px;
-  border-radius: var(--button-border-radius-default);
-  border-style: none;
+  height: 2em;
+  width: 16em;
+  border-radius: 0.313em;
+  border: 1px solid var(--background-color-default);
   margin-bottom: 10px;
   padding: 5px;
 }
+.payment-input-short:hover {
+  box-shadow: 5px 5px 10px 2px var(--background-color-default);
+}
 .payment-input {
   padding: 5px;
-  height: 25px;
-  width: 350px;
+  height: 2em;
+  width: 32em;
   margin-bottom: 10px;
-  border-radius: var(--button-border-radius-default);
-  border-style: none;
+  border-radius: 0.313em;
+  border: 1px solid var(--background-color-default);
+}
+.payment-input:hover {
+  box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
 .input-order {
   display: flex;
@@ -1016,13 +1024,13 @@ li {
 }
 .btn-confirm {
   margin: 20px 20px 40px 20px;
-  height: 40px;
-  width: 360px;
-  border-radius: var(--button-border-radius-default);
-  border-style: none;
+  height: var(--button-height-default);
+  width: 32em;
+  border-radius: 0.313em;
   background-color: var(--headings-color);
   color: white;
   text-transform: uppercase;
+  box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
 .btn-confirm:hover {
   background-color: var(--hover-color);
@@ -1033,14 +1041,12 @@ li {
 .bigger-box {
   width: 350px;
   height: 350px;
-  background-color: white;
-  border-radius: var(--button-border-radius-default);
+  border: 1px solid var(--background-color-default);
 }
 .smaller-box {
   width: 350px;
   height: 160px;
-  background-color: white;
-  border-radius: var(--button-border-radius-default);
+  border: 1px solid var(--background-color-default);
 }
 .image-text {
   display: flex;
@@ -1286,6 +1292,7 @@ h4 {
   padding-left: 0;
   margin-left: 0;
   width: 410px;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 .btn-contact:hover {
   background-color: var(--hover-color);

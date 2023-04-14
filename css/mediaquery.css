@@ -61,6 +61,9 @@
   .jacket-name {
     font-size: 0.9em;
   }
+  .payment-container {
+    gap: 1em;
+  }
 }
 
 /***********************Small laptop*******************************/
@@ -139,9 +142,6 @@
   .jacket-price-new {
     font-size: 1.2em;
   }
-  .button-shop-now {
-    width: 8em;
-  }
   h2 {
     font-size: 2em;
   }
@@ -150,6 +150,22 @@
   }
   .component-cart {
     padding: 0.5em;
+  }
+  .payment-container {
+    margin-top: 24em;
+    margin-bottom: 25em;
+    gap: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .payment-item-1,
+  .payment-item-2 {
+    align-self: center;
+  }
+  .payment-item-2 {
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
 }
 
@@ -176,9 +192,6 @@
   }
   .jacket-price-new {
     font-size: 1.2em;
-  }
-  .button-shop-now {
-    width: 8em;
   }
   h2 {
     font-size: 4em;
@@ -246,26 +259,6 @@
   }
   .product-detail {
     margin-right: 1.25em;
-  }
-  .payment-container {
-    margin-top: 21em;
-    margin-bottom: 21em;
-    gap: 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .payment-item-1,
-  .payment-item-2 {
-    align-self: center;
-    width: 33em;
-  }
-  .payment-item-2 {
-    padding-top: 2em;
-    padding-bottom: 2em;
-  }
-  .btn-confirm {
-    width: 30em;
   }
   .image-gallery-1 {
     width: 35em;
@@ -703,10 +696,10 @@
   }
   .payment-input,
   .payment-input-short {
-    width: 24em;
+    width: 25em;
   }
   .btn-confirm {
-    width: 25em;
+    width: 26em;
   }
   .grid-item-2 {
     height: 13em;
@@ -745,7 +738,6 @@
     width: 12em;
     padding-bottom: 2em;
   }
-
   h7 {
     font-size: 1.2em;
   }
@@ -860,7 +852,7 @@
     justify-content: flex-end;
   }
   .payment-container {
-    margin-top: 19em;
+    margin-top: 22em;
   }
   .product-detail-h4 {
     margin-top: 6.2em;
@@ -900,6 +892,17 @@
 }
 
 @media (max-width: 434px) {
+  .payment-item-1,
+  .payment-item-2 {
+    width: 22.5em;
+  }
+  .btn-confirm {
+    width: 24em;
+  }
+  .payment-input,
+  .payment-input-short {
+    width: 23em;
+  }
   .image-gallery-1 {
     width: 19em;
   }
