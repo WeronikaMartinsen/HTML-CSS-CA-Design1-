@@ -147,9 +147,6 @@
   .component1 {
     gap: 1em;
   }
-  .component-cart {
-    padding: 0.5em;
-  }
   .payment-container {
     margin-top: 24em;
     margin-bottom: 25em;
@@ -190,7 +187,7 @@
     font-size: 1.2em;
   }
   h2 {
-    font-size: 4em;
+    font-size: 3em;
   }
   .component1 {
     gap: 1em;
@@ -244,9 +241,6 @@
   }
   .horizontal-line {
     width: 7em;
-  }
-  .component-cart {
-    height: 20em;
   }
   .product-detail {
     margin-right: 1.25em;
@@ -524,6 +518,12 @@
   .hero-header {
     margin-left: 1em;
   }
+  .component-cart {
+    height: 19em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
 }
 
 @media (max-width: 600px) {
@@ -547,12 +547,6 @@
     height: max-content;
     justify-items: center;
     padding: 0.6em;
-  }
-  .component-cart {
-    height: 27em;
-  }
-  .span-paragraph {
-    font-size: 0.8em;
   }
   .icon-inner {
     width: 50%;
@@ -698,6 +692,16 @@
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 1em;
+  }
+  h2 {
+    margin-top: 1em;
+  }
+  .button-shop-now {
+    margin-bottom: 1em;
+  }
+  .component-cart {
+    height: 26em;
+    margin-bottom: 1em;
   }
 }
 
