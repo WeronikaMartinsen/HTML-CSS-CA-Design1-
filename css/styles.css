@@ -276,19 +276,14 @@ h2 {
   margin: 0;
 }
 .button-shop-now {
-  background-color: var(--background-color);
   width: var(--button-width-default);
   height: var(--button-height-default);
   border-radius: var(--button-border-radius-default);
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 500;
   font-family: var(--button-font-family);
   border-style: none;
-  text-align: center;
   color: var(--headings-color);
-  margin-top: 0.62em;
-  margin-bottom: 1.25em;
-  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 .button-shop-now:hover {
   background-color: var(--headings-color);
@@ -388,6 +383,9 @@ h2 {
   text-align: center;
 }
 .section-break-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--headings-color);
   width: 1.375em;
   height: 1.375em;
@@ -396,7 +394,8 @@ h2 {
 .span-paragraph {
   font-family: var(--button-font-family);
   padding-left: 0.4em;
-  font-weight: 600;
+  font-weight: 500;
+  text-align: center;
 }
 .image-1-box {
   display: grid;
@@ -469,9 +468,6 @@ h3 {
   color: var(--headings-color);
   font-family: var(--paragraph-family);
   font-weight: 400;
-}
-.button-shop-now {
-  margin-bottom: 0;
 }
 .footer-box-1 {
   display: flex;
@@ -1061,16 +1057,19 @@ li {
 }
 .btn-confirm {
   margin: 20px 20px 40px 20px;
-  height: 4em;
-  width: 32em;
-  border-radius: 0.313em;
+  width: 27em;
+  height: var(--button-height-default);
+  border-radius: var(--button-border-radius-default);
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--button-font-family);
+  border-style: none;
+  color: var(--background-color);
   background-color: var(--headings-color);
-  color: white;
-  text-transform: uppercase;
-  box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
 .btn-confirm:hover {
   background-color: var(--hover-color);
+  color: var(--headings-color);
 }
 .btn-confirm:active {
   background-color: var(--hover-color);
