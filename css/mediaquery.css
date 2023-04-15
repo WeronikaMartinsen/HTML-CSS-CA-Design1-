@@ -265,7 +265,7 @@
   }
   .grid-item-2 {
     width: 11em;
-    height: 17em;
+    height: 19em;
   }
   .jackets-for-grid.jacket-others {
     width: 8em;
@@ -645,7 +645,10 @@
     width: 21em;
   }
   .grid-item-2 {
-    height: 13em;
+    height: 11em;
+  }
+  .grid-item-paragraph {
+    padding-left: 2.3em;
   }
   .contact-input {
     width: 25em;
@@ -674,8 +677,9 @@
     height: 26em;
   }
   .jackets-for-grid {
-    width: 13em;
-    height: auto;
+    margin-bottom: 0.2em;
+    height: 16em;
+    width: auto;
   }
   .jackets-for-grid.jacket-others {
     width: 12em;
