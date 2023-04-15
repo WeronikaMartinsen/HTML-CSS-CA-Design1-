@@ -1,10 +1,10 @@
 :root {
-  --background-color: rgb(152, 126, 136);
-  --hover-color: rgb(222, 222, 222);
+  --background-color: #f2f2f2;
+  --hover-color: #b5b4bf;
   --active-color: rgb(74, 74, 74);
-  --headings-color: rgb(74, 74, 74);
-  --paragraph-color: rgb(76, 75, 75);
-  --background-color-default: rgba(217, 217, 217);
+  --headings-color: #1f1410;
+  --paragraph-color: #b5b4bf;
+  --background-color-default: #b5b4bf;
   --heading-family: "Ibarra Real Nova", serif;
   --paragraph-family: "Roboto", sans-serif;
 
@@ -32,7 +32,7 @@ header {
   background-image: src= "images/woman-sitting-mountain-top.jpg";
 }
 .menu-icon {
-  color: white;
+  color: var(--headings-color);
   width: 2.8em;
   height: 2.8em;
   display: none;
@@ -42,7 +42,7 @@ header {
 }
 #navbar {
   display: flex;
-  background-color: var(--headings-color);
+  background-color: var(--background-color);
   width: 100%;
   height: 7.5em;
   justify-content: center;
@@ -74,16 +74,15 @@ header {
 #logo {
   max-width: 9.3em;
   height: auto;
-  stroke: white;
+  stroke: var(--headings-color);
   margin-top: 1.25em;
   margin-bottom: 1.25em;
-  filter: invert(99%) sepia(6%) saturate(3%) hue-rotate(155deg) brightness(105%)
-    contrast(100%);
+  color: var(--headings-color);
 }
 .nav-links {
   text-decoration: none;
-  color: white;
-  font-weight: 300;
+  color: var(--headings-color);
+  font-weight: 500;
   letter-spacing: 2;
   font-family: roboto;
   padding-right: 1.25em;
@@ -107,7 +106,7 @@ header {
   align-self: flex-start;
 }
 .search-icon {
-  color: var(--paragraph-color);
+  color: var(--headings-color);
   align-self: flex-start;
   position: absolute;
   left: 0.62em;
@@ -132,7 +131,7 @@ header {
   height: 1.43em;
   text-align: center;
   justify-self: center;
-  color: white;
+  color: var(--headings-color);
 }
 .nav-icons:hover {
   color: var(--hover-color);
@@ -140,8 +139,8 @@ header {
 .icon-text {
   font-size: 0.75em;
   text-align: center;
-  color: white;
-  font-weight: 300;
+  color: var(--headings-color);
+  font-weight: 400;
   letter-spacing: 1.6;
 }
 .icon-text:hover {
@@ -160,9 +159,9 @@ h1 {
   font-weight: 700;
   font-size: 2.5em;
   text-align: center;
-  color: rgb(35, 34, 34);
+  color: var(--headings-color);
 }
-.CTA-button {
+.btn-cta {
   width: var(--button-width-default);
   height: var(--button-height-default);
   border-radius: var(--button-border-radius-default);
@@ -172,11 +171,11 @@ h1 {
   color: var(--headings-color);
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
-.CTA-button:hover {
+.btn-cta:hover {
   background-color: var(--hover-color);
   color: var(--headings-color);
 }
-.CTA-button:active {
+.btn-cta:active {
   background-color: var(--active-color);
   color: white;
 }
@@ -212,8 +211,7 @@ h1 {
   width: 1.68em;
   height: 1.68em;
   background-color: var(--background-color-default);
-  border: 0.313em solid rgba(217, 217, 217);
-  color: var(--paragraph-color);
+  border: 0.313em solid var(--background-color-default);
   border-radius: 100%;
   padding: 0.313em;
   align-self: center;
@@ -224,7 +222,7 @@ h1 {
 .feature-paragraph {
   font-size: 0.75em;
   align-self: center;
-  color: var(--paragraph-color);
+  color: var(--headings-color);
 }
 .component-cart {
   background-color: white;
@@ -234,7 +232,7 @@ h1 {
   box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
 .component1 {
-  background-color: rgb(241, 241, 241);
+  background-color: var(--background-color-default);
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -261,7 +259,7 @@ h1 {
   justify-content: flex-start;
 }
 .box-for-asset {
-  background-color: rgb(241, 241, 241);
+  background-color: var(--background-color-default);
   border-radius: var(--button-border-radius-default);
   width: 13em;
   height: 14em;
@@ -296,8 +294,8 @@ h2 {
   font-size: 1em;
   font-family: var(--button-font-family);
   border-style: none;
-  background-color: var(--headings-color);
-  color: white;
+  background-color: var(--background-color);
+  color: var(--headings-color);
   text-align: center;
   margin-top: 0.62em;
   margin-bottom: 1.25em;
@@ -369,7 +367,7 @@ h2 {
   text-align: center;
 }
 .section-break-icon {
-  color: var(--background-color);
+  color: var(--headings-color);
   width: 1.375em;
   height: 1.375em;
   align-self: center;
@@ -377,7 +375,7 @@ h2 {
 .span-paragraph {
   padding-left: 0.4em;
   text-decoration: underline;
-  text-decoration-color: var(--background-color);
+  text-decoration-color: var(--background-color-default);
   text-underline-position: under;
 }
 .image-1-box {
@@ -408,7 +406,7 @@ h2 {
 .sign-up-box {
   display: flex;
   align-items: center;
-  background-color: var(--background-color-default);
+  background-color: var(--paragraph-color);
   height: 25em;
   width: 31.25em;
   border-radius: 0.93em;
@@ -434,14 +432,13 @@ input:hover {
 }
 h3 {
   font-size: 1.75em;
-  font-family: var(--heading-family);
-  color: var(--headings-color);
+  font-family: var(--paragraph-color);
   font-weight: 700;
   margin: 0;
   margin-bottom: 1.25em;
 }
 .footer-box {
-  background-color: var(--headings-color);
+  background-color: var(--background-color);
   height: 18em;
   min-width: 100%;
   display: flex;
@@ -449,9 +446,9 @@ h3 {
   align-items: center;
   margin-top: 4.37em;
   gap: 5em;
-  color: white;
+  color: var(--headings-color);
   font-family: var(--paragraph-family);
-  font-weight: 300;
+  font-weight: 400;
 }
 .button-shop-now {
   margin-bottom: 0;
@@ -465,8 +462,6 @@ h3 {
 .footer-logo {
   height: 4em;
   width: 7.4em;
-  filter: invert(99%) sepia(6%) saturate(3%) hue-rotate(155deg) brightness(105%)
-    contrast(100%);
 }
 .footer-box-2 {
   display: flex;
@@ -1164,7 +1159,7 @@ h4 {
   padding-right: 0.8em;
 }
 .about-us-text-item-1 {
-  color: var(--paragraph-color);
+  color: var(--headings-color);
 }
 .about-container {
   margin-left: 2.5em;

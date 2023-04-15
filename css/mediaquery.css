@@ -344,7 +344,7 @@
   .nav-div2 {
     align-self: start;
     position: absolute;
-    background-color: var(--headings-color);
+    background-color: var(--background-color);
     top: 1.25em;
     left: 1.5em;
     z-index: 1;
