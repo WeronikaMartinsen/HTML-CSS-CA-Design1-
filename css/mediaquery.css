@@ -271,9 +271,6 @@
     width: 8em;
     height: auto;
   }
-  h7 {
-    font-size: 0.9em;
-  }
   .grid-item-paragraph {
     font-size: 0.8em;
   }
@@ -497,7 +494,7 @@
     width: 29em;
   }
   .btn-contact {
-    width: 30em;
+    width: 25em;
   }
   .btn-contact-conf {
     width: 20em;
@@ -654,7 +651,7 @@
     width: 25em;
   }
   .btn-contact {
-    width: 25em;
+    width: 22em;
   }
   .contact-box-2 {
     width: 25em;
@@ -808,7 +805,7 @@
     width: 22em;
   }
   .btn-contact {
-    width: 22em;
+    width: 19em;
   }
   .contact-box-1 {
     width: 24em;
@@ -897,12 +894,13 @@
     width: 19em;
   }
   .btn-contact {
-    width: 19em;
+    width: 17em;
   }
   .contact-box-1 {
     width: 20em;
   }
   .contact-box-2 {
+    padding-left: 1.2em;
     width: 18em;
   }
   .maps {

@@ -556,7 +556,7 @@ h3 {
   border: 0.1em solid white;
   padding: 1em;
   border-radius: var(--button-border-radius-default);
-  box-shadow: 5px 5px 10px 2px var(--background-color-default);
+  border: 1px solid var(--background-color-default);
   justify-self: center;
   text-align: center;
   display: flex;
@@ -1278,8 +1278,7 @@ h4 {
   display: flex;
   flex-direction: column;
   text-align: start;
-  background-color: var(--background-color-default);
-  border-radius: 5px;
+  border: 1px solid var(--background-color-default);
 }
 .contact-h6 {
   margin-bottom: 5px;
