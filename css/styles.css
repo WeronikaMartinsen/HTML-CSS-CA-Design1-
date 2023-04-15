@@ -11,7 +11,7 @@
   /*Button*/
   --button-font-family: "Roboto", sans-serif;
   --button-width-default: 9em;
-  --button-height-default: 2.8em;
+  --button-height-default: 2.7em;
   --button-border-radius-default: 1.063em;
   --button-font-size: 1em;
 }
@@ -82,15 +82,14 @@ header {
 .nav-links {
   text-decoration: none;
   color: var(--headings-color);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 2;
   font-family: roboto;
   padding-right: 1.25em;
   font-size: 1em;
 }
 .nav-links:hover {
-  color: var(--hover-color);
-  font-weight: 400;
+  color: var(--background-color-default);
 }
 .search-bar {
   width: 17em;
@@ -140,11 +139,8 @@ header {
   font-size: 0.75em;
   text-align: center;
   color: var(--headings-color);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 1.6;
-}
-.icon-text:hover {
-  color: var(--hover-color);
 }
 .hero-image-wrapper {
   position: relative;
@@ -166,14 +162,14 @@ h1 {
   height: var(--button-height-default);
   border-radius: var(--button-border-radius-default);
   font-size: 1.1em;
+  font-weight: 500;
   font-family: var(--button-font-family);
   border-style: none;
   color: var(--headings-color);
-  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 .btn-cta:hover {
   background-color: var(--hover-color);
-  color: var(--headings-color);
+  box-shadow: 5px 5px 10px 2px var(--headings-color);
 }
 .btn-cta:active {
   background-color: var(--active-color);
@@ -193,7 +189,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 10em;
+  margin-left: 5em;
 }
 .feature {
   display: flex;
@@ -227,12 +223,13 @@ h1 {
 .component-cart {
   background-color: white;
   border: 0.1em solid white;
+  height: 17em;
   padding: 1em;
   border-radius: var(--button-border-radius-default);
   box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
 .component1 {
-  background-color: var(--background-color-default);
+  background-color: var(--paragraph-color);
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -251,22 +248,13 @@ h1 {
 .jacket-name {
   display: flex;
   justify-content: flex-start;
-  margin-top: 0.3em;
+  margin-top: 0.5em;
+  font-weight: 500;
   margin-bottom: 0.5em;
 }
 .color-choice {
   display: flex;
   justify-content: flex-start;
-}
-.box-for-asset {
-  background-color: var(--background-color-default);
-  border-radius: var(--button-border-radius-default);
-  width: 13em;
-  height: 14em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 .color-choice {
   display: flex;
@@ -278,7 +266,7 @@ h1 {
   font-weight: 500;
   font-size: 1.25em;
   padding: 0em;
-  color: var(--paragraph-color);
+  color: var(--headings-color);
 }
 h2 {
   font-family: var(--heading-family);
@@ -288,41 +276,52 @@ h2 {
   margin: 0;
 }
 .button-shop-now {
+  background-color: var(--background-color);
   width: var(--button-width-default);
   height: var(--button-height-default);
   border-radius: var(--button-border-radius-default);
-  font-size: 1em;
+  font-size: 0.9em;
+  font-weight: 500;
   font-family: var(--button-font-family);
   border-style: none;
-  background-color: var(--background-color);
-  color: var(--headings-color);
   text-align: center;
+  color: var(--headings-color);
   margin-top: 0.62em;
   margin-bottom: 1.25em;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 .button-shop-now:hover {
-  background-color: var(--heading-color);
-  color: var(--headings-color);
+  background-color: var(--headings-color);
+  color: var(--background-color);
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 .button-shop-now:active {
   background-color: var(--active-color);
 }
+.man-paragraph {
+  font-family: var(--button-font-family);
+  font-size: 1.1em;
+  font-weight: 500;
+}
 .assets-jacket {
-  width: 10em;
-  height: auto;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10em;
+  width: auto;
 }
 .component1-paragraph {
   text-align: right;
-  padding: 0em;
-  color: var(--paragraph-color);
+  color: var(--headings-color);
 }
 .jacket-price-old {
+  padding-top: 0.3em;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 0;
   margin-top: 0;
-  color: var(--paragraph-color);
+  color: var(--heading-family);
 }
 .jacket-price-new {
   font-weight: 700;
@@ -330,24 +329,6 @@ h2 {
   color: rgb(216, 38, 38);
   margin: 0;
   text-align: end;
-}
-.discount-box {
-  display: flex;
-  justify-content: center;
-  width: 9.62em;
-  height: 2.43em;
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  bottom: 88.18%;
-  background-color: var(--background-color);
-}
-.discount-paragraph {
-  color: white;
-  text-align: center;
-  align-self: center;
-  font-weight: 500;
-  font-size: 1.75em;
 }
 .section-break {
   display: flex;
@@ -373,10 +354,9 @@ h2 {
   align-self: center;
 }
 .span-paragraph {
+  font-family: var(--button-font-family);
   padding-left: 0.4em;
-  text-decoration: underline;
-  text-decoration-color: var(--background-color-default);
-  text-underline-position: under;
+  font-weight: 600;
 }
 .image-1-box {
   display: grid;
@@ -614,7 +594,7 @@ h3 {
   justify-self: center;
 }
 .grid-item-paragraph {
-  color: var(--paragraph-color);
+  color: var(--headings-color);
   margin-top: 0.3em;
 }
 .jacket-price-new-grid {
@@ -649,6 +629,9 @@ h3 {
   color: white;
   transition: 0.3s;
 }
+h7 {
+  font-weight: 600;
+}
 
 /************************PRODUCT DETAILS*************************/
 .product-detail-h4 {
@@ -659,6 +642,22 @@ h4 {
   color: var(--headings-color);
   font-size: 1.5em;
   font-family: var(--heading-family);
+}
+.btn-product {
+  margin-top: 2em;
+  width: 19em;
+  height: var(--button-height-default);
+  background-color: var(--headings-color);
+  border-radius: var(--button-border-radius-default);
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: var(--button-font-family);
+  border-style: none;
+  color: var(--background-color);
+}
+.btn-product:hover {
+  background-color: var(--paragraph-color);
+  color: var(--headings-color);
 }
 .checkout-stage {
   display: flex;
@@ -674,7 +673,7 @@ h4 {
 .checkout-paragraph {
   align-items: center;
   font-size: 0.75em;
-  color: var(--paragraph-color);
+  color: var(--headings-color);
 }
 .checkout-icon {
   width: 3.43em;
@@ -723,7 +722,7 @@ h4 {
   margin: 0;
 }
 .product-details-paragraph {
-  color: var(--paragraph-color);
+  color: var(--headings-color);
   margin-top: 0.313em;
 }
 .select-paragraph {
@@ -806,18 +805,11 @@ ul {
   margin: 0;
   padding: 0.188em;
   font-size: 0.87em;
-  color: var(--paragraph-color);
+  color: gray;
 }
 li {
   font-size: 0.75em;
-  color: var(--paragraph-color);
-}
-.buy-now {
-  width: 18em;
-  margin-top: 1.25em;
-  border-radius: 0.313em;
-  background-color: var(--headings-color);
-  color: white;
+  color: gray;
 }
 .sign-up-break {
   margin-top: 3.75em;
@@ -834,6 +826,7 @@ li {
   flex-direction: row;
   margin: 0.626em;
   gap: 0.625em;
+  font-size: 1em;
 }
 .h5-product-details-page {
   font-size: 1.37em;
@@ -845,6 +838,7 @@ li {
   padding: 0.313em;
 }
 .sign-up-input {
+  border: none;
   padding: 0.313em;
 }
 .sign-up-paragraph {
@@ -855,12 +849,14 @@ li {
 .btn-sign-up {
   background-color: var(--headings-color);
   border-radius: var(--button-border-radius-default);
-  width: 7em;
-  height: 2.5em;
+  width: var(--button-width-default);
+  height: var(--button-height-default);
   color: white;
+  border: none;
 }
 .btn-sign-up:hover {
-  background-color: var(--hover-color);
+  background-color: var(--background-color);
+  color: var(--headings-color);
 }
 .btn-sign-up:active {
   background-color: var(--active-color);

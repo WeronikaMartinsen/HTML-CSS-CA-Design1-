@@ -133,7 +133,6 @@
     font-size: 0.9em;
   }
   .assets-jacket {
-    width: 7em;
   }
   .box-for-asset {
     width: 9em;
@@ -183,9 +182,6 @@
   .jacket-name {
     font-size: 0.9em;
   }
-  .assets-jacket {
-    width: 13em;
-  }
   .box-for-asset {
     width: 15em;
     height: 16em;
@@ -199,18 +195,9 @@
   .component1 {
     gap: 1em;
   }
-  .component-cart {
-    padding: 1em;
-  }
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-  }
-  .search-icon {
-    top: 0.7em;
-  }
-  .search-bar {
-    padding-right: 0.2em;
   }
   .discount-box {
     display: none;
@@ -243,6 +230,7 @@
     height: auto;
   }
   .search-bar {
+    padding-right: 0.2em;
     width: 16em;
     height: 2.2em;
   }
@@ -256,6 +244,9 @@
   }
   .horizontal-line {
     width: 7em;
+  }
+  .component-cart {
+    height: 20em;
   }
   .product-detail {
     margin-right: 1.25em;
@@ -531,7 +522,7 @@
     font-size: 1.6em;
   }
   .hero-header {
-    margin-left: 4em;
+    margin-left: 1em;
   }
 }
 
@@ -558,11 +549,7 @@
     padding: 0.6em;
   }
   .component-cart {
-    background-color: white;
-    border-radius: 1.06em;
-    border: 0.06em solid white;
-    padding: 0.6em;
-    margin: 0.6em;
+    height: 27em;
   }
   .span-paragraph {
     font-size: 0.8em;
