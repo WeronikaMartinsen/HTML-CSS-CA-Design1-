@@ -590,15 +590,16 @@ h3 {
   position: absolute;
   top: 9.37em;
   left: 3em;
-  width: 10em;
-  height: 3em;
-  background-color: var(--headings-color);
-  color: white;
+  background-color: var(--background-color-default);
+  text-align: center;
+  padding: 1em 2em 1em 2em;
+  text-decoration: none;
   border-radius: var(--button-border-radius-default);
   font-size: 1em;
-  font-weight: 500;
-  z-index: 2;
+  font-weight: 600;
+  font-family: var(--button-font-family);
   border-style: none;
+  color: var(--headings-color);
 }
 .color-grid {
   display: flex;
