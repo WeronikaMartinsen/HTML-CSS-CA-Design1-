@@ -437,6 +437,12 @@ h2 {
   padding-right: 1.87em;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
+#name-input {
+  width: 25em;
+  height: 3em;
+  border-radius: 0.625em;
+  border-style: none;
+}
 #name {
   width: 25em;
   height: 3em;
