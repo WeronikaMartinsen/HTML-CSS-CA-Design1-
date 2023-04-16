@@ -697,20 +697,26 @@ h3 {
   font-size: 1.5em;
 }
 .btn-product {
+  display: block;
+  color: var(--headings-color);
+  background-color: var(--background-color-default);
   margin-top: 1.6em;
-  width: 17em;
-  height: var(--button-height-default);
-  background-color: var(--headings-color);
+  width: 13em;
+  text-align: center;
+  padding: 1em 2em 1em 2em;
+  text-decoration: none;
   border-radius: var(--button-border-radius-default);
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 500;
   font-family: var(--button-font-family);
-  border-style: none;
-  color: var(--background-color);
 }
 .btn-product:hover {
-  background-color: var(--paragraph-color);
-  color: var(--headings-color);
+  background-color: var(--headings-color);
+  color: var(--background-color);
+}
+.btn-product:active {
+  background-color: var(--headings-color);
+  color: var(--background-color);
 }
 .checkout-stage {
   display: flex;
@@ -770,7 +776,7 @@ h3 {
   height: 22em;
   margin-bottom: 0;
 }
-.product-details-heading {
+.h2-product-details {
   font-size: 1.8em;
   text-align: start;
   margin: 0;
@@ -860,7 +866,7 @@ ul {
   color: gray;
 }
 li {
-  font-size: 0.75em;
+  font-size: 0.9em;
   color: gray;
 }
 .sign-up-break {
@@ -880,11 +886,19 @@ li {
   gap: 0.625em;
   font-size: 1em;
 }
-.h5-product-details-page {
+.h3-product-detail-sign-up {
   font-size: 1.37em;
   margin-bottom: 0.313em;
-  margin-top: 0;
   font-weight: 700;
+}
+.h4-product-detail {
+  font-size: 1.5em;
+  font-family: var(--heading-family);
+  margin-right: 4em;
+}
+.detail-paragraph {
+  font-weight: 600;
+  margin-bottom: 0.1em;
 }
 .sign-up-text {
   padding: 0.313em;
