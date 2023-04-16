@@ -484,9 +484,6 @@
   .payment-input-short {
     width: 32em;
   }
-  .btn-confirm {
-    width: 27em;
-  }
   .image-gallery-1 {
     width: 30em;
   }
@@ -640,9 +637,6 @@
   .payment-input,
   .payment-input-short {
     width: 25em;
-  }
-  .btn-confirm {
-    width: 21em;
   }
   .grid-item-2 {
     height: 11em;
@@ -858,9 +852,7 @@
   .payment-item-2 {
     width: 22.5em;
   }
-  .btn-confirm {
-    width: 20em;
-  }
+
   .payment-input,
   .payment-input-short {
     width: 23em;

@@ -910,7 +910,7 @@ li {
 .sign-up-paragraph {
   margin: 0;
   font-size: 0.75em;
-  color: var(--paragraph-color);
+  color: var(--headings-color);
 }
 .btn-sign-up {
   background-color: var(--headings-color);
@@ -993,11 +993,16 @@ li {
   gap: 1.25em;
   box-shadow: 5px 5px 10px 2px var(--background-color-default);
 }
-.unique-h6 {
+.h2-checkout {
   font-family: var(--heading-family);
   color: var(--headings-color);
-  font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2em;
+  margin: 1.4em 0 0.8em 1.5em;
+}
+.h3-order-summary {
+  font-family: var(--heading-family);
+  color: var(--headings-color);
+  font-size: 1.2em;
   margin: 1.4em 0 0.8em 1.5em;
 }
 .icon-payment {
@@ -1085,23 +1090,27 @@ li {
   font-size: 12px;
 }
 .btn-confirm {
+  width: 10em;
+  display: block;
   margin: 20px 20px 40px 20px;
-  width: 27em;
-  height: var(--button-height-default);
+  background-color: var(--headings-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 0.8em 2em 0.8em 2em;
+  text-decoration: none;
   border-radius: var(--button-border-radius-default);
   font-size: 1em;
   font-weight: 500;
   font-family: var(--button-font-family);
   border-style: none;
-  color: var(--background-color);
-  background-color: var(--headings-color);
 }
 .btn-confirm:hover {
-  background-color: var(--hover-color);
+  background-color: var(--background-color-default);
   color: var(--headings-color);
 }
 .btn-confirm:active {
-  background-color: var(--hover-color);
+  background-color: var(--background-color-default);
+  color: var(--headings-color);
 }
 .bigger-box {
   width: 350px;
@@ -1130,7 +1139,7 @@ li {
   margin: 0;
   padding: 2px;
   font-size: 12px;
-  color: var(--paragraph-color);
+  color: var(--headings-color);
   align-self: flex-start;
   margin-left: 20px;
 }
@@ -1145,6 +1154,7 @@ li {
 .order-details {
   display: flex;
   justify-content: space-between;
+  color: var(--headings-color);
   margin-top: 0;
   margin-bottom: 6px;
   margin-left: 10px;
@@ -1164,6 +1174,7 @@ li {
   text-align: end;
 }
 .order-details-2 {
+  color: var(--headings-color);
   margin-top: 0;
   margin-bottom: 6px;
   margin-right: 20px;
@@ -1177,7 +1188,7 @@ li {
   margin-bottom: 0px;
   padding: 2px;
   font-size: 12px;
-  color: #939393;
+  color: var(--headings-color);
 }
 .shipping-one {
   margin-bottom: 15px;
