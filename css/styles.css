@@ -1198,9 +1198,14 @@ li {
 }
 
 /************************Confirmation*************************/
+.box-for-button {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .btn-confirm-order {
   width: 10em;
-  margin: 20px 20px 40px 20px;
   background-color: var(--headings-color);
   color: var(--background-color);
   text-align: center;
@@ -1211,6 +1216,14 @@ li {
   font-weight: 500;
   font-family: var(--button-font-family);
   border-style: none;
+}
+.btn-confirm-order:hover {
+  background-color: var(--background-color-default);
+  color: var(--headings-color);
+}
+.btn-confirm-order:active {
+  background-color: var(--background-color-default);
+  color: var(--headings-color);
 }
 .confirmation-div {
   display: flex;
@@ -1240,6 +1253,14 @@ li {
 .btn-link {
   align-self: center;
   margin-top: 20px;
+}
+.h2-confirmation {
+  font-family: ibarra real nova;
+  font-weight: 700;
+  font-size: 2.2em;
+  text-align: center;
+  padding: 1em;
+  color: var(--headings-color);
 }
 
 /************************About us*************************/
