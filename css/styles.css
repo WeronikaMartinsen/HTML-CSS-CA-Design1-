@@ -525,7 +525,7 @@ h3 {
   font-family: var(--paragraph-family);
   color: var(--headings-color);
   margin-top: 7.5em;
-  font-weight: 400;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -535,11 +535,16 @@ h3 {
   width: 100%;
   object-fit: 100%;
 }
-.h4-jackets {
-  margin-top: 0;
-  margin-left: 3.75em;
+.h1-jackets {
+  margin-left: 0;
   margin-top: 2em;
+  font-size: 1.5em;
 }
+.h2-jackets {
+  font-size: 1.1em;
+  font-weight: 900;
+}
+
 .grid-container {
   max-width: 100%;
   margin: 0 3.75em 1.25em 3.75em;
@@ -671,14 +676,10 @@ h3 {
 }
 
 /************************PRODUCT DETAILS*************************/
-.product-detail-h4 {
-  margin-top: 7em;
-  margin-left: 2.5em;
-}
-h4 {
-  color: var(--headings-color);
+.h1-product-details {
+  margin-top: 1em;
+  margin-bottom: 2em;
   font-size: 1.5em;
-  font-family: var(--heading-family);
 }
 .btn-product {
   margin-top: 1.6em;
@@ -929,8 +930,10 @@ li {
 }
 
 /************************Checkout Page*************************/
-.product-detail-h4 {
-  margin-left: 3.75em;
+.h1-checkout {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-size: 1.5em;
   color: var(--headings-color);
 }
 .payment-container {
@@ -1173,7 +1176,7 @@ li {
   text-align: center;
   margin: 5px;
   font-family: roboto;
-  color: var(--paragraph-color);
+  color: var(--headings-color);
 }
 .one {
   font-weight: 700;
