@@ -1112,6 +1112,9 @@ li {
   background-color: var(--background-color-default);
   color: var(--headings-color);
 }
+.extra-margin {
+  margin-left: 1em;
+}
 .bigger-box {
   width: 350px;
   height: 350px;
