@@ -1190,8 +1190,9 @@ li {
 }
 
 /************************About us*************************/
-h4 {
-  margin-left: 2em;
+.h1-about {
+  font-size: 1.5em;
+  margin-top: 1.5em;
 }
 .star-icon {
   padding-right: 0.8em;
@@ -1223,11 +1224,10 @@ h4 {
 }
 
 /************************Contact*************************/
-.contact-h4 {
-  font-size: 2em;
+.h1-contact {
+  font-size: 1.7em;
   margin-left: 1.2em;
   margin-bottom: 1em;
-  margin-top: 0;
 }
 .contact-container {
   display: flex;
