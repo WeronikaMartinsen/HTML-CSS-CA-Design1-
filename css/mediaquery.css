@@ -832,8 +832,11 @@
   #name {
     width: 20em;
   }
+  #name-input {
+    width: 20em;
+  }
   .component-cart {
-    height: 26em;
+    height: 24em;
     margin-bottom: 1em;
   }
   h3 {

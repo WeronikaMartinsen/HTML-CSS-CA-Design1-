@@ -158,22 +158,27 @@ h1 {
   color: var(--headings-color);
 }
 .btn-cta {
-  width: var(--button-width-default);
-  height: var(--button-height-default);
   border-radius: var(--button-border-radius-default);
   font-size: 1.1em;
   font-weight: 500;
   font-family: var(--button-font-family);
   border-style: none;
   color: var(--headings-color);
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 0.8em 1.7em 0.8em 1.7em;
+  text-decoration: none;
 }
 .btn-cta:hover {
   background-color: var(--hover-color);
   box-shadow: 5px 5px 10px 2px var(--headings-color);
 }
 .btn-cta:active {
-  background-color: var(--active-color);
-  color: white;
+  background-color: var(--hover-color);
+  box-shadow: 5px 5px 10px 2px var(--headings-color);
+}
+.a-btn-cta {
+  background-color: var(--background-color);
 }
 .hero-header-wrapper {
   position: absolute;
@@ -221,12 +226,12 @@ h1 {
   color: var(--headings-color);
 }
 .component-cart {
-  background-color: white;
+  background-color: var(--background-color);
   border: 0.1em solid white;
   height: 17em;
   padding: 1em;
   border-radius: var(--button-border-radius-default);
-  box-shadow: 5px 5px 10px 2px var(--background-color-default);
+  border: 1px solid var(--headings-color);
 }
 .component1 {
   background-color: var(--paragraph-color);
@@ -276,8 +281,10 @@ h2 {
   margin: 0;
 }
 .button-shop-now {
-  width: var(--button-width-default);
-  height: var(--button-height-default);
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 0.8em 1.7em 0.8em 1.7em;
+  text-decoration: none;
   border-radius: var(--button-border-radius-default);
   font-size: 1em;
   font-weight: 500;
@@ -294,6 +301,7 @@ h2 {
   background-color: var(--active-color);
 }
 .man-paragraph {
+  margin-bottom: 2em;
   font-family: var(--button-font-family);
   font-size: 1em;
   font-weight: 500;
