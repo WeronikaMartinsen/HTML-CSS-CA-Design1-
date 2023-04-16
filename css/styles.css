@@ -867,7 +867,7 @@ ul {
 }
 li {
   font-size: 0.9em;
-  color: gray;
+  color: var(--headings-color);
 }
 .sign-up-break {
   margin-top: 3.75em;
