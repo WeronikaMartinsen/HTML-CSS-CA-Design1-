@@ -853,12 +853,11 @@ h3 {
   width: 1.12em;
   height: 1.12em;
 }
-.size:hover {
+.size:hover,
+.size:active {
   box-shadow: 0 0 0 0.125em black;
 }
-.size:active {
-  box-shadow: 0 0 0 1px var(--active-color);
-}
+
 ul {
   margin: 0;
   padding: 0.188em;
@@ -895,6 +894,7 @@ li {
   font-size: 1.5em;
   font-family: var(--heading-family);
   margin-right: 4em;
+  margin-left: 2em;
 }
 .detail-paragraph {
   font-weight: 600;
