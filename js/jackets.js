@@ -1,4 +1,4 @@
-const products = [
+/* const products = [
   {
     name: "Jacket 1",
     price: 1499,
@@ -9,7 +9,7 @@ const products = [
     name: "Jacket 1",
     price: 1499,
     soldOut: false,
-    colors: ["white", "orange", "blue"],
+    colors: ["white", "orange", "red"],
   },
   {
     name: "Jacket 2",
@@ -53,4 +53,4 @@ const products = [
     soldOut: true,
     colors: ["white", "orange", "blue"],
   },
-];
+]; */

@@ -532,7 +532,7 @@ h3 {
 
 /************************JACKETS STYLE*************************/
 
-.jacket-container {
+/* .jacket-container {
   max-width: 900px;
   margin: 20px auto;
 }
@@ -567,6 +567,25 @@ h3 {
 }
 .menu a {
   color: gray;
+} */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result {
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 200px;
+  background: white;
+  border: 1px solid grey;
+  border-radius: 1rem;
 }
 .extra-box {
   height: 2.5em;

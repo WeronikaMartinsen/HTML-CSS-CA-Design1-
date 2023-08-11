@@ -38,6 +38,7 @@
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
+ 
     <script defer src="js/script.js"></script>
   </head>
   <body>
@@ -78,7 +79,6 @@
                 <span class="icon-text">Log inn</span>
               </div>
             </div>
-
             <div class="nav-icon-box">
               <div class="nav-link-svg">
                 <a href="#"
@@ -119,27 +119,12 @@
     </header>
     <main>
       <div class="extra-box">Buy now. Pay later. Klarna.</div>
-      <h1 class="h1-jackets">New Collection</h1>
-
-      <div class="jacket-container">
-        <div class="menu">
-          <a href="index.html" class="active">Home</a>
-          <a href="favourites.html">Favorites</a>
-        </div>
-
-        <div class="product-container"></div>
-      </div>
-    </main>
-    <div class="load-more-paragraph">
-      <a class="load-more-link" href="jackets.html"> <p>Load more</p></a>
-      <ion-icon
-        class="icon-arrow-paragraph"
-        name="chevron-forward-outline"
-      ></ion-icon>
-    </div>
-    <script defer src="js/jackets.js"></script>
-    <script defer src="js/products.js"></script>
-
+      
+      <div class="container"></div>
+      <h1>Jackets</h1>
+      <div class="results"></div>
+      
+    <script defer src="js/script.js"></script>
     <footer>
       <div class="footer-box">
         <div class="footer-box-1">
@@ -231,6 +216,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/products.js" type="module"></script>
+    <script src="js/products.js"></script>
   </body>
 </html>
