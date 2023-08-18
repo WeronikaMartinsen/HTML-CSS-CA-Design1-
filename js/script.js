@@ -8,11 +8,16 @@ fetch("https://api.noroff.dev/api/v1/rainy-days")
     console.log(complatedata);
     let data1 = "";
     complatedata.map((values) => {
-      data1 += `  <div class="results"><h4 class="title">${values.title}</h4>
+      data1 += `  <div class="results">
+      <ion-icon class="heartFav" name="heart-outline"></ion-icon>
+      <h4 class="title">${values.title}</h4>
       <img class="image" src=${values.image} alt="img" />
       <p class="description">${values.description}</p>
+      <p class="baseColor">Color: ${values.baseColor}</p>
       <p class="category">Avelible sizes: ${values.sizes}</p>
       <p class="price">Price: ${values.price}</p>
+
+      
     </div>`;
     });
     document.querySelector(".resultsContainer").innerHTML = data1;
