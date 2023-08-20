@@ -1,9 +1,14 @@
 const resultsContainer = document.querySelector(".resultsContainer");
+const loader = document.querySelector(".loader");
 
-const greeting = document.querySelector(".greeting");
+resultsContainer.style.display = "none";
 
-const loading = document.querySelector(".loader");
+setTimeout(changeLoading, 2000);
 
+function changeLoading() {
+  resultsContainer.style.display = "flex";
+  loader.classList.remove("loader");
+}
 fetch("https://api.noroff.dev/api/v1/rainy-days")
   .then((data) => {
     return data.json();

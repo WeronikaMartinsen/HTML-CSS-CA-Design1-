@@ -532,7 +532,7 @@ h3 {
 
 /************************JACKETS STYLE*************************/
 
-.loading-indicator {
+.loader {
   border: 16px solid lightcoral;
   border-top: 16px solid lightpink;
   animation: spin 2s linear infinite;
