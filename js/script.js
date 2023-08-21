@@ -3,7 +3,7 @@ const loader = document.querySelector(".loader");
 
 resultsContainer.style.display = "none";
 
-setTimeout(changeLoading, 2000);
+setTimeout(changeLoading, 1500);
 
 function changeLoading() {
   resultsContainer.style.display = "flex";
@@ -24,10 +24,22 @@ fetch("https://api.noroff.dev/api/v1/rainy-days")
         <img class="image" src=${values.image} alt="img" />
         <p class="description">${values.description}</p>
         <p class="baseColor">Color: ${values.baseColor}</p>
-        <p class="category">Avalible sizes: ${values.sizes}</p>
+        <p class="sizes">Avalible sizes: ${values.sizes}</p>
         <p class="price">Price: ${values.price}</p>
-        <button class="button-shop-now">Add to card</div>
+        <p class="discountedPrice">Price: ${values.discountedPrice}</p>
+        <a href="product-details.html" class="btnAdd">Add to card</a>
       </div>`;
+    });
+
+    complatedata.forEach((item) => {
+      const onSale = item.onSale;
+      const discountedPrice = item.discountedPrice;
+      const price = item.price;
+      console.log(onSale, discountedPrice);
+      {
+        if (onSale === true) {
+        }
+      }
     });
 
     resultsContainer.innerHTML = data1;

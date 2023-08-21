@@ -531,7 +531,25 @@ h3 {
 }
 
 /************************JACKETS STYLE*************************/
+.sizes {
+  padding: 0.4em;
+}
+.btnAdd {
+  background-color: lightcoral;
+  padding: 1em 2em 1em 2em;
+  font-size: var(--button-font-family);
+  border-radius: var(--button-border-radius-default);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: black;
+}
 
+.btnAdd:hover,
+.btnAdd:active {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 .loader {
   border: 16px solid lightcoral;
   border-top: 16px solid lightpink;
@@ -566,7 +584,7 @@ h3 {
 }
 .results {
   width: 23%;
-  padding: 1em;
+  padding: 2em;
   border: 2px solid black;
   border-radius: 10px;
   margin: 2em;
@@ -612,126 +630,8 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.grid-item {
-  width: 13em;
-  height: 21em;
-  background-color: white;
-  border: 0.1em solid white;
-  padding: 1em;
-  border-radius: var(--button-border-radius-default);
-  border: 1px solid var(--background-color-default);
-  justify-self: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.grid-item:hover .hidden-button {
-  display: block;
-}
-.hidden-button {
-  display: none;
-  position: absolute;
-  top: 9.37em;
-  left: 3em;
-  background-color: var(--background-color-default);
-  text-align: center;
-  padding: 1em 2em 1em 2em;
-  text-decoration: none;
-  border-radius: var(--button-border-radius-default);
-  font-size: 1em;
-  font-weight: 600;
-  font-family: var(--button-font-family);
-  border-style: none;
-  color: var(--headings-color);
-}
-.color-grid {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-bottom: 1em;
-}
-.color-grid-.brown {
-  background-color: brown;
-}
-.color-grid-.brown:hover {
-  background: brown;
-  box-shadow: 0 0 0 0.125em brown;
-}
-.color-grid-.red {
-  background-color: red;
-}
-.color-grid-.red:hover {
-  background: red;
-  box-shadow: 0 0 0 0.125em red;
-}
-.color-grid-.gray {
-  background-color: gray;
-}
-.color-grid-.gray:hover {
-  background: gray;
-  box-shadow: 0 0 0 0.125em gray;
-}
-.color-grid-.blue {
-  background-color: blue;
-}
-.color-grid-.blue:hover {
-  background: blue;
-  box-shadow: 0 0 0 0.125em blue;
-}
-.color-grid- {
-  width: 1.3em;
-  height: 1.3em;
-  border-radius: 25%;
-  background-color: red;
-  margin-right: 0.3em;
-}
-.color-1:hover {
-  background: red;
-  box-shadow: 0 0 0 0.125em red;
-}
-.cart {
-  justify-self: center;
-}
-.grid-item-paragraph {
-  font-size: 0.8em;
-  color: var(--heading-family);
-  margin-top: 0.3em;
-  text-align: start;
-  padding-left: 1em;
-}
-.jacket-price-new-grid {
-  font-weight: 700;
-  font-size: 1.4em;
-  color: rgb(216, 38, 38);
-  margin: 0;
-  text-align: end;
-}
-.jacket-price-old-grid {
-  text-align: end;
-  margin: 0;
-}
-.jackets-for-grid {
-  margin-bottom: 1em;
-  height: 10em;
-  width: auto;
-  align-self: center;
-  justify-items: center;
-}
-.heart-icon {
-  padding-right: 0.62em;
-  padding-top: 0;
-  width: 1.56em;
-  height: 1.56em;
-  float: right;
-}
-.heart-icon:hover {
-  color: var(--background-color);
-  transition: 0.3s;
-}
-.heart-icon:active {
-  color: white;
-  transition: 0.3s;
+.priceDiscount {
+  padding-bottom: 2em;
 }
 
 /************************PRODUCT DETAILS*************************/
