@@ -1,50 +1,67 @@
-const resultsContainer = document.querySelector(".resultsContainer");
+const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
+
+const jacketsContainer = document.querySelector(".resultsContainer");
+
 const loader = document.querySelector(".loader");
 
-resultsContainer.style.display = "none";
+jacketsContainer.style.display = "none";
 
 setTimeout(changeLoading, 1500);
 
 function changeLoading() {
-  resultsContainer.style.display = "flex";
+  jacketsContainer.style.display = "flex";
   loader.classList.remove("loader");
 }
-fetch("https://api.noroff.dev/api/v1/rainy-days")
-  .then((data) => {
-    return data.json();
-  })
-  .then((complatedata) => {
-    console.log(complatedata);
-    let data1 = "";
 
-    complatedata.map((values) => {
-      data1 += `  <div class="results">
-        <ion-icon class="heartFav" name="heart-outline"></ion-icon>
-        <h4 class="title">${values.title}</h4>
-        <img class="image" src=${values.image} alt="img" />
-        <p class="description">${values.description}</p>
-        <p class="baseColor">Color: ${values.baseColor}</p>
-        <p class="sizes">Avalible sizes: ${values.sizes}</p>
-        <p class="price">Price: ${values.price}</p>
-        <p class="discountedPrice">Price: ${values.discountedPrice}</p>
-        <a href="product-details.html" class="btnAdd">Add to card</a>
-      </div>`;
-    });
+async function getJackets() {
+  const response = await fetch(rainyDaysAPI);
+  const result = await response.json();
+  return result;
+}
 
-    complatedata.forEach((item) => {
-      const onSale = item.onSale;
-      const discountedPrice = item.discountedPrice;
-      const price = item.price;
-      console.log(onSale, discountedPrice);
-      {
-        if (onSale === true) {
-        }
-      }
-    });
+async function displayJackets() {
+  const jackets = await getJackets();
 
-    resultsContainer.innerHTML = data1;
-  })
+  for (let i = 0; i < jackets.length; i++) {
+    const jacket = jackets[i];
+    console.log(jacket);
 
-  .catch((err) => {
-    console.log(err);
-  });
+    if (jacket.onSale) {
+      const jacketDiv = document.createElement("div");
+      jacketDiv.classList.add("card");
+      jacketsContainer.appendChild(jacketDiv);
+
+      const image = document.createElement("img");
+      image.src = jacket.image;
+      image.alt = jacket.description;
+      image.classList.add("image");
+
+      const jacketTitle = document.createElement("jacketTitle");
+      jacketTitle.classList.add("jacketTitle");
+      jacketTitle.innerHTML = `<h4>${jacket.title}</h4>`;
+
+      const jacketText = document.createElement("jacketText");
+      jacketText.classList.add("jacketText");
+      jacketText.innerHTML = `<h5>${jacket.description}</h5>
+     `;
+
+      const jacketPrice = document.createElement("jacketPrice");
+      jacketPrice.classList.add("jacketPrice");
+      jacketPrice.innerHTML = ` <span class="jacketSale">${jacket.price}</span>
+     <span>${jacket.discountedPrice}</span>`;
+
+      const button = document.createElement("a");
+      button.href = "product-details.html";
+      button.classList.add("btnAdd");
+      button.textContent = "Add to bag";
+
+      jacketDiv.appendChild(jacketTitle);
+      jacketDiv.appendChild(image);
+      jacketDiv.appendChild(jacketText);
+      jacketDiv.appendChild(jacketPrice);
+      jacketDiv.appendChild(button);
+    }
+  }
+}
+
+displayJackets();

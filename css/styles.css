@@ -534,6 +534,10 @@ h3 {
 .sizes {
   padding: 0.4em;
 }
+
+.jacketSale {
+  text-decoration: line-through;
+}
 .btnAdd {
   background-color: lightcoral;
   padding: 1em 2em 1em 2em;
@@ -582,16 +586,26 @@ h3 {
   font-size: 1.5em;
   display: flex;
 }
-.results {
+.card {
   width: 23%;
   padding: 2em;
   border: 2px solid black;
   border-radius: 10px;
   margin: 2em;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .image {
   width: 80%;
+}
+.jacketText,
+.jacketPrice {
+  padding: 1em;
+}
+.jacketPrice {
+  font-size: 1.3em;
 }
 
 .extra-box {
@@ -606,30 +620,7 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.jacket-image {
-  height: auto;
-  width: 100%;
-  object-fit: 100%;
-}
-.h1-jackets {
-  margin-left: 0;
-  margin-top: 2em;
-  font-size: 1.5em;
-}
-.h2-jackets {
-  font-size: 1.1em;
-  font-weight: 900;
-}
 
-.grid-container {
-  max-width: 100%;
-  margin: 0 3.75em 1.25em 3.75em;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25em;
-  justify-content: center;
-  align-items: center;
-}
 .priceDiscount {
   padding-bottom: 2em;
 }
