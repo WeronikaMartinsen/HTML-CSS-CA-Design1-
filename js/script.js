@@ -27,19 +27,9 @@ async function displayJackets() {
     console.log(jacket);
     const price = jacket.price;
 
-    /*     const onSale = jacket.onSale;
-  
-   
-    const discountedPrice = jacket.discountedPrice;
- 
-
-    if(onSale === true) {
-      discountedPrice
-    }
- */
-
     const jacketDiv = document.createElement("div");
     jacketDiv.classList.add("card");
+
     jacketsContainer.appendChild(jacketDiv);
 
     const image = document.createElement("img");
@@ -62,9 +52,9 @@ async function displayJackets() {
      <span class="newPrice">${jacket.discountedPrice}</span>`;
 
     const button = document.createElement("a");
-    button.href = "product-details.html";
-    button.classList.add("btnAdd");
-    button.textContent = "Add to bag";
+
+    button.innerHTML = `<a href="product-details.html?${(id =
+      jacket.id)} class="btnAdd">Add to bag</a>`;
 
     jacketDiv.appendChild(jacketTitle);
     jacketDiv.appendChild(image);
