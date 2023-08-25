@@ -33,13 +33,13 @@
       nomodule=""
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
-
+    <link rel="icon" href="data:;base64,=" />
     <script
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
-    <script defer src="js/function.js"></script>
-    <script defer src="js/script.js"></script>
+
+    <script defer src="js/script.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -121,6 +121,10 @@
     <div class="extra-box">Buy now. Pay later. Klarna.</div>
     <h1>Jackets</h1>
     <div class="loader"></div>
+    <div class="searchContainer">
+      <input type="search" name="Search" class="searchJacket" />
+      <button class="search-results">Search</button>
+    </div>
     <div class="resultsContainer"></div>
 
     <footer>

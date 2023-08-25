@@ -1,4 +1,4 @@
-const detailContainer = document.querySelector(".product-detail");
+const detailContainer = document.querySelector(".product-cart");
 
 const queryString = document.location.search;
 
@@ -6,20 +6,27 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-const urlApi = `https://api.noroff.dev/api/v1/rainy-days/${id}`;
-
 console.log(id);
 
-async function fetchJacket() {
-  const response = await fetch(urlApi);
-  const results = await response.json();
+const urlApiId = "https://api.noroff.dev/api/v1/rainy-days/" + id;
 
-  console.log(results);
+async function getId() {
+  try {
+    const response = await fetch(urlApiId);
+    const json = await response.json();
+
+    console.log(json);
+
+    createHtml(json);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-fetchJacket();
+getId();
 
-function createHtml(jacket) {
-  detailContainer.innerHTML = `<h4>${jacket.title}</h4>
-  `;
+function createHtml(json) {
+  detailContainer.innerHTML = `<div class="productContainer">
+    <img class="image" src="${json.image}"/>
+    <div class="productContainer2"><h4>${json.title}</h4><p>${json.description}</div></div>`;
 }

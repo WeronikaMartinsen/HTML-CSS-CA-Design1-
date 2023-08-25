@@ -1,15 +1,18 @@
 const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
 
 const jacketsContainer = document.querySelector(".resultsContainer");
-
+const searchContainer = document.querySelector(".searchContainer");
 const loader = document.querySelector(".loader");
+const searchButton = document.querySelector(".search-results");
 
 jacketsContainer.style.display = "none";
+searchContainer.style.display = "none";
 
 setTimeout(changeLoading, 1500);
 
 function changeLoading() {
   jacketsContainer.style.display = "flex";
+  searchContainer.style.display = "flex";
   loader.classList.remove("loader");
 }
 
@@ -29,8 +32,10 @@ async function displayJackets() {
 
     const jacketDiv = document.createElement("div");
     jacketDiv.classList.add("card");
-
     jacketsContainer.appendChild(jacketDiv);
+
+    const heartFav = document.createElement("i");
+    heartFav.innerHTML += `<ion-icon class="heartFav" name="heart-outline"></ion-icon>`;
 
     const image = document.createElement("img");
     image.src = jacket.image;
@@ -51,17 +56,31 @@ async function displayJackets() {
     jacketPrice.innerHTML = ` <span class="jacketSale">${price}</span>
      <span class="newPrice">${jacket.discountedPrice}</span>`;
 
-    const button = document.createElement("a");
+    const buttonDiv = document.createElement("div");
+    buttonDiv.classList.add("buttonDiv");
+    buttonDiv.innerHTML += `<a class="btnAdd" href="product-details.html?id=${jacket.id}">Add to bag</a>`;
 
-    button.innerHTML = `<a href="product-details.html?${(id =
-      jacket.id)} class="btnAdd">Add to bag</a>`;
-
+    jacketDiv.appendChild(heartFav);
     jacketDiv.appendChild(jacketTitle);
     jacketDiv.appendChild(image);
     jacketDiv.appendChild(jacketText);
     jacketDiv.appendChild(jacketPrice);
-    jacketDiv.appendChild(button);
+    jacketDiv.appendChild(buttonDiv);
   }
 }
 
 displayJackets();
+
+searchButton.onclick = function () {
+  const searchInput = document.querySelector(".searchJacket").value;
+  console.log(searchInput);
+};
+
+heartFav.forEach((button) => {
+  button.addEventListener("click", handleClick);
+});
+function handleClick() {
+  console.log(event);
+}
+
+handleClick();
