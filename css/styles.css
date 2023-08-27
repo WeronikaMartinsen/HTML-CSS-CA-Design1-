@@ -550,7 +550,7 @@ h3 {
 }
 .search-results,
 .searchJacket {
-  padding: 0.5em 2em 0.5em 2em;
+  padding: 0.5em 0.5em;
   border-radius: var(--button-border-radius-default);
 }
 .searchContainer {
@@ -560,7 +560,7 @@ h3 {
 }
 .btnAdd {
   background-color: lightcoral;
-  padding: 1em 2em 1em 2em;
+  padding: 1em 2em;
   font-size: var(--button-font-family);
   border-radius: var(--button-border-radius-default);
   border: none;
@@ -568,6 +568,7 @@ h3 {
   transition: background-color 0.3s, box-shadow 0.3s;
   text-decoration: none;
   color: black;
+  font-size: 1.1em;
 }
 
 .btnAdd:hover,
@@ -581,6 +582,9 @@ h3 {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+}
+.buttonDiv {
+  margin: 2em;
 }
 
 @keyframes spin {
@@ -605,7 +609,7 @@ h3 {
 
 .card {
   width: 23%;
-  padding: 2em;
+  padding: 1em;
   border: 2px solid black;
   border-radius: 10px;
   margin: 2em;
@@ -656,6 +660,7 @@ h3 {
   border: 1px solid black;
   border-radius: var(--button-border-radius-default);
   padding: 2em;
+  width: 100%;
 }
 .productContainer2 {
   display: flex;
@@ -692,6 +697,10 @@ h3 {
   font-size: 1.3em;
   font-weight: 600;
   font-family: var(--button-font-family);
+}
+.imageDetail {
+  width: 100%;
+  height: auto;
 }
 .btn-product:hover {
   background-color: var(--headings-color);

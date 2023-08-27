@@ -36,8 +36,8 @@ getId();
 
 function createHtml(json) {
   detailContainer.innerHTML = `<div class="productContainer">
-    <img class="image" src="${json.image}"/>
-    <div class="productContainer2"><h2>${json.title}</h2><span class="spanProduct">${json.description}</span>
+   <div class="imageDiv"><img class="imageDetail" src="${json.image}"/></div>
+    <div class="productContainer2"><h3>${json.title}</h3><span class="spanProduct">${json.description}</span>
     <label class="labelSize" for="sizes">Select size:</label>
     <select class="option" name="size" id="size">
       <optgroup class="option"label="Small:">
