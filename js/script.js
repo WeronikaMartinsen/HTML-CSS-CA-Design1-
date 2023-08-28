@@ -2,19 +2,7 @@ const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
 
 const jacketsContainer = document.querySelector(".resultsContainer");
 const searchContainer = document.querySelector(".searchContainer");
-const loader = document.querySelector(".loader");
 const searchButton = document.querySelector(".search-results");
-
-jacketsContainer.style.display = "none";
-searchContainer.style.display = "none";
-
-setTimeout(changeLoading, 1500);
-
-function changeLoading() {
-  jacketsContainer.style.display = "flex";
-  searchContainer.style.display = "flex";
-  loader.classList.remove("loader");
-}
 
 async function getJackets() {
   const response = await fetch(rainyDaysAPI);
@@ -27,7 +15,6 @@ async function displayJackets() {
 
   for (let i = 0; i < jackets.length; i++) {
     const jacket = jackets[i];
-    console.log(jacket);
     const price = jacket.price;
 
     const jacketDiv = document.createElement("div");
@@ -75,12 +62,3 @@ searchButton.onclick = function () {
   const searchInput = document.querySelector(".searchJacket").value;
   console.log(searchInput);
 };
-
-heartFav.forEach((button) => {
-  button.addEventListener("click", handleClick);
-});
-function handleClick() {
-  console.log(event);
-}
-
-handleClick();

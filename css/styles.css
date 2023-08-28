@@ -575,26 +575,11 @@ h3 {
 .btnAdd:active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.loader {
-  border: 16px solid lightcoral;
-  border-top: 16px solid lightpink;
-  animation: spin 2s linear infinite;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-}
+
 .buttonDiv {
   margin: 2em;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .resultsContainer {
   display: flex;
   justify-content: center;

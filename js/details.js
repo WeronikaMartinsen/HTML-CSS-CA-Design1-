@@ -6,17 +6,6 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-console.log(id);
-
-detailContainer.style.display = "none";
-
-setTimeout(changeLoading, 1500);
-
-function changeLoading() {
-  detailContainer.style.display = "flex";
-  loader.classList.remove("loader");
-}
-
 const urlApiId = "https://api.noroff.dev/api/v1/rainy-days/" + id;
 
 async function getId() {
