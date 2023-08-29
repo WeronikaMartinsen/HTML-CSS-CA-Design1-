@@ -603,7 +603,7 @@ h3 {
 .card {
   width: 23%;
   padding: 1em;
-  border: 2px solid black;
+  border: 1px solid var(--background-color-default);
   border-radius: 10px;
   margin: 2em;
   display: flex;
@@ -669,10 +669,9 @@ h3 {
 }
 .productContainer {
   display: flex;
-  border: 1px solid black;
+  border: 1px solid var(--background-color-default);
   border-radius: var(--button-border-radius-default);
   padding: 2em;
-
   margin: 2em;
 }
 .productContainer2 {

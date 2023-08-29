@@ -1,16 +1,21 @@
-/* const cardContainer = document.querySelector(".component-cart");
+import rainyDaysAPI from "./script.js";
+import { getJackets } from "./script.js";
 
-cardContainer.innerHTML = `<div class="component-cart">
-<img
-  class="assets-jacket"
-  src="${jacket.image}"
-  alt="Jacket asset"
-/>
-<p class="jacket-name">${jacket.title}</p>
+const cardContainer = document.querySelector(".component-cart");
 
-<p class="jacket-price-old">
-  <del> 1 999,-</del>
-</p>
-<p class="jacket-price-new">1 499,-</p>
-</div>`;
- */
+async function displayJacket() {
+  try {
+    const jackets = await getJackets();
+
+    for (let i = 0; i < jackets.length; i++) {
+      const jacket = jackets[i];
+      const jacketCard = document.createElement("div");
+      jacketCard.innerHTML = `<h3>${jacket.title}</h3>`;
+      cardContainer.appendChild(jacketCard);
+    }
+  } catch (error) {
+    console.error("Error fetching jackets:", error);
+  }
+}
+
+displayJacket();
