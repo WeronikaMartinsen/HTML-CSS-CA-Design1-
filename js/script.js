@@ -35,8 +35,14 @@ async function displayJackets() {
 
     const jacketText = document.createElement("jacketText");
     jacketText.classList.add("jacketText");
-    jacketText.innerHTML = `<h5>${jacket.description}</h5>
+    jacketText.innerHTML = `<p>${jacket.description}</p>
      `;
+
+    const color = document.createElement("div");
+    color.classList.add("colorVariable");
+
+    const jacketColor = jacket.baseColor;
+    color.innerHTML = `<p class="pCenter">Color:<ion-icon class="colorIcon" style="color:${jacketColor}"name="ellipse"></ion-icon></p>`;
 
     const jacketPrice = document.createElement("div");
     const price = jacket.price;
@@ -48,8 +54,10 @@ async function displayJackets() {
     if (!onSale) {
       jacketPrice.innerHTML = `<span class="normalPrice">${price} ,-</span>`;
     } else {
-      jacketPrice.innerHTML = `<span class="oldPrice">${price} ,-</span>
-      <span class="jacketSale">${sale} ,-</span>`;
+      jacketPrice.innerHTML = `
+      <span class="oldPrice">${price} ,-</span>
+      <span class="jacketSale">${sale} ,-</span>
+      `;
     }
 
     const buttonDiv = document.createElement("div");
@@ -59,6 +67,7 @@ async function displayJackets() {
     jacketDiv.appendChild(heartFav);
     jacketDiv.appendChild(jacketTitle);
     jacketDiv.appendChild(image);
+    jacketDiv.appendChild(color);
     jacketDiv.appendChild(jacketText);
     jacketDiv.appendChild(jacketPrice);
     jacketDiv.appendChild(buttonDiv);

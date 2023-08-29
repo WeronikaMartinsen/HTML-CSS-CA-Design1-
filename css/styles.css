@@ -543,7 +543,7 @@ h3 {
 }
 .jacketSale {
   font-size: 1.5em;
-  padding: 1em;
+  font-weight: 600;
   color: red;
 }
 .oldPrice {
@@ -637,24 +637,48 @@ h3 {
 .priceDiscount {
   padding-bottom: 2em;
 }
-.holdingLoader {
+
+.colorIcon {
+  padding-left: 0.4em;
+
+  position: absolute;
+}
+.colorVariable {
+  position: relative;
+
+  font-size: 1.3em;
+}
+.jacketPrice {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 /************************PRODUCT DETAILS*************************/
 
+.iconBag {
+  font-size: 28px;
+  margin-left: 0.6em;
+  font-weight: 600;
+}
+.divPrice {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 1.5em;
+}
 .productContainer {
   display: flex;
   border: 1px solid black;
   border-radius: var(--button-border-radius-default);
   padding: 2em;
-  width: 100%;
+
+  margin: 2em;
 }
 .productContainer2 {
   display: flex;
   flex-direction: column;
-  padding-left: 2em;
+  padding: 2em;
   justify-content: center;
 }
 .option {
@@ -674,11 +698,10 @@ h3 {
   font-size: 1.5em;
 }
 .btnConfirm {
-  display: block;
+  margin-top: 2em;
   color: var(--headings-color);
   background-color: var(--background-color-default);
-  margin-top: 1.6em;
-  width: 70%;
+  width: 60%;
   text-align: center;
   padding: 1em;
   text-decoration: none;
@@ -686,9 +709,16 @@ h3 {
   font-size: 1.3em;
   font-weight: 600;
   font-family: var(--button-font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .imageDetail {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: auto;
 }
 .btn-product:hover {

@@ -24,6 +24,19 @@ async function getId() {
 getId();
 
 function createHtml(json) {
+  const divPrice = document.createElement("div");
+  divPrice.classList.add("divPrice");
+  const priceJ = json.price;
+  const saleJ = json.discountedPrice;
+  const onSaleJ = json.onSale;
+
+  if (!onSaleJ) {
+    divPrice.innerHTML = `<span class="normalPrice">${priceJ} ,-</span>`;
+  } else {
+    divPrice.innerHTML = `<span class="oldPrice">${priceJ} ,-</span>
+    <span class="jacketSale">${saleJ} ,-</span>`;
+  }
+
   detailContainer.innerHTML = `<div class="productContainer">
    <div class="imageDiv"><img class="imageDetail" src="${json.image}"/></div>
     <div class="productContainer2"><h3>${json.title}</h3><span class="spanProduct">${json.description}</span>
@@ -39,8 +52,13 @@ function createHtml(json) {
         <option class="option">${json.sizes[4]}</option>
       </optgroup>
     </select>
-    <span class="spanProduct">Base color: ${json.baseColor}</span> 
-  
-    <a href="checkout.html"class="btnConfirm">Add to bag <ion-icon name="bag-handle-outline"></ion-icon></a>
+    <span class="spanProduct">Color:<ion-icon class="colorIcon" style="color:${json.baseColor}"name="ellipse"></ion-icon></span> 
+    <div class="jacketPrice">${divPrice.outerHTML}</div>
+ 
+
+
+    <a href="checkout.html"class="btnConfirm">Add to bag <ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></a>
     </div></div>`;
+
+  console.log(json);
 }
