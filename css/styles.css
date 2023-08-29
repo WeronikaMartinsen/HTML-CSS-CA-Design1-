@@ -538,8 +538,16 @@ h3 {
 .sizes {
   padding: 0.4em;
 }
-
+.normalPrice {
+  font-size: 1.4em;
+}
 .jacketSale {
+  font-size: 1.5em;
+  padding: 1em;
+  color: red;
+}
+.oldPrice {
+  columns: gray;
   text-decoration: line-through;
 }
 .heartFav {
@@ -603,14 +611,10 @@ h3 {
   justify-content: center;
   align-items: center;
   position: relative;
+  text-align: center;
 }
 .image {
   width: 80%;
-}
-
-.jacketPrice {
-  font-size: 1.3em;
-  padding: 1em;
 }
 
 .extra-box {

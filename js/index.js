@@ -1,6 +1,12 @@
 const cardContainer = document.querySelector(".component-cart");
 
-cardContainer.innerHTML = `<div class="component-cart">
+import { fetchJackets } from "./api";
+
+async function fetchProduct() {
+  const product = await fetchJackets();
+  cardContainer.innerHTML = "";
+
+  cardContainer.innerHTML = `<div class="component-cart">
 <img
   class="assets-jacket"
   src="${jacket.image}"
@@ -18,3 +24,6 @@ cardContainer.innerHTML = `<div class="component-cart">
 </p>
 <p class="jacket-price-new">1 499,-</p>
 </div>`;
+}
+
+fetchProduct();

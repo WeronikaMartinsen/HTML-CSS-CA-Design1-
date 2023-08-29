@@ -1,10 +1,9 @@
 const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
 
 const jacketsContainer = document.querySelector(".resultsContainer");
-const searchContainer = document.querySelector(".searchContainer");
-const searchButton = document.querySelector(".search-results");
 
 async function getJackets() {
+  showLoadingIndicator();
   const response = await fetch(rainyDaysAPI);
   const result = await response.json();
   return result;
@@ -12,10 +11,11 @@ async function getJackets() {
 
 async function displayJackets() {
   const jackets = await getJackets();
+  jacketsContainer.innerHTML = "";
 
   for (let i = 0; i < jackets.length; i++) {
     const jacket = jackets[i];
-    const price = jacket.price;
+    console.log(jacket);
 
     const jacketDiv = document.createElement("div");
     jacketDiv.classList.add("card");
@@ -38,10 +38,19 @@ async function displayJackets() {
     jacketText.innerHTML = `<h5>${jacket.description}</h5>
      `;
 
-    const jacketPrice = document.createElement("jacketPrice");
+    const jacketPrice = document.createElement("div");
+    const price = jacket.price;
+    const sale = jacket.discountedPrice;
+    const onSale = jacket.onSale;
+
     jacketPrice.classList.add("jacketPrice");
-    jacketPrice.innerHTML = ` <span class="jacketSale">${price}</span>
-     <span class="newPrice">${jacket.discountedPrice}</span>`;
+
+    if (!onSale) {
+      jacketPrice.innerHTML = `<span class="normalPrice">${price} ,-</span>`;
+    } else {
+      jacketPrice.innerHTML = `<span class="oldPrice">${price} ,-</span>
+      <span class="jacketSale">${sale} ,-</span>`;
+    }
 
     const buttonDiv = document.createElement("div");
     buttonDiv.classList.add("buttonDiv");
@@ -56,9 +65,9 @@ async function displayJackets() {
   }
 }
 
-displayJackets();
+function showLoadingIndicator() {
+  const loading = document.querySelector(".resultsContainer");
+  loading.innerHTML = `<span>Loading...</span>`;
+}
 
-searchButton.onclick = function () {
-  const searchInput = document.querySelector(".searchJacket").value;
-  console.log(searchInput);
-};
+displayJackets();
