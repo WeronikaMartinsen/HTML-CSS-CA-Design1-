@@ -6,9 +6,17 @@ function getJacketIdFromQuery() {
   return urlParams.get("id");
 }
 
+function getJacketTitleFromQuery() {
+  const urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams.get("title"));
+  return urlParams.get("title");
+}
+
 async function fetchDetail() {
   try {
     const itemId = getJacketIdFromQuery();
+
+    const title = getJacketTitleFromQuery();
 
     if (!itemId) {
       return;
@@ -18,7 +26,8 @@ async function fetchDetail() {
       `https://api.noroff.dev/api/v1/rainy-days/${itemId}`
     );
     const jacketDetail = await response.json();
-
+    const titleContainer = document.getElementById("title");
+    titleContainer.textContent = title;
     createHtml(jacketDetail);
     console.log(jacketDetail);
   } catch (error) {
