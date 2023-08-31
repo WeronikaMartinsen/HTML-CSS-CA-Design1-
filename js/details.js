@@ -1,9 +1,14 @@
+function showError(message) {
+  const errorContainer = document.querySelector(".resultsContainer");
+  errorContainer.innerHTML = `<h2>Error: ${message}</h2>`;
+}
+
 const detailContainer = document.querySelector(".product-cart");
 
 function getJacketIdFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams.get("id"));
-  return urlParams.get("id");
+  const id = urlParams.get("id");
+  return id;
 }
 
 function getJacketTitleFromQuery() {
@@ -15,13 +20,16 @@ function getJacketTitleFromQuery() {
 async function fetchDetail() {
   try {
     const itemId = getJacketIdFromQuery();
-
     const title = getJacketTitleFromQuery();
 
     if (!itemId) {
-      return;
+      throw new Error(
+        `API ID loading failed. Not found in the query parameter.`
+      );
     }
 
+    try {
+    } catch (error) {}
     const response = await fetch(
       `https://api.noroff.dev/api/v1/rainy-days/${itemId}`
     );
