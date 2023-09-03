@@ -5,11 +5,9 @@ function showError(message) {
 
 const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
 
-export default rainyDaysAPI;
-
 const jacketsContainer = document.querySelector(".resultsContainer");
 
-export async function getJackets() {
+async function getJackets() {
   showLoadingIndicator();
   try {
     const response = await fetch(rainyDaysAPI);

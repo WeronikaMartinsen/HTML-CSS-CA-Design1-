@@ -1,21 +1,48 @@
-import rainyDaysAPI from "./script.js";
-import { getJackets } from "./script.js";
+/* function showError(message) {
+  const errorContainer = document.querySelector(".component-cart");
+  errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
+}
 
 const cardContainer = document.querySelector(".component-cart");
 
-async function displayJacket() {
-  try {
-    const jackets = await getJackets();
+const rainyDaysAPIHomePage = "https://api.noroff.dev/api/v1/rainy-days";
 
-    for (let i = 0; i < jackets.length; i++) {
-      const jacket = jackets[i];
-      const jacketCard = document.createElement("div");
-      jacketCard.innerHTML = `<h3>${jacket.title}</h3>`;
-      cardContainer.appendChild(jacketCard);
+async function getJacketsHomePage() {
+  showLoadingIndicator();
+  try {
+    const response = await fetch(rainyDaysAPIHomePage);
+    if (!response.ok) {
+      throw new Error(`API fetch call failed.`);
     }
+    const result = await response.json();
+
+    return result;
+
+  
   } catch (error) {
-    console.error("Error fetching jackets:", error);
+    throw error;
   }
 }
 
-displayJacket();
+async function displayJacketsHomePage() {
+  try {
+    const jacketHome = await getJacketsHomePage();
+    cardContainer.innerHTML = "";
+
+    for (let i = 0; i < jacketHome.length; i++) {
+      const homeJacket = jacketHome[i];
+      console.log(homeJacket);
+    }
+  } catch (error) {
+    showError(error.message);
+  }
+}
+
+function showLoadingIndicator() {
+  const loading = document.querySelector(".cardContainer");
+  loading.innerHTML = `<span>Loading...</span>`;
+}
+
+displayJacketsHomePage();
+console.log(displayJacketsHomePage);
+ */
