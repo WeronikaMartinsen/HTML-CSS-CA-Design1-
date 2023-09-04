@@ -30,7 +30,7 @@
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
-    <script defer src="js/script.js"></script>
+    <script defer src="js/store.js"></script>
   </head>
   <body>
     <header>
@@ -135,74 +135,81 @@
       </div>
       </section>
 <section class="payment-information">
-  <div class="payment-container">
-    <div class="payment-item-1">
-      <h2 class="h2-checkout">Select Payment Method</h2>
+
+<div class="checkoutContainer">
+  <div class="checkoutCart">
+    <span>ITEM</span>
+    <span>PRICE</span>
+    <span>QUANTITY</span>
+  </div>
+  <div class="checkoutDiv">
+    <div class="cart-row">
+      <div class="cart-item"><img class="small-asset" src="images/Asset%203.png" alt="Picture of jacket.">
+        <span>product name</span>
+        </div>
+        <span class="cartPrice">1799,-</span>
+        <div class="quantityDiv">
+        <span>-</span><input class="quantityInput" value="2" type="number" name="input"  placeholder="">
+        <span>+</span><button class="btn-confirm btnRemove">REMOVE</button></div>
+    </div>
+
+    <div class="checkoutDiv">
+      <div class="cart-row">
+        <div class="cart-item"><img class="small-asset" src="images/Asset%203.png" alt="Picture of jacket.">
+          <span>product name</span>
+          </div>
+          <span class="cartPrice">1799,-</span>
+          <div class="quantityDiv">
+          <span>-</span><input class="quantityInput" value="2" type="number" name="input"  placeholder="">
+          <span>+</span><button class="btn-confirm btnRemove">REMOVE</button></div>
+      </div>
+    <div class="checkoutDiv">
+      <div class="cart-row">
+        <div class="cart-item"><img class="small-asset" src="images/Asset%203.png" alt="Picture of jacket.">
+          <span>product name</span>
+          </div>
+          <span class="cartPrice">1799,-</span>
+          <div class="quantityDiv">
+          <span>-</span><input class="quantityInput" value="2" type="number" name="input"  placeholder="">
+          <span>+</span><button class="btn-confirm btnRemove">REMOVE</button></div>
+      </div>
+</div>
+<div class="totalPrice">
+  <span class="order-details">Total:</span>
+  <span class="order-details">price</span>
+</div>
+<button class="btnConfirm">PURCHASE</button>
+
+</div>
+
+<div class="payment-item-1">
+<h2 class="h2-checkout">Select Payment Method</h2>
 <div class="icon-payment">
-  <div class="icon-div-1">
-  <ion-icon class="icon-payment-1" name="card-outline"></ion-icon>  
-  <span class="payment-span">Visa</span></div>
-  <div class="icon-div-1"> <ion-icon class="icon-payment-1" name="logo-paypal"></ion-icon><span class="payment-span">PayPay</span></div>
-    <div class="icon-div-1"><ion-icon class="icon-payment-1" name="wallet-outline"></ion-icon><span class="payment-span">Master Card</span></div>
+<div class="icon-div-1">
+<ion-icon class="icon-payment-1" name="card-outline"></ion-icon>  
+<span class="payment-span">Visa</span></div>
+<div class="icon-div-1"> <ion-icon class="icon-payment-1" name="logo-paypal"></ion-icon><span class="payment-span">PayPay</span></div>
+<div class="icon-div-1"><ion-icon class="icon-payment-1" name="wallet-outline"></ion-icon><span class="payment-span">Master Card</span></div>
 </div>
 <div class="input-order">
-  <label class="label-text" for="Card Number">Card number:</label>
-  <input class="payment-input" type="text" name="input" placeholder="3536 4565 6567 3543">
-  <label class="label-text" for="Card Number">Cardholder Name:</label>
-  <input class="payment-input" type="text" name="input" placeholder="Weronika Martinsen">
-    <label class="label-text" for="Card Number">Valid Throught:</label>
-  <input class="payment-input-short" type="text" name="input" placeholder="12/26">
-  <label class="label-text" for="Card Number">CVV:</label>
-  <input class="payment-input-short" type="text" name="input"  placeholder=" &#8226; &#8226; &#8226; ">
-  <div class="input-span">
-  <input type="checkbox" class="menu-checkbox" />
-  <label for="menu-chechbox"><i class="fas fa-bars"></i></label>
-  <span class="checkout-span">Save my payment details for my next purchases.</span></div>
+<label class="label-text" for="Card Number">Card number:</label>
+<input class="payment-input" type="text" name="input" placeholder="3536 4565 6567 3543">
+<label class="label-text" for="Card Number">Cardholder Name:</label>
+<input class="payment-input" type="text" name="input" placeholder="Weronika Martinsen">
+<label class="label-text" for="Card Number">Valid Throught:</label>
+<input class="payment-input-short" type="text" name="input" placeholder="12/26">
+<label class="label-text" for="Card Number">CVV:</label>
+<input class="payment-input-short" type="text" name="input"  placeholder=" &#8226; &#8226; &#8226; ">
+<div class="input-span">
+<input type="checkbox" class="menu-checkbox" />
+<label for="menu-chechbox"><i class="fas fa-bars"></i></label>
+<span class="checkout-span">Save my payment details for my next purchases.</span></div>
 </div>
 <a href="confirmation.html" class="btn-confirm">Confirm your order</a>
 </div>
-    <div class="payment-item-2">
-      <div class="bigger-box">
-        <h3 class="h3-order-summary">Order summary</h3>
-        <hr class="horizontal-line-2"></hr>
-        <div class="image-text">
-        <div class="image-asset-small">
-          <img class="small-asset" src="images/Asset%203.png" alt="Picture of jacket.">
-        </div>
-        <div class="image-text-small">
-          <p class="detail-paragraph extra-margin">Mountain Jacket</p>
-    <p class="grid-item-paragraph small">Senja Winn Jacket Sigma</p>
-    <p class="order-paragraph">Quanity: 1</p>
-    <p class="order-paragraph">Size: XL</p>
-    <p class="order-paragraph">Color: &#11044;</p>
-    <p class="order-paragraph">Price: 1 499,-</p>      
-  </div>
-        </div>
-        <div class="order-details">
-          <div class="details-1">
-          <p class="order-details">Subtotal</p>
-          <p class="order-details">VAT (15%)</p>
-          <p class="order-details">Shipping Charges</p>
-          <p class="order-details"><b>Total</b></p>
-        </div>
-        <div class="details-2">
-          <p class="order-details-2">1 499</p>
-          <p class="order-details-2">54</p>
-          <p class="order-details-2">FREE</p>
-          <hr class="horizontal-line-3"></hr>
-          <p class="order-details-2"><b>NOK 1 533.00</b></p>
-        </div>
-        </div>
-      </div>
-      <div class="smaller-box">
-        <h3 class="h3-order-summary">Order summary</h3>
-        <hr class="horizontal-line-2 shipping-one"></hr>
-        <p class="order-details shipping-address">Martin Mabalaja</p>
-        <p class="order-details shipping-address">Valvatne 11b</p>
-        <p class="order-details shipping-address">5412 Stord</p>
-        <p class="order-details shipping-address">Vestland, Norway</p>
-      </div>
-    </div>
+
+</div>
+
 </section>
 <footer>
   <div class="footer-box">
