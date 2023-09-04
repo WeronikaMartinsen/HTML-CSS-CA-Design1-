@@ -37,7 +37,11 @@ async function fetchDetail() {
     const titleContainer = document.getElementById("title");
     titleContainer.textContent = title;
     createHtml(jacketDetail);
-    console.log(jacketDetail);
+
+    const btnConfirm = document.querySelector(".btnConfirm");
+    btnConfirm.addEventListener("click", () => {
+      window.location.href = `checkout.html?id=${jacketDetail.id}&title=${jacketDetail.title}`;
+    });
 
     function createHtml(jacketDetail) {
       const divPrice = document.createElement("div");
@@ -45,6 +49,10 @@ async function fetchDetail() {
       const priceJ = jacketDetail.price;
       const saleJ = jacketDetail.discountedPrice;
       const onSaleJ = jacketDetail.onSale;
+      /* const btnConfirm = document.querySelector(".btnConfirm");
+      btnConfirm.addEventListener("click", () => {
+        window.location.href = `checkout.html?id=${jacketDetail.id}&title=${jacketDetail.title}`;
+      }); */
 
       if (!onSaleJ) {
         divPrice.innerHTML = `<span class="normalPrice">${priceJ} ,-</span>`;
@@ -70,7 +78,7 @@ async function fetchDetail() {
     </select>
     <span class="spanProduct">Color:<ion-icon class="colorIcon" style="color:${jacketDetail.baseColor}"name="ellipse"></ion-icon></span> 
     <div class="jacketPrice">${divPrice.outerHTML}</div>
-    <a href="checkout.html"class="btnConfirm">Add to bag <ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></a>
+    <button class="btnConfirm shopItemButton">Add to bag <ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></button>
     </div></div>`;
 
       console.log(jacketDetail);
