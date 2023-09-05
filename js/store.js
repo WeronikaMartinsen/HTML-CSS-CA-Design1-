@@ -1,9 +1,8 @@
-function showError(message) {
-  const errorContainer = document.querySelector(".checkoutContainer");
+/* function showError(message) {
+  const errorContainer = document.querySelector(".checkoutDiv");
   errorContainer.innerHTML = `<h2>Error: ${message}</h2>`;
 }
 
-const addedProduct = document.querySelector(".cart-row");
 
 function getProductIdFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -17,7 +16,7 @@ function getJacketTitleFromQuery() {
   return urlParams.get("title");
 }
 
-async function fetchDetail() {
+async function fetchProduct() {
   const itemId = getProductIdFromQuery();
   const title = getJacketTitleFromQuery();
   if (!itemId) {
@@ -30,39 +29,38 @@ async function fetchDetail() {
     const response = await fetch(
       `https://api.noroff.dev/api/v1/rainy-days/${itemId}`
     );
-    const jacketDetail = await response.json();
+    const productDetail = await response.json();
     if (!response.ok) {
       throw new Error("Fetch jacket with ID failed.");
     }
-    const titleContainer = document.getElementById("title");
-    titleContainer.textContent = title;
-    createHtml(jacketDetail);
-    console.log(jacketDetail);
 
-    function createHtml(jacketDetail) {
-      const divPrice = document.createElement("div");
-      divPrice.classList.add("divPrice");
-      const priceJ = jacketDetail.price;
-      const saleJ = jacketDetail.discountedPrice;
-      const onSaleJ = jacketDetail.onSale;
+    const checkoutContainer = document.querySelector("checkoutDiv");
+    function createHtml(productDetail) {
+      const productContainer = document.createElement("div");
+      productContainer.classList.add("cart-row");
 
-      if (!onSaleJ) {
-        divPrice.innerHTML = `<span class="normalPrice">${priceJ} ,-</span>`;
-      } else {
-        divPrice.innerHTML = `<span class="oldPrice">${priceJ} ,-</span>
-    <span class="jacketSale">${saleJ} ,-</span>`;
-      }
+      checkoutContainer.appendChild(productContainer);
+      const image = document.createElement("img");
+      image.classList.add("small-asset");
+      image.innerHTML = `${productDetail.image}`;
 
-      detailContainer.innerHTML = ``;
-
-      console.log(jacketDetail);
-    }
+      /*      <div class="checkoutDiv">
+    <div class="cart-row">
+      <div class="cart-item">
+        <img class="small-asset" src="images/Asset%203.png" alt="Picture of jacket.">
+        <span>product name</span>
+        </div>
+        <span class="cartPrice">1799</span>
+        <div class="quantityDiv">
+        <input class="quantityInput" value="1" type="number" name="input"  placeholder="">
+        <button class="btn-confirm btnRemove">REMOVE</button></div>
+    </div> */
+/*     }
   } catch (error) {
     showError(error.message);
   }
 }
-
-fetchDetail();
+fetchProduct();
 
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", ready);
@@ -124,3 +122,52 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("totalPrice")[0].innerText = total + "$";
 }
+  */
+
+function showError(message) {
+  const errorContainer = document.querySelector(".checkoutDiv");
+  errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
+}
+
+const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
+
+const checkoutContainer = document.querySelector(".checkoutDiv");
+
+async function fetchProduct() {
+  showLoadingIndicator();
+  try {
+    const response = await fetch(rainyDaysAPI);
+    if (!response.ok) {
+      throw new Error(`API fetch call failed.`);
+    }
+    console.log(response);
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    throw error;
+  }
+}
+async function displayProduct() {
+  try {
+    const jackets = await fetchProduct();
+    checkoutContainer.innerHTML = "";
+
+    for (let i = 0; i < jackets.length; i++) {
+      const jacket = jackets[i];
+      console.log(jackets);
+
+      const productDiv = document.createElement("div");
+      productDiv.classList.add("cart-row");
+      checkoutContainer.appendChild(productDiv);
+    }
+  } catch (error) {
+    showError(error.message);
+  }
+}
+function showLoadingIndicator() {
+  const loading = document.querySelector(".checkoutDiv");
+  loading.innerHTML = `<span>Loading...</span>`;
+}
+
+displayProduct();
+console.log(displayProduct);

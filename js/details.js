@@ -49,10 +49,6 @@ async function fetchDetail() {
       const priceJ = jacketDetail.price;
       const saleJ = jacketDetail.discountedPrice;
       const onSaleJ = jacketDetail.onSale;
-      /* const btnConfirm = document.querySelector(".btnConfirm");
-      btnConfirm.addEventListener("click", () => {
-        window.location.href = `checkout.html?id=${jacketDetail.id}&title=${jacketDetail.title}`;
-      }); */
 
       if (!onSaleJ) {
         divPrice.innerHTML = `<span class="normalPrice">${priceJ} ,-</span>`;
@@ -89,3 +85,7 @@ async function fetchDetail() {
 }
 
 fetchDetail();
+const btnConfirm = document.querySelector(".btnConfirm");
+btnConfirm.addEventListener("click", () => {
+  window.location.href = `checkout.html?id=${jacketDetail.id}&title=${jacketDetail.title}`;
+});
