@@ -313,7 +313,7 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 10em;
-  width: auto;
+  width: 100%;
 }
 .component1-paragraph {
   text-align: right;
@@ -1384,6 +1384,13 @@ li {
 }
 .contact-input:hover {
   background-color: rgb(245, 245, 245);
+}
+
+.jacket-image-box {
+  width: 100;
+}
+.jacket-image {
+  width: 100%;
 }
 /************************Contact Confirmation*************************/
 

@@ -5,29 +5,29 @@ const favorites = getExistingFavs();
 const jacketsContainer = document.querySelector(".resultsContainer");
 
 favorites.forEach((favorite) => {
-  jacketsContainer.innerHTML += `<div class="card">
-  <i class="fa fa-heart" aria-hidden="true"></i>
-<h4>${favorite.name}</h4>
-<span>${favorite.price}</span>
-<img ${favorite.image}/>
+  const cardDiv = document.createElement("div");
+  cardDiv.classList.add("card");
 
+  const heartIcon = document.createElement("i");
+  heartIcon.classList.add("fa", "fa-heart");
+  heartIcon.setAttribute("aria-hidden", "true");
 
-  </div>`;
+  const title = document.createElement("h4");
+  title.textContent = favorite.name;
+
+  const price = document.createElement("span");
+  price.textContent = favorite.price;
+
+  const image = document.createElement("img");
+  image.src = favorite.image;
+  image.alt = favorite.name;
+  console.log("Image Path:", favorite.image); // You can set an alt attribute for accessibility
+  console.log("Favorites:", favorites);
+  // Append the elements to the card div
+  cardDiv.appendChild(heartIcon);
+  cardDiv.appendChild(title);
+  cardDiv.appendChild(price);
+  cardDiv.appendChild(image);
+
+  jacketsContainer.appendChild(cardDiv);
 });
-
-/* 
-async function displayJackets() {
-  try {
-    const jackets = await getJackets();
-
-    for (let i = 0; i < jackets.length; i++) {
-      const jacket = jackets[i];
-      console.log(jacket);
-    }
-  } catch (error) {
-    showError(error.message);
-  }
-}
-
-displayJackets();
- */
