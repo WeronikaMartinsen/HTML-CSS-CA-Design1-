@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="We are an online shop selling a rain jackets in the very good price."
+    />
+    <title>Rainy Days/Jackets</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/mediaquery.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;600;700&family=Raleway:wght@100;200;400;500&family=Roboto:ital,wght@0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="icon" href="data:;base64,=" />
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script defer src="js/favorites.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox"
+          ><ion-icon class="menu-icon" name="menu-outline">%20</ion-icon></label
+        >
+        <div class="nav-div1">
+          <a href="index.html">
+            <img
+              id="logo"
+              src="images/RainyDays_Logo.png"
+              alt="The logo of the Rainy Days Website."
+            />
+          </a>
+        </div>
+        <div class="nav-div2">
+          <a class="nav-links" href="index.html">HOME</a>
+
+          <a class="nav-links" href="jackets.html">JACKETS</a>
+
+          <a class="nav-links" href="about.html">ABOUT US</a>
+
+          <a class="nav-links" href="contact.html">CONTACT</a>
+        </div>
+
+        <div class="div-3-and-div-4">
+          <div class="nav-div4">
+            <div class="nav-icon-box">
+              <div class="nav-link-svg">
+                <a href="login.html">
+                  <ion-icon class="nav-icons" name="person-outline"></ion-icon>
+                </a>
+              </div>
+              <div>
+                <span class="icon-text">Log inn</span>
+              </div>
+            </div>
+            <div class="nav-icon-box">
+              <div class="nav-link-svg">
+                <a href="favorites.html"
+                  ><ion-icon class="nav-icons" name="heart-outline"></ion-icon
+                ></a>
+              </div>
+              <div>
+                <a href="favorites.html" class="icon-text">Favorites</a>
+              </div>
+            </div>
+            <div class="nav-icon-box">
+              <div class="nav-link-svg">
+                <a href="product-details.html">
+                  <ion-icon class="nav-icons" name="bag-outline"></ion-icon
+                ></a>
+              </div>
+              <div>
+                <span class="icon-text">Add to cart</span>
+              </div>
+            </div>
+          </div>
+          <div class="nav-div3">
+            <div class="icon-and-search-bar">
+              <ion-icon class="search-icon" name="search"></ion-icon>
+              <input
+                aria-expanded="true"
+                aria-label="search-bar"
+                class="search-bar"
+                name="q"
+                type="text"
+                role="combobox"
+                placeholder="Search the product name"
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="extra-box">Buy now. Pay later. Klarna.</div>
+
+    <div class="containerFav">
+      <h1>Favourites</h1>
+      <div class="resultsContainer"></div>
+    </div>
+    <script src="js/favorites.js" type="module"></script>
+  </body>
+</html>

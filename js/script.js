@@ -1,3 +1,5 @@
+import { getExistingFavs } from "./favFunctions.js";
+
 function showError(message) {
   const errorContainer = document.querySelector(".resultsContainer");
   errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
@@ -35,7 +37,7 @@ async function displayJackets() {
       jacketsContainer.appendChild(jacketDiv);
 
       const heartFav = document.createElement("i");
-      heartFav.innerHTML += `<ion-icon class="heartFav" name="heart-outline"></ion-icon>`;
+      heartFav.innerHTML += `<i class="far fa-heart" aria-hidden="true" data-id="${jacket.id}" data-name="${jacket.title}"></i>`;
 
       const image = document.createElement("img");
       image.src = jacket.image;
@@ -88,6 +90,10 @@ async function displayJackets() {
       jacketDiv.appendChild(jacketText);
       jacketDiv.appendChild(jacketPrice);
       jacketDiv.appendChild(buttonDiv);
+
+      heartFav.addEventListener("click", (event) => {
+        handleClick(event, heartFav);
+      });
     }
   } catch (error) {
     showError(error.message);
@@ -99,4 +105,36 @@ function showLoadingIndicator() {
   loading.innerHTML = `<span>Loading...</span>`;
 }
 
+function handleClick(event) {
+  const heartIcon = event.target;
+  heartIcon.classList.toggle("fa");
+  heartIcon.classList.toggle("far");
+
+  const id = heartIcon.dataset.id;
+  const name = heartIcon.dataset.name;
+  const price = heartIcon.dataset.price;
+  const image = heartIcon.dataset.image;
+
+  const currentFavs = getExistingFavs();
+
+  const productExists = currentFavs.find(function (fav) {
+    return fav.id === id;
+  });
+
+  if (productExists === undefined) {
+    const product = { id: id, name: name, price: price, image: image };
+
+    currentFavs.push(product);
+    saveFavs(currentFavs);
+  } else {
+    const newFavs = currentFavs.filter((fav) => fav.id !== id);
+    saveFavs(newFavs);
+  }
+
+  console.log("Saved favorites:", currentFavs);
+}
+
+function saveFavs(favs) {
+  localStorage.setItem("favorites", JSON.stringify(favs));
+}
 displayJackets();

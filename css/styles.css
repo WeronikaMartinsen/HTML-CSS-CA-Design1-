@@ -141,6 +141,7 @@ header {
   color: var(--headings-color);
   font-weight: 600;
   letter-spacing: 1.6;
+  text-decoration: none;
 }
 .hero-image-wrapper {
   position: relative;
@@ -550,11 +551,11 @@ h3 {
   columns: gray;
   text-decoration: line-through;
 }
-.heartFav {
-  font-size: 28px;
+i {
+  font-size: 1.3em;
   position: absolute;
-  right: 4%;
   top: 2%;
+  right: 5%;
 }
 .search-results,
 .searchJacket {
@@ -568,7 +569,7 @@ h3 {
 }
 .btnAdd {
   background-color: lightcoral;
-  padding: 1em 2em;
+  padding: 1em 2.3em;
   font-size: var(--button-font-family);
   border-radius: var(--button-border-radius-default);
   border: none;
