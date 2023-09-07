@@ -180,6 +180,9 @@ h1 {
 }
 .a-btn-cta {
   background-color: var(--background-color);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -4px -4px 8px rgba(255, 255, 255, 0.2);
+  font-weight: 800;
 }
 .hero-header-wrapper {
   position: absolute;
@@ -237,22 +240,25 @@ h1 {
   padding: 1em;
   margin: 1em;
   border-radius: var(--button-border-radius-default);
-  border: 1px solid var(--headings-color);
-  height: 18em;
+  border: 1px solid var(--background-color-default);
+  height: 20em;
   width: auto;
   text-align: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -4px -4px 8px rgba(255, 255, 255, 0.2);
 }
 .component1 {
+  margin-top: 4em;
   background-color: var(--paragraph-color);
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  max-width: 100%;
   height: 14em;
-  gap: 0.62em;
-  padding: 3.75em;
+  gap: 0.4em;
+  padding: 3em;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .heart-icon-home-page {
   position: absolute;
@@ -266,6 +272,7 @@ h1 {
   font-size: 1.25em;
   padding: 0em;
   color: var(--headings-color);
+  margin: 2em;
 }
 h2 {
   font-family: var(--heading-family);
@@ -277,7 +284,7 @@ h2 {
 .button-shop-now {
   background-color: var(--background-color);
   text-align: center;
-  padding: 0.8em 1.7em 0.8em 1.7em;
+  padding: 0.8em;
   text-decoration: none;
   border-radius: var(--button-border-radius-default);
   font-size: 1em;
@@ -285,6 +292,8 @@ h2 {
   font-family: var(--button-font-family);
   border-style: none;
   color: var(--headings-color);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -4px -4px 8px rgba(255, 255, 255, 0.2);
 }
 .button-shop-now:hover {
   background-color: var(--headings-color);
@@ -334,7 +343,8 @@ select {
   padding: 1em;
 }
 .assets-jacket {
-  height: 100%;
+  height: 17em;
+  width: 100%;
 }
 .section-break {
   display: flex;
@@ -531,7 +541,7 @@ i {
 }
 .btnAdd {
   background-color: lightcoral;
-  padding: 1em 2.3em;
+  padding: 1em 2em;
   font-size: var(--button-font-family);
   border-radius: var(--button-border-radius-default);
   border: none;
@@ -540,6 +550,8 @@ i {
   text-decoration: none;
   color: black;
   font-size: 1.1em;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -4px -4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .btnAdd:hover,
@@ -553,8 +565,9 @@ i {
 
 .resultsContainer {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .baseColor {
@@ -564,7 +577,12 @@ i {
 }
 
 .card {
-  width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40em;
+  width: 20%;
   padding: 1em;
   border: 1px solid var(--background-color-default);
   border-radius: 10px;
@@ -575,6 +593,8 @@ i {
   align-items: center;
   position: relative;
   text-align: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -4px -4px 8px rgba(255, 255, 255, 0.2);
 }
 .image {
   width: 80%;

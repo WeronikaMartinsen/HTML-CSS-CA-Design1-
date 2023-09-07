@@ -20,9 +20,6 @@
   .box-for-asset {
     width: 11em;
   }
-  .assets-jacket {
-    width: 9em;
-  }
 }
 @media (max-width: 960px) {
   .contact-container {
@@ -126,6 +123,7 @@
   .about-us-item-2 {
     max-width: 100%;
   }
+
   #navbar {
     gap: 2.5em;
   }
@@ -139,12 +137,7 @@
   .jacket-price-new {
     font-size: 1.2em;
   }
-  h2 {
-    font-size: 2em;
-  }
-  .component1 {
-    gap: 1em;
-  }
+
   .payment-container {
     margin-top: 24em;
     margin-bottom: 25em;
@@ -162,19 +155,19 @@
     padding-top: 3em;
     padding-bottom: 3em;
   }
-}
 
-/***********************Tablet *******************************/
-
-@media (max-width: 810px) {
   .component1 {
-    font-size: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: max-content;
     justify-items: center;
   }
+}
+
+/***********************Tablet *******************************/
+
+@media (max-width: 810px) {
   .jacket-name {
     font-size: 0.9em;
   }
@@ -188,9 +181,7 @@
   h2 {
     font-size: 3em;
   }
-  .component1 {
-    gap: 1em;
-  }
+
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -446,10 +437,7 @@
     width: 16em;
     height: auto;
   }
-  .assets-jacket {
-    width: 13em;
-    height: auto;
-  }
+
   .nav-div3 {
     margin-right: 0.6em;
   }
@@ -505,9 +493,6 @@
   .hero-header {
     margin-left: 1em;
   }
-  .component-cart {
-    height: 19em;
-  }
   h2 {
     font-size: 2.5em;
   }
@@ -525,15 +510,6 @@
   }
   .email {
     display: none;
-  }
-  .component1 {
-    font-size: 75%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat 2 (1fr);
-    height: max-content;
-    justify-items: center;
-    padding: 0.6em;
   }
   .icon-inner {
     width: 50%;
@@ -615,6 +591,11 @@
   .btn-contact-conf {
     width: 20em;
   }
+  .component1 {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 @media (max-width: 540px) {
   .checkout-icon {
@@ -681,12 +662,15 @@
   h2 {
     margin-top: 1em;
   }
-  .button-shop-now {
-    margin-bottom: 1em;
-  }
 }
 
 @media (max-width: 500px) {
+  .resultsContainer {
+    display: block;
+  }
+  .card {
+    width: 80%;
+  }
   .contact-span {
     font-size: 0.8em;
     padding-right: 3em;
@@ -708,14 +692,6 @@
   .color {
     width: 2em;
     height: 2em;
-  }
-  .component1 {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-  .assets-jacket {
-    width: 16em;
   }
   .box-for-asset {
     width: 20em;
@@ -822,10 +798,6 @@
   }
   #name-input {
     width: 20em;
-  }
-  .component-cart {
-    height: 24em;
-    margin-bottom: 1em;
   }
   h3 {
     font-size: 1.1em;
@@ -989,9 +961,6 @@
     gap: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-  .button-shop-now {
-    margin-bottom: 20px;
   }
   .grid-container {
     grid-template-columns: repeat(1, 1fr);

@@ -35,8 +35,8 @@ async function fetchJackets() {
             jacketPrice.innerHTML = `<span class="normalPrice">${price} ,-</span>`;
           } else {
             jacketPrice.innerHTML = `
-            <span class="oldPrice">${price} ,-</span>
-            <span class="jacketSale">${sale} ,-</span>
+            <span class="oldPrice">Before: ${price} ,-</span>
+            <span class="jacketSale"> ${sale} ,-</span>
             `;
           }
 
