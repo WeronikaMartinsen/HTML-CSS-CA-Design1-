@@ -1,9 +1,7 @@
 function showError(message) {
-  const errorContainer = document.querySelector(".resultsContainer");
+  const errorContainer = document.querySelector(".product-cart");
   errorContainer.innerHTML = `<h2>Error: ${message}</h2>`;
 }
-
-const detailContainer = document.querySelector(".product-cart");
 
 function getJacketIdFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -38,45 +36,78 @@ async function fetchDetail() {
     titleContainer.textContent = title;
     createHtml(jacketDetail);
 
-    const btnConfirm = document.querySelector(".btnConfirm");
-    btnConfirm.addEventListener("click", () => {
-      window.location.href = `checkout.html?id=${jacketDetail.id}&title=${jacketDetail.title}`;
-    });
-
     function createHtml(jacketDetail) {
+      const imageDivDetail = document.createElement("div");
+      const div2 = document.createElement("div");
+      div2.classList.add("div2");
+
+      imageDivDetail.classList.add("imageDivDetail");
+      const image = document.createElement("img");
+      image.classList.add("imageDetail");
+      image.src = jacketDetail.image;
+      image.alt = jacketDetail.description;
+
+      const title = document.createElement("h3");
+      title.innerHTML = jacketDetail.title;
+
+      const description = document.createElement("span");
+      description.innerHTML = jacketDetail.description;
+
       const divPrice = document.createElement("div");
       divPrice.classList.add("divPrice");
       const priceJ = jacketDetail.price;
       const saleJ = jacketDetail.discountedPrice;
       const onSaleJ = jacketDetail.onSale;
-
       if (!onSaleJ) {
         divPrice.innerHTML = `<span class="normalPrice">${priceJ} ,-</span>`;
       } else {
         divPrice.innerHTML = `<span class="oldPrice">${priceJ} ,-</span>
     <span class="jacketSale">${saleJ} ,-</span>`;
       }
+      const btnConfirm = document.createElement("button");
+      btnConfirm.classList.add("btnConfirm");
+      btnConfirm.innerHTML = `Add to bag <ion-icon class="iconBag" name="bag-handle-outline"></ion-icon>`;
+      btnConfirm.addEventListener("click", () => {
+        window.location.href = `checkout.html?id=${jacketDetail.id}&title=${jacketDetail.title}`;
+      });
 
-      detailContainer.innerHTML = `<div class="productContainer">
-   <div class="imageDiv"><img class="imageDetail" src="${jacketDetail.image}"/></div>
-    <div class="productContainer2"><h3>${jacketDetail.title}</h3><span class="spanProduct">${jacketDetail.description}</span>
-    <label class="labelSize" for="sizes">Select size:</label>
-    <select class="option" name="size" id="size">
-      <optgroup class="option"label="Small:">
-        <option class="option">${jacketDetail.sizes[0]}</option>
-        <option class="option">${jacketDetail.sizes[1]}</option>
-      </optgroup>
-      <optgroup label="Medium/Large:">
-        <option class="option">${jacketDetail.sizes[2]}</option>
-        <option class="option">${jacketDetail.sizes[3]}</option>
-        <option class="option">${jacketDetail.sizes[4]}</option>
-      </optgroup>
-    </select>
-    <span class="spanProduct">Color:<ion-icon class="colorIcon" style="color:${jacketDetail.baseColor}"name="ellipse"></ion-icon></span> 
-    <div class="jacketPrice">${divPrice.outerHTML}</div>
-    <button class="btnConfirm shopItemButton">Add to bag <ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></button>
-    </div></div>`;
+      const color = document.createElement("span");
+      color.classList.add("spanProduct");
+      color.innerHTML = `Color:<ion-icon class="colorIcon" style="color:${jacketDetail.baseColor}"name="ellipse"></ion-ico`;
 
+      const sizeDiv = document.createElement("div");
+      sizeDiv.classList.add("sizeDiv");
+      const size = document.createElement("select");
+      size.innerHTML = `<label class="labelSize" for="sizes">Select size:</label>
+      <select class="option" name="size" id="size">
+        <optgroup class="option"label="Small:">
+          <option class="option">${jacketDetail.sizes[0]}</option>
+          <option class="option">${jacketDetail.sizes[1]}</option>
+        </optgroup>
+        <optgroup label="Medium/Large:">
+          <option class="option">${jacketDetail.sizes[2]}</option>
+          <option class="option">${jacketDetail.sizes[3]}</option>
+          <option class="option">${jacketDetail.sizes[4]}</option>
+        </optgroup>
+      </select>`;
+      const detailContainer = document.querySelector(".product-cart");
+      detailContainer.innerHTML = "";
+
+      sizeDiv.appendChild(size);
+      imageDivDetail.appendChild(image);
+      div2.appendChild(title);
+      div2.appendChild(description);
+      div2.appendChild(color);
+      div2.appendChild(sizeDiv);
+      div2.appendChild(divPrice);
+      div2.appendChild(btnConfirm);
+
+      detailContainer.appendChild(imageDivDetail);
+      detailContainer.appendChild(div2);
+      /*    detailContainer.appendChild(sizeDiv);
+      detailContainer.appendChild(size);
+      detailContainer.append(divPrice);
+      detailContainer.append(btnConfirm); */
       console.log(jacketDetail);
     }
   } catch (error) {
@@ -85,7 +116,3 @@ async function fetchDetail() {
 }
 
 fetchDetail();
-const btnConfirm = document.querySelector(".btnConfirm");
-btnConfirm.addEventListener("click", () => {
-  window.location.href = `checkout.html?id=${jacketDetail.id}&title=${jacketDetail.title}`;
-});

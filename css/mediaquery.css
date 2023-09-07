@@ -358,24 +358,18 @@
   .nav-links {
     font-size: 0.7em;
   }
-  .product-detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-  }
+
   .product-cart {
+    display: flex;
+    /*     flex-direction: row;
     align-self: center;
     margin-top: 1.25em;
-    margin-left: 0;
+    margin-left: 0; */
   }
   .btn-sign-up {
     width: 7em;
   }
-  .product-cart-asset {
-    margin-top: 4em;
-    width: 18em;
-  }
+
   .product-info {
     align-self: center;
   }
