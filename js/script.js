@@ -39,6 +39,8 @@ async function displayJackets() {
       const heartFav = document.createElement("i");
       heartFav.innerHTML += `<i class="far fa-heart" aria-hidden="true" data-id="${jacket.id}" data-name="${jacket.title}"></i>`;
 
+      const imageBox = document.createElement("div");
+      imageBox.classList.add("imageBox");
       const image = document.createElement("img");
       image.src = jacket.image;
       image.alt = jacket.description;
@@ -83,9 +85,11 @@ async function displayJackets() {
       });
       console.log(buttonDiv);
 
+      imageBox.appendChild(image);
+
       jacketDiv.appendChild(heartFav);
       jacketDiv.appendChild(jacketTitle);
-      jacketDiv.appendChild(image);
+      jacketDiv.appendChild(imageBox);
       jacketDiv.appendChild(color);
       jacketDiv.appendChild(jacketText);
       jacketDiv.appendChild(jacketPrice);

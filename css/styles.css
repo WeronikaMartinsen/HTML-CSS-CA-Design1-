@@ -232,7 +232,7 @@ h1 {
 .component-cart {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   border: 0.1em solid white;
@@ -241,7 +241,7 @@ h1 {
   margin: 1em;
   border-radius: var(--button-border-radius-default);
   border: 1px solid var(--background-color-default);
-  height: 20em;
+  height: 23em;
   width: auto;
   text-align: center;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
@@ -315,9 +315,11 @@ h2 {
   border-radius: var(--button-border-radius-default);
   padding: 2em;
   display: flex;
+  margin: 2em;
+  width: 80%;
 }
 .imageDivDetail {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -325,7 +327,7 @@ h2 {
 .div2 {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   justify-content: flex-end;
   align-items: flex-end;
   text-align: right;
@@ -333,18 +335,16 @@ h2 {
 
 select {
   padding: 0.5em;
-  font-size: 1.2em;
+  font-size: 1em;
   width: 7em;
   border-radius: var(--button-border-radius-default);
 }
 
 .imageDiv {
-  height: 10em;
-  padding: 1em;
+  width: 100%;
 }
 .assets-jacket {
-  height: 17em;
-  width: 100%;
+  height: 13em;
 }
 .section-break {
   display: flex;
@@ -512,7 +512,7 @@ h3 {
   padding: 0.4em;
 }
 .normalPrice {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 .jacketSale {
   font-size: 1.5em;
@@ -560,7 +560,7 @@ i {
 }
 
 .buttonDiv {
-  margin: 2em;
+  margin: 2em 0 2em 0;
 }
 
 .resultsContainer {
@@ -583,7 +583,7 @@ i {
   align-items: center;
   height: 40em;
   width: 20%;
-  padding: 1em;
+  padding: 2em;
   border: 1px solid var(--background-color-default);
   border-radius: 10px;
   margin: 2em;
@@ -597,7 +597,14 @@ i {
     -4px -4px 8px rgba(255, 255, 255, 0.2);
 }
 .image {
-  width: 80%;
+  height: 16em;
+}
+.imageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  padding: 1em;
 }
 
 .extra-box {
@@ -681,8 +688,7 @@ i {
 }
 .btnConfirm {
   margin-top: 2em;
-  color: var(--headings-color);
-  background-color: var(--background-color-default);
+  background-color: lightcoral;
   width: 60%;
   text-align: center;
   padding: 1em;
@@ -694,14 +700,12 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -4px -4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .imageDetail {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
+  height: 30em;
 }
 .btn-product:hover {
   background-color: var(--headings-color);

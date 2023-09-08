@@ -66,6 +66,9 @@
 /***********************Small laptop*******************************/
 
 @media (max-width: 1050px) {
+  .card {
+    width: 30%;
+  }
   .image-1-box {
     margin-left: 8em;
     margin-right: 8em;
@@ -162,6 +165,9 @@
     grid-template-rows: 1fr 1fr;
     height: max-content;
     justify-items: center;
+  }
+  .product-cart {
+    display: block;
   }
 }
 
@@ -350,17 +356,9 @@
     font-size: 0.7em;
   }
 
-  .product-cart {
-    display: flex;
-    /*     flex-direction: row;
-    align-self: center;
-    margin-top: 1.25em;
-    margin-left: 0; */
-  }
   .btn-sign-up {
     width: 7em;
   }
-
   .product-info {
     align-self: center;
   }
@@ -496,9 +494,19 @@
   h2 {
     font-size: 2.5em;
   }
+  .card {
+    width: 50%;
+  }
 }
 
 @media (max-width: 600px) {
+  .btnConfirm {
+    width: 100%;
+  }
+  .imageDetail {
+    height: 20em;
+    margin-bottom: 2em;
+  }
   .live-icon {
     padding-left: 0;
   }
@@ -665,12 +673,6 @@
 }
 
 @media (max-width: 500px) {
-  .resultsContainer {
-    display: block;
-  }
-  .card {
-    width: 80%;
-  }
   .contact-span {
     font-size: 0.8em;
     padding-right: 3em;
@@ -812,6 +814,9 @@
   .span-paragraph {
     font-size: 0.8em;
   }
+  imageDetail {
+    height: 20em;
+  }
 }
 @media (max-width: 434px) {
   .payment-item-1,
@@ -886,6 +891,9 @@
   }
   .unique-7 {
     padding-bottom: 0.5em;
+  }
+  .image {
+    height: 12em;
   }
 }
 /***********************Small mobile*******************************/
