@@ -157,7 +157,7 @@ h1 {
   font-size: 2.2em;
   text-align: center;
   color: white;
-  box-shadow: , -4px -4px 8px rgba(255, 255, 255, 0.2);
+  /*   box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.2); */
 }
 .btn-cta {
   border-radius: var(--button-border-radius-default);

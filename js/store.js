@@ -97,7 +97,6 @@ if (document.readyState == "loading") {
 
 function ready() {
   const removeCardButtons = document.getElementsByClassName("btnRemove");
-
   for (let i = 0; i < removeCardButtons.length; i++) {
     const button = removeCardButtons[i];
     button.addEventListener("click", removeCartItem);
@@ -149,6 +148,7 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100;
   const totalPriceElement = document.querySelector(".totalPrice");
   totalPriceElement.innerText = total + "$";
+  console.log(total);
 }
 
 function showLoadingIndicator() {

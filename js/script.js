@@ -79,7 +79,7 @@ async function displayJackets() {
 
       const buttonDiv = document.createElement("div");
       buttonDiv.classList.add("buttonDiv");
-      buttonDiv.innerHTML = `<a class="btnAdd">Add to bag</a>`;
+      buttonDiv.innerHTML = `<a class="btnAdd">View details</a>`;
       buttonDiv.addEventListener("click", () => {
         window.location.href = `product-details.html?id=${jacket.id}&title=${jacket.title}`;
       });
