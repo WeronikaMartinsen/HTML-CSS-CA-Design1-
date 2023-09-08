@@ -16,6 +16,7 @@ function getJacketTitleFromQuery() {
 }
 
 async function fetchDetail() {
+  showLoadingIndicator();
   const itemId = getJacketIdFromQuery();
   const title = getJacketTitleFromQuery();
   if (!itemId) {
@@ -104,14 +105,13 @@ async function fetchDetail() {
 
       detailContainer.appendChild(imageDivDetail);
       detailContainer.appendChild(div2);
-      /*    detailContainer.appendChild(sizeDiv);
-      detailContainer.appendChild(size);
-      detailContainer.append(divPrice);
-      detailContainer.append(btnConfirm); */
-      console.log(jacketDetail);
     }
   } catch (error) {
     showError(error.message);
+  }
+  function showLoadingIndicator() {
+    const loading = document.querySelector(".product-cart");
+    loading.innerHTML = `<span>Loading...</span>`;
   }
 }
 

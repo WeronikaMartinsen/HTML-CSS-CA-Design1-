@@ -721,9 +721,7 @@
     align-self: center;
     width: 21em;
   }
-  .hero-image {
-    object-fit: 100%;
-  }
+
   .feature {
     gap: 1.6em;
   }
@@ -937,10 +935,7 @@
   .nav-div4 {
     padding-right: 20px;
   }
-  .hero-image {
-    height: 70%;
-    margin-top: 240px;
-  }
+
   .hero-header {
     margin: 3em;
   }

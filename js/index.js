@@ -14,7 +14,7 @@ async function fetchJackets() {
         // Make sure to check if there's a corresponding jacket data for the div
         if (jacketDataArray[index]) {
           const jacketData = jacketDataArray[index];
-          console.log(jacketData);
+
           const imageDiv = document.createElement("div");
           const image = document.createElement("img");
           image.src = jacketData.image;
@@ -40,10 +40,18 @@ async function fetchJackets() {
             `;
           }
 
+          const button = document.createElement("button");
+          button.classList.add("btnHomePage");
+          button.innerHTML = `See more details <ion-icon name="arrow-forward-outline"></ion-icon>`;
+          button.addEventListener("click", () => {
+            window.location.href = `product-details.html?id=${jacketData.id}&title=${jacketData.title}`;
+          });
+
           componentCard.innerHTML = "";
           componentCard.appendChild(title);
           componentCard.appendChild(imageDiv);
           componentCard.appendChild(jacketPrice);
+          componentCard.appendChild(button);
         }
       });
     }
