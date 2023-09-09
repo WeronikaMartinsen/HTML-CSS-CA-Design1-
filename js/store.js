@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const savedCartData = JSON.parse(localStorage.getItem("cartData"));
+
+  if (savedCartData && Array.isArray(savedCartData)) {
+    const quantityInputs = document.getElementsByClassName("quantityInput");
+
+    for (let i = 0; i < quantityInputs.length; i++) {
+      const input = quantityInputs[i];
+      input.value = savedCartData[i].quantity;
+    }
+  }
+});
+
 function showError(message) {
   const errorContainer = document.querySelector(".checkoutDiv");
   errorContainer.innerHTML = `<h2>Error: ${message}</h2>`;
@@ -62,6 +75,9 @@ async function displayProduct() {
     cartPrice.classList.add("cartPrice");
     cartPrice.innerText = productDetail.price;
 
+    const totalPriceElement = document.querySelector(".totalPrice");
+    totalPriceElement.innerHTML = productDetail.price;
+
     const quantityDiv = document.createElement("div");
     quantityDiv.classList.add("quantityDiv");
 
@@ -71,84 +87,117 @@ async function displayProduct() {
     quantityInput.type = "number";
     quantityInput.name = "input";
 
+    const buttonMinus = document.createElement("button");
+    buttonMinus.classList.add("btnMinusPlus");
+    buttonMinus.innerText = "-";
+    buttonMinus.addEventListener("click", () => {
+      updateQuantity(quantityInput, -1); // Decrease quantity by 1
+      updateCartTotal();
+    });
+
+    const buttonPlus = document.createElement("button");
+    buttonPlus.classList.add("btnMinusPlus");
+    buttonPlus.innerText = "+";
+    buttonPlus.addEventListener("click", () => {
+      updateQuantity(quantityInput, 1); // Increase quantity by 1
+      updateCartTotal();
+    });
+
     const btnRemove = document.createElement("button");
     btnRemove.classList.add("btn-confirm", "btnRemove");
     btnRemove.innerText = "REMOVE";
 
+    quantityDiv.appendChild(buttonMinus);
     quantityDiv.appendChild(quantityInput);
-    quantityDiv.appendChild(btnRemove);
+    quantityDiv.appendChild(buttonPlus);
 
     productDiv.appendChild(image);
     productDiv.appendChild(productName);
     productDiv.appendChild(cartPrice);
     productDiv.appendChild(quantityDiv);
+    productDiv.appendChild(btnRemove);
 
     checkoutContainer.appendChild(productDiv);
+
+    if (document.readyState == "loading") {
+      document.addEventListener("DOMContentLoaded", ready);
+    } else {
+      ready();
+    }
+
+    function ready() {
+      const removeCardButtons = document.getElementsByClassName("btnRemove");
+      for (let i = 0; i < removeCardButtons.length; i++) {
+        const button = removeCardButtons[i];
+        button.addEventListener("click", removeCartItem);
+      }
+
+      const quantityInputs = document.getElementsByClassName("quantityInput");
+      for (let i = 0; i < quantityInputs.length; i++) {
+        const input = quantityInputs[i];
+        input.addEventListener("change", quantityChanged);
+      }
+
+      const addToCardButtons =
+        document.getElementsByClassName("shopItemButton");
+      for (let i = 0; i < addToCardButtons.length; i++) {
+        const button = addToCardButtons[i];
+        button.addEventListener("click", addToCardClicked);
+      }
+    }
+    function removeCartItem(event) {
+      const buttonClicked = event.target;
+      const cartRow = buttonClicked.parentElement.parentElement;
+      cartRow.remove();
+      updateCartTotal();
+    }
+
+    function updateQuantity(input, change) {
+      const currentValue = parseInt(input.value);
+      const newValue = currentValue + change;
+
+      if (isNaN(newValue) || newValue < 1) {
+        input.value = 1; // Minimum quantity is 1
+      } else {
+        input.value = newValue;
+      }
+    }
+
+    function quantityChanged(event) {
+      const input = event.target;
+      if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
+      }
+      updateCartTotal();
+    }
+
+    function updateCartTotal() {
+      const cartRows = document.querySelectorAll(".cart-row");
+      const cartData = [];
+
+      let total = 0;
+
+      cartRows.forEach((cartRow) => {
+        const cartPrice = cartRow.querySelector(".cartPrice");
+        const quantityInput = cartRow.querySelector(".quantityInput");
+        const price = parseFloat(cartPrice.innerText);
+        const quantity = parseInt(quantityInput.value);
+        total += price * quantity;
+        cartData.push({
+          price: price,
+          quantity: quantity,
+        });
+      });
+
+      localStorage.setItem("cartData", JSON.stringify(cartData));
+
+      total = Math.round(total * 100) / 100;
+      totalPriceElement.innerHTML = total;
+      console.log(total);
+    }
   } catch (error) {
     showError(error.message);
   }
-}
-
-if (document.readyState == "loading") {
-  document.addEventListener("DOMContentLoaded", ready);
-} else {
-  ready();
-}
-
-function ready() {
-  const removeCardButtons = document.getElementsByClassName("btnRemove");
-  for (let i = 0; i < removeCardButtons.length; i++) {
-    const button = removeCardButtons[i];
-    button.addEventListener("click", removeCartItem);
-  }
-
-  const quantityInputs = document.getElementsByClassName("quantityInput");
-  for (let i = 0; i < quantityInputs.length; i++) {
-    const input = quantityInputs[i];
-    input.addEventListener("change", quantityChanged);
-  }
-
-  const addToCardButtons = document.getElementsByClassName("shopItemButton");
-  for (let i = 0; i < addToCardButtons.length; i++) {
-    const button = addToCardButtons[i];
-    button.addEventListener("click", addToCardClicked);
-  }
-}
-function removeCartItem(event) {
-  const buttonClicked = event.target;
-  const cartRow = buttonClicked.parentElement.parentElement;
-  cartRow.remove();
-  updateCartTotal();
-}
-
-function quantityChanged(event) {
-  const input = event.target;
-  if (isNaN(input.value) || input.value <= 0) {
-    input.value = 1;
-  }
-  updateCartTotal();
-}
-
-function addToCardClicked(event) {
-  const button = event.target;
-}
-
-function updateCartTotal() {
-  const cartRows = document.querySelectorAll(".cart-row");
-  let total = 0;
-
-  cartRows.forEach((cartRow) => {
-    const cartPrice = cartRow.querySelector(".cartPrice");
-    const quantityInput = cartRow.querySelector(".quantityInput");
-    const price = parseFloat(cartPrice.innerText);
-    const quantity = parseInt(quantityInput.value);
-    total += price * quantity;
-  });
-
-  total = Math.round(total * 100) / 100;
-  const totalPriceElement = document.querySelector(".totalPrice");
-  totalPriceElement.innerText = total + "$";
-  console.log(total);
 }
 
 function showLoadingIndicator() {

@@ -930,16 +930,22 @@ li {
 }
 
 .quantityInput {
-  width: 4em;
-  height: 3em;
+  text-align: center;
+  width: 2.1em;
+  height: 2.5em;
   border: 1px solid var(--background-color-default);
   border-radius: 0.313em;
 }
 .quantityDiv {
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
   justify-content: center;
   align-items: center;
+}
+.btnMinusPlus {
+  background-color: var(--headings-color);
+  color: white;
+  border-radius: var(--button-border-radius-default);
 }
 
 .h1-checkout {

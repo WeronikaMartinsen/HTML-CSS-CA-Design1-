@@ -35,9 +35,15 @@ async function displayJackets() {
       const jacketDiv = document.createElement("div");
       jacketDiv.classList.add("card");
       jacketsContainer.appendChild(jacketDiv);
-
+      /* 
       const heartFav = document.createElement("i");
-      heartFav.innerHTML += `<i class="far fa-heart" aria-hidden="true" data-id="${jacket.id}" data-name="${jacket.title}"></i>`;
+      heartFav.innerHTML += `<i class="far fa-heart" aria-hidden="true" data-id="${jacket.id}" data-name="${jacket.title}"></i>`; */
+
+      const addToBag = document.createElement("i");
+      addToBag.innerHTML += `<ion-icon name="bag-add-outline" aria-hidden="true" data-id="${jacket.id}" data-name="${jacket.title}"></ion-icon>`;
+      addToBag.addEventListener("click", () => {
+        window.location.href = `checkout.html?id=${jacket.id}&title=${jacket.title}`;
+      });
 
       const imageBox = document.createElement("div");
       imageBox.classList.add("imageBox");
@@ -87,7 +93,7 @@ async function displayJackets() {
 
       imageBox.appendChild(image);
 
-      jacketDiv.appendChild(heartFav);
+      jacketDiv.appendChild(addToBag);
       jacketDiv.appendChild(jacketTitle);
       jacketDiv.appendChild(imageBox);
       jacketDiv.appendChild(color);
@@ -95,9 +101,9 @@ async function displayJackets() {
       jacketDiv.appendChild(jacketPrice);
       jacketDiv.appendChild(buttonDiv);
 
-      heartFav.addEventListener("click", (event) => {
+      /*   heartFav.addEventListener("click", (event) => {
         handleClick(event, heartFav);
-      });
+      }); */
     }
   } catch (error) {
     showError(error.message);
@@ -108,7 +114,7 @@ function showLoadingIndicator() {
   const loading = document.querySelector(".resultsContainer");
   loading.innerHTML = `<span>Loading...</span>`;
 }
-
+/* 
 function handleClick(event) {
   const heartIcon = event.target;
   heartIcon.classList.toggle("fa");
@@ -140,5 +146,6 @@ function handleClick(event) {
 
 function saveFavs(favs) {
   localStorage.setItem("favorites", JSON.stringify(favs));
-}
+} */
+
 displayJackets();
