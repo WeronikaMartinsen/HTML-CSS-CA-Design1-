@@ -169,6 +169,9 @@
   .product-cart {
     display: block;
   }
+  .payment-input {
+    width: 32em;
+  }
 }
 
 /***********************Tablet *******************************/
@@ -511,6 +514,9 @@
 }
 
 @media (max-width: 600px) {
+  .payment-input {
+    width: 22em;
+  }
   .imageDetail {
     height: 20em;
     margin-bottom: 2em;
@@ -678,6 +684,9 @@
 }
 
 @media (max-width: 500px) {
+  .payment-input {
+    width: 17em;
+  }
   .contact-span {
     font-size: 0.8em;
     padding-right: 3em;
@@ -824,7 +833,7 @@
 @media (max-width: 434px) {
   .payment-item-1,
   .payment-item-2 {
-    width: 22.5em;
+    width: 18em;
   }
 
   .image-gallery-1 {

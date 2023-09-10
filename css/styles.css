@@ -151,13 +151,16 @@ header {
   width: 100%;
   object-fit: cover;
 }
+.extraMargin {
+  margin-top: 1em;
+  color: black;
+}
 h1 {
   font-family: ibarra real nova;
   font-weight: 700;
   font-size: 2.2em;
   text-align: center;
   color: white;
-  /*   box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.2); */
 }
 .btn-cta {
   border-radius: var(--button-border-radius-default);
@@ -350,6 +353,7 @@ select {
   font-size: 1em;
   width: 7em;
   border-radius: var(--button-border-radius-default);
+  text-decoration: none;
 }
 
 .imageDiv {
@@ -1042,9 +1046,9 @@ li {
 }
 
 .payment-input {
-  padding: 5px;
+  padding: 1em;
   height: 2em;
-  width: 32em;
+  width: 40em;
   margin-bottom: 10px;
   border-radius: 0.313em;
   border: 1px solid var(--background-color-default);
