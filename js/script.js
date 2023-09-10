@@ -1,12 +1,9 @@
-import { getExistingFavs } from "./favFunctions.js";
-
 function showError(message) {
   const errorContainer = document.querySelector(".resultsContainer");
   errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
 }
 
 const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
-
 const jacketsContainer = document.querySelector(".resultsContainer");
 
 async function getJackets() {
@@ -30,19 +27,16 @@ async function displayJackets() {
 
     for (let i = 0; i < jackets.length; i++) {
       const jacket = jackets[i];
-      console.log(jacket);
 
       const jacketDiv = document.createElement("div");
       jacketDiv.classList.add("card");
       jacketsContainer.appendChild(jacketDiv);
-      /* 
-      const heartFav = document.createElement("i");
-      heartFav.innerHTML += `<i class="far fa-heart" aria-hidden="true" data-id="${jacket.id}" data-name="${jacket.title}"></i>`; */
 
       const addToBag = document.createElement("i");
       addToBag.innerHTML += `<ion-icon name="bag-add-outline" aria-hidden="true" data-id="${jacket.id}" data-name="${jacket.title}"></ion-icon>`;
+      addToBag.classList.add("addToBag");
       addToBag.addEventListener("click", () => {
-        window.location.href = `checkout.html?id=${jacket.id}&title=${jacket.title}`;
+        window.location.href = `product-details.html?id=${jacket.id}&title=${jacket.title}`;
       });
 
       const imageBox = document.createElement("div");
@@ -71,7 +65,6 @@ async function displayJackets() {
       const price = jacket.price;
       const sale = jacket.discountedPrice;
       const onSale = jacket.onSale;
-
       jacketPrice.classList.add("jacketPrice");
 
       if (!onSale) {
@@ -89,10 +82,8 @@ async function displayJackets() {
       buttonDiv.addEventListener("click", () => {
         window.location.href = `product-details.html?id=${jacket.id}&title=${jacket.title}`;
       });
-      console.log(buttonDiv);
 
       imageBox.appendChild(image);
-
       jacketDiv.appendChild(addToBag);
       jacketDiv.appendChild(jacketTitle);
       jacketDiv.appendChild(imageBox);
@@ -100,10 +91,6 @@ async function displayJackets() {
       jacketDiv.appendChild(jacketText);
       jacketDiv.appendChild(jacketPrice);
       jacketDiv.appendChild(buttonDiv);
-
-      /*   heartFav.addEventListener("click", (event) => {
-        handleClick(event, heartFav);
-      }); */
     }
   } catch (error) {
     showError(error.message);
@@ -114,38 +101,5 @@ function showLoadingIndicator() {
   const loading = document.querySelector(".resultsContainer");
   loading.innerHTML = `<span>Loading...</span>`;
 }
-/* 
-function handleClick(event) {
-  const heartIcon = event.target;
-  heartIcon.classList.toggle("fa");
-  heartIcon.classList.toggle("far");
-
-  const id = heartIcon.dataset.id;
-  const name = heartIcon.dataset.name;
-  const price = heartIcon.dataset.price;
-  const image = heartIcon.dataset.image;
-
-  const currentFavs = getExistingFavs();
-
-  const productExists = currentFavs.find(function (fav) {
-    return fav.id === id;
-  });
-
-  if (productExists === undefined) {
-    const product = { id: id, name: name, price: price, image: image };
-
-    currentFavs.push(product);
-    saveFavs(currentFavs);
-  } else {
-    const newFavs = currentFavs.filter((fav) => fav.id !== id);
-    saveFavs(newFavs);
-  }
-
-  console.log("Saved favorites:", currentFavs);
-}
-
-function saveFavs(favs) {
-  localStorage.setItem("favorites", JSON.stringify(favs));
-} */
 
 displayJackets();

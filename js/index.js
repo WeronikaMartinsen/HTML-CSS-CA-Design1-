@@ -1,9 +1,14 @@
+function showError(message) {
+  const errorContainer = document.querySelector(".component-cart");
+  errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
+}
+
 import { getJackets } from "./apicall.js";
 
 const componentCard = document.querySelector(".component-cart");
 
 async function fetchJackets() {
-  console.log("Before calling getJackets");
+  showLoadingIndicator();
   try {
     const jacketDataArray = await getJackets();
 
@@ -56,7 +61,13 @@ async function fetchJackets() {
       });
     }
   } catch (error) {
-    console.error("Error fetching data:", error);
+    showError(error.message);
   }
 }
+
+function showLoadingIndicator() {
+  const loading = document.querySelector(".component-cart");
+  loading.innerHTML = `<span>Loading...</span>`;
+}
+
 fetchJackets();

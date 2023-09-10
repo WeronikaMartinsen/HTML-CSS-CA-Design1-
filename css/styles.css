@@ -716,7 +716,6 @@ i {
   color: black;
   margin-top: 2em;
   background-color: lightcoral;
-  width: 60%;
   text-align: center;
   padding: 1em;
   text-decoration: none;
@@ -938,6 +937,12 @@ li {
 }
 .imageTitleDiv {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.addToBag {
+  font-size: 2em;
 }
 .productName {
   display: flex;

@@ -72,8 +72,7 @@ async function displayProduct() {
     image.alt = `Picture of ${productDetail.description}`;
 
     const productName = document.createElement("h4");
-    productName.innerText = productDetail.title;
-    productName.classList.add("productName");
+    productName.innerText = productDetail.title; //
 
     const cartPrice = document.createElement("span");
     cartPrice.classList.add("cartPrice");

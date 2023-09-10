@@ -11,7 +11,6 @@ function getJacketIdFromQuery() {
 
 function getJacketTitleFromQuery() {
   const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams.get("title"));
   return urlParams.get("title");
 }
 
@@ -102,7 +101,6 @@ async function fetchDetail() {
       div2.appendChild(sizeDiv);
       div2.appendChild(divPrice);
       div2.appendChild(btnConfirm);
-
       detailContainer.appendChild(imageDivDetail);
       detailContainer.appendChild(div2);
     }
