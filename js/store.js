@@ -58,10 +58,13 @@ async function displayProduct() {
     const productDetail = await fetchProduct();
     const checkoutContainer = document.querySelector(".checkoutDiv");
 
-    checkoutContainer.innerHTML = ""; // Clear previous content
+    checkoutContainer.innerHTML = "";
 
     const productDiv = document.createElement("div");
     productDiv.classList.add("cart-row");
+
+    const imageTitleDiv = document.createElement("div");
+    imageTitleDiv.classList.add("imageTitleDiv");
 
     const image = document.createElement("img");
     image.classList.add("small-asset");
@@ -69,14 +72,15 @@ async function displayProduct() {
     image.alt = `Picture of ${productDetail.description}`;
 
     const productName = document.createElement("h4");
-    productName.innerText = productDetail.title; //
+    productName.innerText = productDetail.title;
+    productName.classList.add("productName");
 
     const cartPrice = document.createElement("span");
     cartPrice.classList.add("cartPrice");
-    cartPrice.innerText = productDetail.price;
+    cartPrice.innerText = productDetail.price + ",-";
 
     const totalPriceElement = document.querySelector(".totalPrice");
-    totalPriceElement.innerHTML = productDetail.price;
+    totalPriceElement.innerHTML = productDetail.price + ",-";
 
     const quantityDiv = document.createElement("div");
     quantityDiv.classList.add("quantityDiv");
@@ -91,7 +95,7 @@ async function displayProduct() {
     buttonMinus.classList.add("btnMinusPlus");
     buttonMinus.innerText = "-";
     buttonMinus.addEventListener("click", () => {
-      updateQuantity(quantityInput, -1); // Decrease quantity by 1
+      updateQuantity(quantityInput, -1);
       updateCartTotal();
     });
 
@@ -99,20 +103,20 @@ async function displayProduct() {
     buttonPlus.classList.add("btnMinusPlus");
     buttonPlus.innerText = "+";
     buttonPlus.addEventListener("click", () => {
-      updateQuantity(quantityInput, 1); // Increase quantity by 1
+      updateQuantity(quantityInput, 1);
       updateCartTotal();
     });
 
     const btnRemove = document.createElement("button");
     btnRemove.classList.add("btn-confirm", "btnRemove");
-    btnRemove.innerText = "REMOVE";
+    btnRemove.innerHTML = "REMOVE";
 
     quantityDiv.appendChild(buttonMinus);
     quantityDiv.appendChild(quantityInput);
     quantityDiv.appendChild(buttonPlus);
-
-    productDiv.appendChild(image);
-    productDiv.appendChild(productName);
+    productDiv.appendChild(imageTitleDiv);
+    imageTitleDiv.appendChild(image);
+    imageTitleDiv.appendChild(productName);
     productDiv.appendChild(cartPrice);
     productDiv.appendChild(quantityDiv);
     productDiv.appendChild(btnRemove);
@@ -157,7 +161,7 @@ async function displayProduct() {
       const newValue = currentValue + change;
 
       if (isNaN(newValue) || newValue < 1) {
-        input.value = 1; // Minimum quantity is 1
+        input.value = 1;
       } else {
         input.value = newValue;
       }

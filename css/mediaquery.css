@@ -177,6 +177,20 @@
   .jacket-name {
     font-size: 0.9em;
   }
+  .imageTitleDiv,
+  .cart-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cart-row {
+    gap: 1.3em;
+    padding-bottom: 2em;
+  }
+  .small-asset {
+    width: 60%;
+  }
+
   .box-for-asset {
     width: 15em;
     height: 16em;
@@ -460,10 +474,7 @@
     align-self: center;
     width: 30em;
   }
-  .payment-input,
-  .payment-input-short {
-    width: 32em;
-  }
+
   .image-gallery-1 {
     width: 30em;
   }
@@ -500,9 +511,6 @@
 }
 
 @media (max-width: 600px) {
-  .btnConfirm {
-    width: 100%;
-  }
   .imageDetail {
     height: 20em;
     margin-bottom: 2em;
@@ -617,10 +625,7 @@
     align-self: center;
     width: 24em;
   }
-  .payment-input,
-  .payment-input-short {
-    width: 25em;
-  }
+
   .grid-item-2 {
     height: 11em;
   }
@@ -822,10 +827,6 @@
     width: 22.5em;
   }
 
-  .payment-input,
-  .payment-input-short {
-    width: 23em;
-  }
   .image-gallery-1 {
     width: 19em;
   }
