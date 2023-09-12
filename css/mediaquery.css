@@ -265,10 +265,6 @@
   }
 }
 @media (max-width: 724px) {
-  .footer-box {
-    gap: 4em;
-  }
-
   .icon-text {
     display: none;
   }
@@ -488,6 +484,11 @@
 }
 
 @media (max-width: 600px) {
+  .box-payment-icons {
+    display: flex;
+
+    width: 100%;
+  }
   .payment-input {
     width: 22em;
   }
@@ -521,15 +522,17 @@
   .product-cart-asset {
     width: 15em;
   }
-  .jacket-price-new-grid {
-    font-size: 1.25em;
-  }
+
   .footer-box {
-    height: max-content;
     display: flex;
     flex-direction: column;
+    justify-self: center;
     gap: 20px;
     padding-top: 20px;
+    margin: 2em;
+  }
+  .div-box-social-media {
+    height: max-content;
   }
   .checkout-stage {
     display: flex;
@@ -655,6 +658,10 @@
   h2 {
     margin-top: 1em;
   }
+  .section-break {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 500px) {
@@ -669,10 +676,7 @@
     font-size: 0.8em;
     padding-right: 1em;
   }
-  .section-break {
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
+
   .jacket-price-new {
     font-size: 1.5em;
   }
@@ -723,9 +727,7 @@
     width: 16em;
     height: 2.2em;
   }
-  .section-break {
-    gap: 1.6em;
-  }
+
   .feature-paragraph {
     font-size: 0.7em;
   }
@@ -794,9 +796,7 @@
     width: 1em;
     height: 1em;
   }
-  .section-break {
-    gap: 2em;
-  }
+
   .span-paragraph {
     font-size: 0.8em;
   }
@@ -902,11 +902,7 @@
   .feature-paragraph {
     display: none;
   }
-  .section-break {
-    gap: 1em;
-    margin-left: 0.2em;
-    margin-right: 0.2em;
-  }
+
   .span-paragraph {
     font-size: 12px;
   }

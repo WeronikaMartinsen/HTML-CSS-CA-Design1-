@@ -152,7 +152,7 @@ header {
   color: var(--hover-color);
 }
 .icon-text {
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-align: center;
   color: var(--headings-color);
 
@@ -223,13 +223,10 @@ h1 {
   display: flex;
   flex-direction: row;
   align-content: center;
-  height: 100px;
-  min-width: 100%;
   align-items: center;
-  gap: 4.37em;
+  gap: 7em;
   justify-content: center;
-  margin-bottom: 1.25em;
-  margin-top: 1.25em;
+  margin: 2.8em;
 }
 .feature-icon {
   width: 1.68em;
@@ -255,20 +252,22 @@ h1 {
   align-items: center;
   background-color: white;
   border: 0.1em solid white;
-  height: 17em;
+  height: 20em;
   padding: 1em;
   margin: 1em;
   border-radius: var(--button-border-radius-default);
   border: 1px solid var(--background-color-default);
-  height: 23em;
   width: auto;
   text-align: center;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
     -4px -4px 8px rgba(255, 255, 255, 0.2);
 }
 .component1 {
-  margin-top: 4em;
-  background-color: var(--paragraph-color);
+  background: linear-gradient(
+    to left,
+    var(--background-color-default),
+    #ffffff
+  );
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -277,7 +276,6 @@ h1 {
   height: 14em;
   gap: 0.4em;
   padding: 3em;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .heart-icon-home-page {
   position: absolute;
@@ -314,7 +312,7 @@ h2 {
 .button-shop-now {
   background-color: var(--background-color);
   text-align: center;
-  padding: 0.8em;
+  padding: 0.8em 1em;
   text-decoration: none;
   border-radius: var(--button-border-radius-default);
   font-size: 1em;
@@ -375,24 +373,22 @@ select {
   width: 100%;
 }
 .assets-jacket {
-  height: 13em;
+  height: 11em;
 }
 .section-break {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
-  gap: 3.125em;
-  height: 100px;
-  width: 100%;
+  gap: 3em;
+  align-items: center;
   justify-content: center;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin: 5em;
 }
 .section-break-box {
   display: flex;
   justify-content: center;
   align-self: center;
   text-align: center;
+  position: relative;
 }
 .section-break-icon {
   display: flex;
@@ -409,6 +405,17 @@ select {
   font-weight: 500;
   text-align: center;
 }
+.section-break-box::after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: -1px;
+  right: -1px;
+  background-color: var(--highlighter);
+  height: 0.5em;
+}
+
 .spanProduct {
   margin: 1em;
   font-size: 1.3em;
@@ -441,7 +448,7 @@ select {
 .sign-up-box {
   display: flex;
   align-items: center;
-  background-color: var(--paragraph-color);
+  background: linear-gradient(to bottom, #b5b4bf, #ffffff);
   height: 25em;
   width: 31.25em;
   border-radius: 0.93em;
@@ -451,7 +458,6 @@ select {
   gap: 1.25em;
   padding-left: 1.87em;
   padding-right: 1.87em;
-  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 #name-input {
   width: 25em;
@@ -483,14 +489,13 @@ h3 {
 }
 .footer-box {
   background-color: white;
-  height: 18em;
+  height: 14em;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 2em;
   color: var(--headings-color);
   font-family: var(--paragraph-family);
-  font-weight: 400;
 }
 
 #footerLogo {
@@ -501,9 +506,8 @@ h3 {
 .footer-box-3 {
   display: flex;
   flex-direction: column;
-  width: 23%;
+  width: 20%;
 }
-
 .payment-icon {
   height: 2em;
   width: 2em;
@@ -790,7 +794,7 @@ li {
   margin-top: 3.75em;
   height: 12.5em;
   width: 100%;
-  background-color: var(--background-color-default);
+  background: linear-gradient(to top, #b5b4bf, #ffffff);
   display: flex;
   flex-direction: column;
   justify-content: center;
