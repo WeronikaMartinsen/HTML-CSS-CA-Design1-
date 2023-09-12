@@ -57,6 +57,13 @@
   .payment-container {
     gap: 1em;
   }
+  .footerLogo {
+    width: 80%;
+  }
+  .payment-icon {
+    width: 1.7em;
+    height: 1.7em;
+  }
 }
 
 /***********************Small laptop*******************************/
