@@ -33,10 +33,14 @@ async function displayJackets() {
       jacketsContainer.appendChild(jacketDiv);
 
       const addToBag = document.createElement("i");
-      addToBag.innerHTML += `<ion-icon name="bag-add-outline" aria-hidden="true" data-id="${jacket.id}" data-name="${jacket.title}"></ion-icon>`;
+      addToBag.innerHTML += `<ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>`;
       addToBag.classList.add("addToBag");
       addToBag.addEventListener("click", () => {
-        window.location.href = `product-details.html?id=${jacket.id}&title=${jacket.title}`;
+        addToCart({
+          id: jacket.id,
+          title: jacket.title,
+        });
+        alert("Item added to cart!");
       });
 
       const imageBox = document.createElement("div");
@@ -96,6 +100,16 @@ async function displayJackets() {
     showError(error.message);
   }
 }
+
+function load(key) {}
+function remove(key) {}
+function addToCart(jacket) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(jacket);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Item added to cart!");
+}
+function renderCart() {}
 
 function showLoadingIndicator() {
   const loading = document.querySelector(".resultsContainer");

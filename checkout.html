@@ -34,75 +34,45 @@
   </head>
   <body>
     <header>
-      <nav id="navbar">
-        <input type="checkbox" id="menu-checkbox" />
-        <label for="menu-checkbox"
-          ><ion-icon class="menu-icon" name="menu-outline">%20</ion-icon
-        ></label>
-        <div class="nav-div1">
+      <div class="navContainer"><div class="icons">
+        <div class="navbar-toggle" id="navbar-toggle">
+          <ion-icon name="menu-outline" class="hamburger"></ion-icon>
+        </div>
+        <div class="navbar-logo">
           <a href="index.html">
-            <img id="logo" src="images/RainyDays_Logo.png" alt="logo"/>
+            <img id="logo" src="images/newLogo.png" alt="logo" />
           </a>
         </div>
-        <div class="nav-div2">
-          <a class="nav-links" href="index.html">HOME</a>
-
-          <a class="nav-links" href="jackets.html">JACKETS</a>
-
-          <a class="nav-links" href="about.html">ABOUT US</a>
-
-          <a class="nav-links" href="contact.html">CONTACT</a>
+      
+        <div class="icon">
+          <a href="login.html">
+            <ion-icon class="nav-icons" name="person-outline"></ion-icon
+          ></a>
+          <span class="icon-text">Log inn</span>
         </div>
-        <div class="div-3-and-div-4">
-          <div class="nav-div4">
-            <div class="nav-icon-box">
-              <div class="nav-link-svg">
-                <a href="login.html">
-                  <ion-icon class="nav-icons" name="person-outline"></ion-icon>
-                </a>
-              </div>
-              <div>
-                <span class="icon-text">Log inn</span>
-              </div>
-            </div>
-
-            <div class="nav-icon-box">
-              <div class="nav-link-svg">
-                <a href="favorites.html"
-                ><ion-icon class="nav-icons" name="heart-outline"></ion-icon
-              ></a>
-            </div>
-            <div>
-              <a href="favorites.html"class="icon-text">Favorites</a>
-            </div>
-            </div>
-            <div class="nav-icon-box">
-              <div class="nav-link-svg">
-                <a href="product-details.html">
-                  <ion-icon class="nav-icons" name="bag-outline"></ion-icon
-                ></a>
-              </div>
-              <div>
-                <span class="icon-text">Add to cart</span>
-              </div>
-            </div>
-          </div>
-          <div class="nav-div3">
-            <div class="icon-and-search-bar">
-              <ion-icon class="search-icon" name="search"></ion-icon>
-              <input
-              aria-label="search-bar"
-              aria-expanded="true"
-                class="search-bar"
-                name="q"
-                type="text"
-                role="combobox"
-                placeholder="Search the product name"
-              />
-            </div>
-          </div>
+        <div class="icon">
+          <a href="favorites.html"
+            ><ion-icon class="nav-icons" name="heart-outline"></ion-icon
+          ></a>
+          <a href="favorites.html" class="icon-text">Favorites</a>
         </div>
-      </nav>
+        <div class="icon">
+          <a href="product-details.html">
+            <ion-icon class="nav-icons" name="bag-outline"></ion-icon
+          ></a>
+          <span class="icon-text">Add to cart</span>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <ul class="navbar-menu" id="navbar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jackets.html">Jackets</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav></div>
+      
     </header>
     <main>
       <div class="extra-box">Buy now. Pay later. Klarna.</div>
