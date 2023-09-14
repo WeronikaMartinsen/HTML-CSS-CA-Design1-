@@ -455,12 +455,7 @@
   .image-gallery-1 {
     width: 30em;
   }
-  .contact-input {
-    width: 29em;
-  }
-  .btn-contact {
-    width: 25em;
-  }
+
   .btn-contact-conf {
     width: 20em;
   }
@@ -610,12 +605,7 @@
   .grid-item-paragraph {
     padding-left: 2.3em;
   }
-  .contact-input {
-    width: 25em;
-  }
-  .btn-contact {
-    width: 22em;
-  }
+
   .contact-box-2 {
     width: 25em;
   }
@@ -754,12 +744,7 @@
     margin-left: 1.7em;
     font-size: 1.25em;
   }
-  .contact-input {
-    width: 22em;
-  }
-  .btn-contact {
-    width: 19em;
-  }
+
   .contact-box-1 {
     width: 24em;
   }
@@ -834,12 +819,7 @@
   .horizontal-line {
     width: 5em;
   }
-  .contact-input {
-    width: 19em;
-  }
-  .btn-contact {
-    width: 17em;
-  }
+
   .contact-box-1 {
     width: 20em;
   }
@@ -870,8 +850,8 @@
     height: 12em;
   }
   .footer-box {
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: 3fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
 /***********************Small mobile*******************************/
