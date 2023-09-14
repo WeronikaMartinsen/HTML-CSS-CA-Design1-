@@ -69,6 +69,10 @@
 /***********************Small laptop*******************************/
 
 @media (max-width: 1050px) {
+  .footer-box {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
   .card {
     width: 30%;
   }
@@ -484,10 +488,9 @@
 }
 
 @media (max-width: 600px) {
-  .box-payment-icons {
-    display: flex;
-
-    width: 100%;
+  .footer-box {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 3fr 3fr;
   }
   .payment-input {
     width: 22em;
@@ -523,14 +526,6 @@
     width: 15em;
   }
 
-  .footer-box {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    gap: 20px;
-    padding-top: 20px;
-    margin: 2em;
-  }
   .div-box-social-media {
     height: max-content;
   }
@@ -874,6 +869,10 @@
   .image {
     height: 12em;
   }
+  .footer-box {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 3fr;
+  }
 }
 /***********************Small mobile*******************************/
 
@@ -909,14 +908,7 @@
   .h3 {
     font-size: 18px;
   }
-  .footer-box {
-    display: flex;
-    flex-direction: column;
-    height: max-content;
-    gap: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;

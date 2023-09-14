@@ -484,33 +484,27 @@ h3 {
   margin: 0;
   margin-bottom: 1.25em;
 }
-.footerLogo {
-  width: 50%;
-}
+
 .footer-box {
-  background-color: white;
-  height: 14em;
-  display: flex;
+  color: #333;
+
+  margin: 2em;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 2em;
-  color: var(--headings-color);
-  font-family: var(--paragraph-family);
+  align-content: center;
+  height: max-content;
 }
 
-#footerLogo {
-  width: 100%;
-}
-.footer-box-1,
-.footer-box-2,
-.footer-box-3 {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
+.copyright-text {
+  border-top: 1px solid #b5b4bf;
+  padding: 1em;
+  color: #88878e;
 }
 .payment-icon {
-  height: 2em;
-  width: 2em;
+  height: 4em;
+  width: 2.2em;
   padding-right: 1.5em;
 }
 
