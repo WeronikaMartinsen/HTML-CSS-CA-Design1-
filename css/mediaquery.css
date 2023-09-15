@@ -817,7 +817,6 @@
     width: 20em;
   }
   .contact-box-2 {
-    padding-left: 1.2em;
     width: 18em;
   }
   .maps {
@@ -850,6 +849,9 @@
 /***********************Small mobile*******************************/
 
 @media (max-width: 375px) {
+  .contact-box-2 {
+    width: 15em;
+  }
   .checkout-icon {
     width: 2.7em;
   }
