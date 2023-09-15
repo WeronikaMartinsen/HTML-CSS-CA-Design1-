@@ -77,7 +77,7 @@ header {
   font-size: 3em;
 }
 #logo {
-  width: 80%;
+  width: 75%;
 }
 
 .navbar-logo a {
@@ -109,9 +109,9 @@ header {
 }
 
 .navbar-menu a {
-  color: white;
   text-decoration: none;
   font-size: 1.4em;
+  color: white;
 }
 
 .search-bar {
@@ -785,7 +785,6 @@ ul {
 }
 li {
   font-size: 0.9em;
-  color: var(--headings-color);
 }
 .sign-up-break {
   margin-top: 3.75em;

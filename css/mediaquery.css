@@ -347,9 +347,10 @@
     text-align: center;
   }
   .navbar-menu a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 1.4em;
+    text-decoration: none;
   }
   .navbar-logo {
     width: 40%;
@@ -359,6 +360,7 @@
     display: flex;
     gap: 3em;
     padding: 3em;
+    background-color: black;
   }
   .icon {
     padding: 0.5em;
