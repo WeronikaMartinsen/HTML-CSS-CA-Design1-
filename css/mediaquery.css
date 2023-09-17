@@ -73,9 +73,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  .card {
-    width: 30%;
-  }
+
   .image-1-box {
     margin-left: 8em;
     margin-right: 8em;
@@ -96,9 +94,7 @@
     margin-left: 1.25em;
     margin-top: 1.25em;
   }
-  .h4 {
-    margin-left: 0;
-  }
+
   .jacket-price-new-grid {
     font-size: 1.25em;
   }
@@ -479,9 +475,6 @@
   h2 {
     font-size: 2.5em;
   }
-  .card {
-    width: 50%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -516,9 +509,7 @@
     width: 27em;
     height: 20em;
   }
-  h3 {
-    font-size: 22px;
-  }
+
   .product-cart-asset {
     width: 15em;
   }
@@ -533,6 +524,9 @@
   }
   .horizontal-line {
     width: 5em;
+  }
+  .component-cart {
+    width: 20em;
   }
   .checkout-icon {
     width: 3em;
@@ -728,9 +722,7 @@
     justify-content: center;
     align-items: center;
   }
-  .h4 {
-    margin-left: 0;
-  }
+
   .sign-up-text {
     font-size: 0.8em;
   }
@@ -771,9 +763,6 @@
   }
   #name-input {
     width: 20em;
-  }
-  h3 {
-    font-size: 1.1em;
   }
 }
 @media (max-width: 434px) {
@@ -847,10 +836,16 @@
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr 1fr;
   }
+  .component-cart {
+    width: 18em;
+  }
 }
 /***********************Small mobile*******************************/
 
 @media (max-width: 375px) {
+  .component-cart {
+    width: 13em;
+  }
   .contact-box-2 {
     width: 15em;
   }
@@ -877,10 +872,6 @@
   }
   .feature-paragraph {
     display: none;
-  }
-
-  .h3 {
-    font-size: 18px;
   }
 
   .grid-container {

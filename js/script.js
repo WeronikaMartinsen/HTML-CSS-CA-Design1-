@@ -30,17 +30,23 @@ async function displayJackets() {
 
       const jacketDiv = document.createElement("div");
       jacketDiv.classList.add("card");
+      jacketDiv.addEventListener("click", () => {
+        window.location.href = `product-details.html?id=${jacket.id}&title=${jacket.title}`;
+      });
       jacketsContainer.appendChild(jacketDiv);
 
+      const heartDiv = document.createElement("div");
+      heartDiv.classList.add("heartDiv");
+
       const addToBag = document.createElement("i");
-      addToBag.innerHTML += `<ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>`;
+      addToBag.innerHTML += `<ion-icon name="heart-outline"></ion-icon>`;
       addToBag.classList.add("addToBag");
       addToBag.addEventListener("click", () => {
         addToCart({
           id: jacket.id,
           title: jacket.title,
         });
-        alert("Item added to cart!");
+        alert("Item added to favorite!");
       });
 
       const imageBox = document.createElement("div");
@@ -82,13 +88,15 @@ async function displayJackets() {
 
       const buttonDiv = document.createElement("div");
       buttonDiv.classList.add("buttonDiv");
-      buttonDiv.innerHTML = `<a class="btnAdd">View details</a>`;
+      buttonDiv.innerHTML = `<a class="btnAdd">Add<ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></a>`;
       buttonDiv.addEventListener("click", () => {
         window.location.href = `product-details.html?id=${jacket.id}&title=${jacket.title}`;
       });
 
+      jacketDiv.appendChild(heartDiv);
+      heartDiv.appendChild(addToBag);
       imageBox.appendChild(image);
-      jacketDiv.appendChild(addToBag);
+
       jacketDiv.appendChild(jacketTitle);
       jacketDiv.appendChild(imageBox);
       jacketDiv.appendChild(color);
