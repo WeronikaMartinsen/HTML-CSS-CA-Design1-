@@ -232,7 +232,7 @@ h1 {
   background-color: var(--background-color-default);
   border: 0.313em solid var(--background-color-default);
   border-radius: 100%;
-  padding: 0.313em;
+  padding: 1em;
   align-self: center;
 }
 .feature-box {
@@ -255,6 +255,7 @@ h1 {
   gap: 1em;
   padding: 1em;
   margin: 1em;
+  cursor: pointer;
   border-radius: var(--button-border-radius-default);
   border: 1px solid var(--background-color-default);
   text-align: center;
@@ -515,7 +516,7 @@ input:hover {
   padding: 0.4em;
 }
 .normalPrice {
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
 .jacketSale {
   font-size: 1.5em;
@@ -601,7 +602,7 @@ input:hover {
 }
 .image {
   height: 16em;
-  width: 15em;
+  width: auto;
 }
 .imageBox {
   display: flex;
@@ -870,13 +871,16 @@ li {
   justify-content: center;
   align-items: center;
 }
+.cartContainer {
+  width: 81%;
+}
 
 .checkoutCart {
   display: flex;
   justify-content: center;
   border: 2px solid black;
-  width: 80%;
-  padding: 1em 0.4em 0.4em;
+  width: 100%;
+  padding: 1em 0;
   border: 1px solid var(--background-color-default);
   border-radius: 0.313em;
   font-weight: 800;
@@ -942,7 +946,7 @@ li {
 }
 
 .payment-item-1 {
-  width: 70%;
+  width: 80%;
   border: 2px solid var(--background-color-default);
   border-radius: 0.313em;
   display: flex;
@@ -964,8 +968,7 @@ li {
   justify-items: center;
   gap: 1.25em;
   align-content: center;
-  margin-bottom: 1.25em;
-  margin-top: 1.875em;
+  margin: 2em;
 }
 .icon-div-1 {
   height: 3.75em;
@@ -978,13 +981,12 @@ li {
   flex-direction: column;
   border: 1px solid var(--background-color-default);
 }
-.icon-div-1:hover {
-  box-shadow: 5px 5px 10px 2px var(--background-color-default);
-}
+.icon-div-1:hover,
 .icon-div-1:active {
-  background-color: var(--active-color);
+  background-color: black;
   color: white;
 }
+
 .icon-payment-1 {
   width: 1.75em;
   height: 1.75em;
@@ -1150,6 +1152,12 @@ li {
 }
 .totalPrice {
   margin-left: 0.4em;
+}
+.buttonBox {
+  width: 70%;
+}
+.arrowIcon {
+  margin-left: 1em;
 }
 
 /************************Confirmation*************************/
@@ -1414,4 +1422,14 @@ li {
   display: flex;
   align-self: center;
   margin-top: 10em;
+}
+
+/********************Payment*****************************************/
+
+.paymentContainer {
+  margin: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

@@ -1,13 +1,33 @@
+const bag = document.querySelector("bag");
+const cartOverview = document.querySelector(".cartOverview");
+bag.addEventListener("mouseover", () => {
+  if (cartOverview.classList.container("hide"))
+    cartOverview.classList.remove("hide");
+});
+bag.addEventListener("mouseleave", () => {
+  cartOverview.classList.add("hide");
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const savedCartData = JSON.parse(localStorage.getItem("cartData"));
 
-  if (savedCartData && Array.isArray(savedCartData)) {
-    const quantityInputs = document.getElementsByClassName("quantityInput");
-
-    for (let i = 0; i < quantityInputs.length; i++) {
-      const input = quantityInputs[i];
-      input.value = savedCartData[i].quantity;
+  if (
+    !savedCartData ||
+    !Array.isArray(savedCartData) ||
+    savedCartData.length === 0
+  ) {
+    const emptyCartMessage = document.getElementById("emptyCartMessage");
+    if (emptyCartMessage) {
+      emptyCartMessage.style.display = "block";
     }
+  } else {
+    displayProduct();
+  }
+  const quantityInputs = document.getElementsByClassName("quantityInput");
+
+  for (let i = 0; i < quantityInputs.length; i++) {
+    const input = quantityInputs[i];
+    input.value = savedCartData[i].quantity;
   }
 });
 

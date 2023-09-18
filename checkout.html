@@ -73,10 +73,10 @@
           <a href="favorites.html" class="icon-text">Favorites</a>
         </div>
         <div class="icon">
-          <a href="product-details.html">
+          <a href="checkout.html">
             <ion-icon class="nav-icons" name="bag-outline"></ion-icon
           ></a>
-          <span class="icon-text">Add to cart</span>
+          <span class="icon-text">Shopping bag</span>
         </div>
       </div>
 
@@ -121,47 +121,29 @@
       </div>
       </section>
 <section class="payment-information">
-
-<div class="checkoutContainer">
-  <div class="checkoutCart">
-SHOPPING CART
+  <div id="emptyCartMessage" style="display: none;">
+    Your shopping bag is empty.
   </div>
-  <div class="checkoutDiv">
+  <div class="cartOverview">
     
+  </div>
+<div class="checkoutContainer">
+  <div class="cartContainer">  <div class="checkoutCart">
+    SHOPPING CART
+      </div></div>
+
+
+  <div class="checkoutDiv">
+
     </div>
 <div class="cartTotalPrice">
-  <span class="totalPriceTitle">Total:</span>
+  <span class="totalPriceTitle">Total price:</span>
   <span class="totalPrice"></span>
 </div>
+<div class="buttonBox">
+  <a href="payment.html"><button class="btnConfirm">Go to checkout <ion-icon class="arrowIcon" name="chevron-forward-outline"></ion-icon></button></a>
+  </div>
 
-<div class="payment-item-1">
-  <div class="checkoutCart">
-    PAYMENT
-      </div>
-<div class="icon-payment">
-<div class="icon-div-1">
-<ion-icon class="icon-payment-1" name="card-outline"></ion-icon>  
-<span class="payment-span">Visa</span></div>
-<div class="icon-div-1"> <ion-icon class="icon-payment-1" name="logo-paypal"></ion-icon><span class="payment-span">PayPay</span></div>
-<div class="icon-div-1"><ion-icon class="icon-payment-1" name="wallet-outline"></ion-icon><span class="payment-span">Master Card</span></div>
-</div>
-<div class="input-order">
-<label class="label-text" for="Card Number">Card number:</label>
-<input class="payment-input" type="text" name="input" placeholder="3536 4565 6567 3543">
-<label class="label-text" for="Card Number">Cardholder Name:</label>
-<input class="payment-input" type="text" name="input" placeholder="Weronika Martinsen">
-<label class="label-text" for="Card Number">Valid Throught:</label>
-<input class="payment-input" type="text" name="input" placeholder="12/26">
-<label class="label-text" for="Card Number">CVV:</label>
-<input class="payment-input" type="text" name="input"  placeholder=" &#8226; &#8226; &#8226; ">
-<div class="input-span">
-<input type="checkbox" class="menu-checkbox" />
-<label for="menu-chechbox"><i class="fas fa-bars"></i></label>
-<span class="checkout-span">Save my payment details for my next purchases.</span></div>
-</div>
-<a href="confirmation.html" class="btnConfirm">Confirm your order</a>
-</div>
-</div>
 </section>
 <section class="sign-up-break">
   <h3 class="h3-product-detail-sign-up">Sign up and save 25%</h3>

@@ -766,9 +766,11 @@
   }
 }
 @media (max-width: 434px) {
-  .payment-item-1,
   .payment-item-2 {
     width: 18em;
+  }
+  .payment-item-1 {
+    width: 22em;
   }
 
   .image-gallery-1 {
@@ -843,6 +845,9 @@
 /***********************Small mobile*******************************/
 
 @media (max-width: 375px) {
+  .payment-item-1 {
+    width: 19em;
+  }
   .component-cart {
     width: 13em;
   }
