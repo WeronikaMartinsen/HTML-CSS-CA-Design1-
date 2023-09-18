@@ -37,13 +37,6 @@ async function displayJackets() {
       const addToBag = document.createElement("i");
       addToBag.innerHTML += `<ion-icon name="heart-outline"></ion-icon>`;
       addToBag.classList.add("addToBag");
-      /*       addToBag.addEventListener("click", () => {
-        addToCart({
-          id: jacket.id,
-          title: jacket.title,
-        });
-        alert("Item added to favorite!");
-      }); */
 
       const imageBox = document.createElement("div");
       imageBox.classList.add("imageBox");
@@ -86,15 +79,25 @@ async function displayJackets() {
         `;
       }
 
-      const buttonDiv = document.createElement("div");
-      buttonDiv.classList.add("buttonDiv");
-      buttonDiv.innerHTML = `<a class="btnAdd">Add<ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></a>`;
-      buttonDiv.addEventListener("click", (event) => {
-        if (!event.target.classList.contains("btnAdd")) {
-          addToCart(jacket);
-          alert("Item added to shopping cart!");
-        }
-      });
+      const button = document.createElement("button");
+      button.classList.add("buttonDiv");
+      button.innerHTML = `<a data-id=${jacket.id}&title=${jacket.title}&image=${jacket.image}&price=${jacket.price}V class="btnAdd">Add<ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></a>`;
+      button.addEventListener("click", onAddToCart);
+      function onAddToCart(event) {
+        const button = event.target;
+        const id = button.dataset.id;
+        const title = button.dataset.title;
+        const price = button.dataset.price;
+        const image = button.dataset.image;
+
+        let cart = load("cart") || [];
+        cart.push(id);
+        cart.push(title);
+        cart.push(price);
+        cart.push(image);
+
+        save("cart", cart);
+      }
 
       jacketDiv.appendChild(heartDiv);
       heartDiv.appendChild(addToBag);
@@ -105,20 +108,42 @@ async function displayJackets() {
       jacketDiv.appendChild(color);
       jacketDiv.appendChild(jacketText);
       jacketDiv.appendChild(jacketPrice);
-      jacketDiv.appendChild(buttonDiv);
+      jacketDiv.appendChild(button);
     }
   } catch (error) {
     showError(error.message);
   }
 }
 
-function load(key) {}
-function remove(key) {}
-function addToCart(jacket) {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push(jacket);
-  localStorage.setItem("cart", JSON.stringify(cart));
+function save(key, value) {
+  const encodedValue = JSON.stringify(value);
+  localStorage.setItem(key, encodedValue);
 }
+function load(key) {
+  const encodedValue = localStorage.getItem(key);
+  return JSON.parse(encodedValue);
+}
+function remove(key) {
+  localStorage.removeItem(key);
+}
+
+/*   const itemInCart = cart.find((item) => item.id === id);
+  if (itemInCart) {
+    itemInCart.quantity++;
+  } else {
+    cart.push({
+      id,
+      quantity,
+    });
+  } */
+/* 
+function calculateTotal() {
+  const cart = load("cart");
+
+  return cart.reduce((total, currentItem) => {
+    return total + currentItem.quantity;
+  }, 0);
+} */
 
 function renderCart() {}
 

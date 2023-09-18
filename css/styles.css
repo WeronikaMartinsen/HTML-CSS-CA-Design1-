@@ -319,7 +319,7 @@ h2 {
   padding: 0.8em 1.2em;
   text-decoration: none;
   border-radius: var(--button-border-radius-default);
-  font-size: 1em;
+  font-size: 0.8em;
   font-family: var(--button-font-family);
   border-style: none;
   color: white;
@@ -516,15 +516,16 @@ input:hover {
   padding: 0.4em;
 }
 .normalPrice {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 .jacketSale {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 600;
   color: red;
   text-align: right;
 }
 .oldPrice {
+  font-size: 0.6em;
   columns: gray;
   text-decoration: line-through;
 }
