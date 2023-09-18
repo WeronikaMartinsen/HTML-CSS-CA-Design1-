@@ -37,13 +37,13 @@ async function displayJackets() {
       const addToBag = document.createElement("i");
       addToBag.innerHTML += `<ion-icon name="heart-outline"></ion-icon>`;
       addToBag.classList.add("addToBag");
-      addToBag.addEventListener("click", () => {
+      /*       addToBag.addEventListener("click", () => {
         addToCart({
           id: jacket.id,
           title: jacket.title,
         });
         alert("Item added to favorite!");
-      });
+      }); */
 
       const imageBox = document.createElement("div");
       imageBox.classList.add("imageBox");

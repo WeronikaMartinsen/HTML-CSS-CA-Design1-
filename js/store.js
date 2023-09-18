@@ -1,13 +1,27 @@
-const bag = document.querySelector("bag");
+/* const bag = document.querySelector("bag");
 const cartOverview = document.querySelector(".cartOverview");
+cartOverview.inWindow = 0;
+
 bag.addEventListener("mouseover", () => {
   if (cartOverview.classList.container("hide"))
     cartOverview.classList.remove("hide");
 });
 bag.addEventListener("mouseleave", () => {
-  cartOverview.classList.add("hide");
+  setTimeout(() => {
+    if (cartOverview.inWindow === 0) {
+      cartOverview.classList.add("hide");
+    }
+  }, 500);
 });
 
+cartOverview.addEventListener("mouseover", () => {
+  cartOverview.inWindow = 1;
+});
+cartOverview.addEventListener("mouseleave", () => {
+  cartOverview.inWindow = 0;
+  cartOverview.classList.add("hide");
+});
+ */
 document.addEventListener("DOMContentLoaded", () => {
   const savedCartData = JSON.parse(localStorage.getItem("cartData"));
 

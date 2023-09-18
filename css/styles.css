@@ -858,6 +858,15 @@ li {
 }
 
 /************************Checkout Page*************************/
+
+.cartOverview {
+  width: 26% !important;
+  position: absolute;
+  left: 72%;
+  top: 25%;
+  border: 1px solid black;
+  padding: 1em;
+}
 .checkoutContainer {
   display: flex;
   flex-direction: column;
