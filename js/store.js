@@ -1,29 +1,6 @@
-/* const bag = document.querySelector("bag");
-const cartOverview = document.querySelector(".cartOverview");
-cartOverview.inWindow = 0;
-
-bag.addEventListener("mouseover", () => {
-  if (cartOverview.classList.container("hide"))
-    cartOverview.classList.remove("hide");
-});
-bag.addEventListener("mouseleave", () => {
-  setTimeout(() => {
-    if (cartOverview.inWindow === 0) {
-      cartOverview.classList.add("hide");
-    }
-  }, 500);
-});
-
-cartOverview.addEventListener("mouseover", () => {
-  cartOverview.inWindow = 1;
-});
-cartOverview.addEventListener("mouseleave", () => {
-  cartOverview.inWindow = 0;
-  cartOverview.classList.add("hide");
-});
- */
 document.addEventListener("DOMContentLoaded", () => {
-  const savedCartData = JSON.parse(localStorage.getItem("cartData"));
+  // Retrieve cart data from local storage
+  const savedCartData = JSON.parse(localStorage.getItem("cart"));
 
   if (
     !savedCartData ||
@@ -35,65 +12,30 @@ document.addEventListener("DOMContentLoaded", () => {
       emptyCartMessage.style.display = "block";
     }
   } else {
-    displayProduct();
+    displayCartProducts(savedCartData);
   }
-  const quantityInputs = document.getElementsByClassName("quantityInput");
+});
+const quantityInputs = document.getElementsByClassName("quantityInput");
 
   for (let i = 0; i < quantityInputs.length; i++) {
     const input = quantityInputs[i];
     input.value = savedCartData[i].quantity;
   }
-});
+
 
 function showError(message) {
   const errorContainer = document.querySelector(".checkoutDiv");
   errorContainer.innerHTML = `<h2>Error: ${message}</h2>`;
 }
 
-function getProductIdFromQuery() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get("id");
-  return id;
-}
 
-function getJacketTitleFromQuery() {
-  const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams.get("title"));
-  return urlParams.get("title");
-}
+function displayCartProducts(cartData) {
+  const checkoutContainer = document.querySelector(".checkoutDiv");
 
-async function fetchProduct() {
-  showLoadingIndicator();
-  try {
-    const itemId = getProductIdFromQuery();
-    if (!itemId) {
-      throw new Error(
-        "API loading failed. ID not found in the query parameter."
-      );
-    }
+  checkoutContainer.innerHTML = "";
 
-    const response = await fetch(
-      `https://api.noroff.dev/api/v1/rainy-days/${itemId}`
-    );
-    if (!response.ok) {
-      throw new Error("Fetch jacket with ID failed.");
-    }
 
-    const productDetail = await response.json();
-    return productDetail;
-  } catch (error) {
-    showError(error.message);
-    throw error;
-  }
-}
-
-async function displayProduct() {
-  try {
-    const productDetail = await fetchProduct();
-    const checkoutContainer = document.querySelector(".checkoutDiv");
-
-    checkoutContainer.innerHTML = "";
-
+  cartData.forEach((productDetail) => {
     const productDiv = document.createElement("div");
     productDiv.classList.add("cart-row");
 
@@ -102,7 +44,7 @@ async function displayProduct() {
 
     const image = document.createElement("img");
     image.classList.add("small-asset");
-    image.src = productDetail.image;
+    image.src = productDetail.image; // Use productDetail instead of image
     image.alt = `Picture of ${productDetail.description}`;
 
     const productName = document.createElement("h4");
@@ -120,7 +62,7 @@ async function displayProduct() {
 
     const quantityInput = document.createElement("input");
     quantityInput.classList.add("quantityInput");
-    quantityInput.value = "1";
+    quantityInput.value = productDetail.quantity; // Set the quantity from productDetail
     quantityInput.type = "number";
     quantityInput.name = "input";
 
@@ -161,7 +103,7 @@ async function displayProduct() {
     } else {
       ready();
     }
-
+  });
     function ready() {
       const removeCardButtons = document.getElementsByClassName("btnRemove");
       for (let i = 0; i < removeCardButtons.length; i++) {
@@ -174,6 +116,8 @@ async function displayProduct() {
         const input = quantityInputs[i];
         input.addEventListener("change", quantityChanged);
       }
+    }
+
 
       const addToCardButtons =
         document.getElementsByClassName("shopItemButton");
@@ -181,7 +125,7 @@ async function displayProduct() {
         const button = addToCardButtons[i];
         button.addEventListener("click", addToCardClicked);
       }
-    }
+    /* 
     function removeCartItem(event) {
       const buttonClicked = event.target;
       const cartRow = buttonClicked.parentElement.parentElement;
@@ -225,21 +169,3 @@ async function displayProduct() {
           quantity: quantity,
         });
       });
-
-      localStorage.setItem("cartData", JSON.stringify(cartData));
-
-      total = Math.round(total * 100) / 100;
-      totalPriceElement.innerHTML = total;
-      console.log(total);
-    }
-  } catch (error) {
-    showError(error.message);
-  }
-}
-
-function showLoadingIndicator() {
-  const loading = document.querySelector(".checkoutDiv");
-  loading.innerHTML = `<span>Loading...</span>`;
-}
-
-displayProduct();

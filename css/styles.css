@@ -553,12 +553,14 @@ input:hover {
   align-items: center;
   width: 100%;
   background-color: black;
-  padding: 1em 2em;
+
+  padding: 0.5em;
   border-radius: var(--button-border-radius-default);
   cursor: pointer;
   text-decoration: none;
   color: white;
   font-size: 1.1em;
+  text-align: center;
 }
 .btnConfirm:hover,
 .btnConfirm:active,

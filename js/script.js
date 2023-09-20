@@ -5,6 +5,7 @@ function showError(message) {
 
 const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
 const jacketsContainer = document.querySelector(".resultsContainer");
+let cart = [];
 
 async function getJackets() {
   showLoadingIndicator();
@@ -28,14 +29,6 @@ async function displayJackets() {
     for (let i = 0; i < jackets.length; i++) {
       const jacket = jackets[i];
 
-      localStorage.setItem("storeItem", JSON.stringify(jacket));
-
-      if (!localStorage.getItem("cart")) {
-        localStorage.setItem("cart", "[]");
-      }
-      const storeItem = JSON.parse(localStorage.getItem("jacket"));
-      const cart = JSON.parse(localStorage.getItem("cart"));
-
       const jacketDiv = document.createElement("div");
       jacketDiv.classList.add("card");
 
@@ -43,7 +36,7 @@ async function displayJackets() {
       heartDiv.classList.add("heartDiv");
 
       const addToBag = document.createElement("i");
-      addToBag.innerHTML += `<ion-icon name="heart-outline"></ion-icon>`;
+      addToBag.innerHTML = `<ion-icon name="heart-outline"></ion-icon>`;
       addToBag.classList.add("addToBag");
 
       const imageBox = document.createElement("div");
@@ -51,26 +44,25 @@ async function displayJackets() {
       imageBox.addEventListener("click", () => {
         window.location.href = `product-details.html?id=${jacket.id}&title=${jacket.title}`;
       });
-      jacketsContainer.appendChild(jacketDiv);
+
       const image = document.createElement("img");
       image.src = jacket.image;
       image.alt = jacket.description;
       image.classList.add("image");
 
-      const jacketTitle = document.createElement("jacketTitle");
+      const jacketTitle = document.createElement("div");
       jacketTitle.classList.add("jacketTitle");
       jacketTitle.innerHTML = `<h4>${jacket.title}</h4>`;
 
-      const jacketText = document.createElement("jacketText");
+      const jacketText = document.createElement("div");
       jacketText.classList.add("jacketText");
-      jacketText.innerHTML = `<p>${jacket.description}</p>
-       `;
+      jacketText.innerHTML = `<p>${jacket.description}</p>`;
 
       const color = document.createElement("div");
       color.classList.add("colorVariable");
 
       const jacketColor = jacket.baseColor;
-      color.innerHTML = `<p class="pCenter">Color:<ion-icon class="colorIcon" style="color:${jacketColor}"name="ellipse"></ion-icon></p>`;
+      color.innerHTML = `<p class="pCenter">Color:<ion-icon class="colorIcon" style="color:${jacketColor}" name="ellipse"></ion-icon></p>`;
 
       const jacketPrice = document.createElement("div");
       const price = jacket.price;
@@ -82,14 +74,23 @@ async function displayJackets() {
         jacketPrice.innerHTML = `<span class="normalPrice">${price} ,-</span>`;
       } else {
         jacketPrice.innerHTML = `
-        <span class="oldPrice">${price} ,-</span>
-        <span class="jacketSale">${sale} ,-</span>
+          <span class="oldPrice">${price} ,-</span>
+          <span class="jacketSale">${sale} ,-</span>
         `;
       }
 
       const button = document.createElement("button");
-      button.classList.add("buttonDiv");
-      button.innerHTML = `<a data-id=${jacket.id}&title=${jacket.title}&image=${jacket.image}&price=${jacket.price}V class="btnAdd">Add<ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></a>`;
+      button.classList.add("btnAdd");
+      button.innerHTML = `<a data-id=${jacket.id}&title=${jacket.title}&image=${jacket.image}&price=${jacket.price} class="btnAdd">Add<ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></a>`;
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const productId = button.getAttribute("data-id");
+        const productTitle = button.getAttribute("data-title");
+        const productImage = button.getAttribute("data-image");
+        const productPrice = button.getAttribute("data-price");
+        addItemToCart(productId, productTitle, productImage, productPrice);
+      });
 
       jacketDiv.appendChild(heartDiv);
       heartDiv.appendChild(addToBag);
@@ -101,82 +102,109 @@ async function displayJackets() {
       jacketDiv.appendChild(jacketText);
       jacketDiv.appendChild(jacketPrice);
       jacketDiv.appendChild(button);
+
+      jacketsContainer.appendChild(jacketDiv);
     }
   } catch (error) {
     showError(error.message);
   }
 }
 
-/* function save(key, value) {
-  const encodedValue = JSON.stringify(value);
-  localStorage.setItem(key, encodedValue);
-}
-function load(key) {
-  const encodedValue = localStorage.getItem(key);
-  return JSON.parse(encodedValue);
-}
-function remove(key) {
-  localStorage.removeItem(key);
-} */
+function addItemToCart(id, title, image, price) {
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedCartData = JSON.parse(localStorage.getItem("cart"));
 
-/*   const itemInCart = cart.find((item) => item.id === id);
-  if (itemInCart) {
-    itemInCart.quantity++;
+    if (
+      !savedCartData ||
+      !Array.isArray(savedCartData) ||
+      savedCartData.length === 0
+    ) {
+      const emptyCartMessage = document.getElementById("emptyCartMessage");
+      if (emptyCartMessage) {
+        emptyCartMessage.style.display = "block";
+      }
+    } else {
+      displayCartProducts(savedCartData);
+    }
+  });
+
+  function addItemToCart(productId, productTitle, productImage, productPrice) {
+    const product = {
+      id: productId,
+      title: productTitle,
+      image: productImage,
+      price: parseFloat(productPrice),
+      quantity: 1,
+    };
+
+    const cartItem = cart.find((item) => item.id === parseInt(productId));
+
+    if (cartItem) {
+      cartItem.quantity++;
+    } else {
+      cart.push(product); // Push the product object
+    }
+
+    saveCartToLocalStorage();
+
+    updateCartTotal();
+  }
+
+  const cartItem = cart.find((item) => item.id === parseInt(id));
+
+  if (!product) {
+    showError("Product not found");
+    return;
+  }
+
+  if (cartItem) {
+    cartItem.quantity++;
   } else {
     cart.push({
-      id,
-      quantity,
+      id: parseInt(id),
+      title,
+      image,
+      price: parseFloat(price),
+      quantity: 1,
     });
-  } */
-/* 
-function calculateTotal() {
-  const cart = load("cart");
-
-  return cart.reduce((total, currentItem) => {
-    return total + currentItem.quantity;
-  }, 0);
-} */
-/* 
-function renderCart() {}
- */
-
-function addItemToCart(productId) {
-  let product = storeItem.find(function (product) {
-    return product.id == productId;
-  });
-
-  if (cart.length == 0) {
-    cart.push(product);
-  } else {
-    let res = cart.find((element) => element.id == productId);
-    if (res === undefined) {
-      cart.push(product);
-    }
   }
+
+  saveCartToLocalStorage();
+
+  updateCartTotal();
+}
+
+function saveCartToLocalStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
+
 function removeItemFromCart(productId) {
-  let temp = cart.filter((item) => item.id != productId);
-  localStorage.setItem("cart", JSON.stringify(temp));
-}
+  const index = cart.findIndex((item) => item.id === productId);
 
-function updateQuantity(productId, quantity, cart) {
-  for (let storeItem of cart) {
-    if (storeItem.id == productId) {
-      storeItem.quantity = quantity;
-    }
+  if (index !== -1) {
+    cart.splice(index, 1);
+
+    saveCartToLocalStorage();
+
+    updateCartTotal();
   }
-  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function getTotal() {
-  let temp = cart.map(function (item) {
-    return parseFloat(item.price);
-  });
-  let sum = temp.reduce(function (prev, next) {
-    return prev + next;
-  }, 0);
-  console.log(sum);
+function updateCartTotal() {
+  const totalElement = document.querySelector(".totalPrice");
+  const total = calculateTotal();
+  totalElement.textContent = `Total: $${total.toFixed(2)}`;
+}
+
+function calculateTotal() {
+  return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+}
+
+function loadCartFromLocalStorage() {
+  const savedCart = localStorage.getItem("cart");
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+  }
 }
 
 function showLoadingIndicator() {
@@ -184,10 +212,7 @@ function showLoadingIndicator() {
   loading.innerHTML = `<span>Loading...</span>`;
 }
 
+loadCartFromLocalStorage();
 displayJackets();
-/* addItemToCart(); */
-/* removeItemFromCart(1);
- */
-updateQuantity(2, 8, JSON.parse(localStorage.getItem("cart")));
-
-getTotal();
+updateCartTotal();
+document.addEventListener("DOMContentLoaded", initialize);
