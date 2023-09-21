@@ -142,6 +142,8 @@ function addItemToCart(id, title, image, price) {
   saveCartToLocalStorage();
   updateCartTotal();
   updateBadge();
+
+  window.alert("Item added to the cart!");
 }
 
 function saveCartToLocalStorage() {
@@ -179,9 +181,10 @@ function updateCartTotal() {
 
 function updateBadge() {
   const badge = document.querySelector(".badge");
-  if (badge) {
-    badge.textContent = badgeCount;
-    badge.style.display = badgeCount > 0 ? "block" : "none";
+  if (badgeCount > 0) {
+    badge.style.display = "block";
+  } else {
+    badge.style.display = "none";
   }
 }
 

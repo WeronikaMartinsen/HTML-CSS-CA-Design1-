@@ -71,10 +71,11 @@
           <a href="favorites.html" class="icon-text">Favorites</a>
         </div>
         <div class="icon">
-          <a href="checkout.html">
-            <ion-icon id="bag" class="nav-icons" name="bag-outline">
-              <span class="badge">0</span></ion-icon
-          ></a>
+          <a href="checkout.html"  class="bag-link">
+            <ion-icon class="nav-icons bag" name="bag-outline">
+              <span class="badge">0</span>
+            </ion-icon>
+          </a>
           <span class="icon-text">Shopping bag</span>
         </div>
       </div>
@@ -106,7 +107,13 @@
           name="name"
           placeholder="Email address"
         />
-        <button class="button-shop-now">Sign up</button>
+        <button onclick="showAlert()" class="button-shop-now width">Sign up</button>
+        <script>
+          function showAlert() {
+              alert("You are log in now!");
+          }
+      </script>
+
     </div>
   </section>
   <footer>

@@ -450,7 +450,7 @@ select {
 .sign-up-box {
   display: flex;
   align-items: center;
-  background: linear-gradient(to bottom, #b5b4bf, #ffffff);
+  background: var(--background-color-default);
   height: 25em;
   width: 31.25em;
   border-radius: 0.93em;
@@ -460,6 +460,9 @@ select {
   gap: 1.25em;
   padding-left: 1.87em;
   padding-right: 1.87em;
+}
+.width {
+  width: 60%;
 }
 #name-input {
   width: 25em;
@@ -547,13 +550,32 @@ input:hover {
   justify-content: center;
   align-items: center;
 }
+.bag {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  background: #ff6600;
+  top: -10px;
+  right: 61px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0.5em;
+  line-height: 20px;
+  font-size: 14px;
+}
+.bag-link {
+  position: relative;
+  display: inline-block;
+}
+
 .btnAdd {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   background-color: black;
-
   padding: 0.5em;
   border-radius: var(--button-border-radius-default);
   cursor: pointer;
@@ -789,6 +811,7 @@ li {
   font-size: 0.9em;
 }
 .sign-up-break {
+  border-top: 1px solid #b5b4bf;
   margin-top: 3.75em;
   height: 12.5em;
   width: 100%;
@@ -917,35 +940,14 @@ li {
 }
 .cartPrice {
   text-align: center;
-  width: 8em;
+  width: 100%;
   font-size: 1.2em;
   font-weight: 700;
   color: red;
 }
-.badge {
-  content: attr(data-count);
-  position: absolute;
-  background: #ff6600;
-  height: 2rem;
-  top: 1rem;
-  right: 1.5rem;
-  width: 2rem;
-  text-align: center;
-  line-height: 2rem;
-  font-size: 1rem;
-  border-radius: 50%;
-  color: white;
-  border: 1px solid #ff6600;
-  font-family: sans-serif;
-  font-weight: bold;
-  display: block;
-}
-#bag {
-  position: relative;
-}
+
 .imageTitleDiv {
   display: flex;
-
   align-items: center;
   gap: 1em;
 }
@@ -1232,6 +1234,8 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 6em;
+  margin-bottom: 6em;
 }
 .big {
   width: 70px;
@@ -1462,6 +1466,11 @@ li {
   display: flex;
   align-self: center;
   margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+.pageInProgress {
+  margin: 10em;
 }
 
 /********************Payment*****************************************/
