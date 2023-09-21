@@ -1,11 +1,17 @@
 function showError(message) {
   const errorContainer = document.querySelector(".resultsContainer");
-  errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
+
+  if (errorContainer) {
+    errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
+  } else {
+    console.error("Error container not found in the DOM.");
+  }
 }
 
 const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
 const jacketsContainer = document.querySelector(".resultsContainer");
 let cart = [];
+let badgeCount = 0;
 
 async function getJackets() {
   showLoadingIndicator();
@@ -81,7 +87,12 @@ async function displayJackets() {
 
       const button = document.createElement("button");
       button.classList.add("btnAdd");
-      button.innerHTML = `<a data-id=${jacket.id}&title=${jacket.title}&image=${jacket.image}&price=${jacket.price} class="btnAdd">Add<ion-icon class="iconBag" name="bag-handle-outline"></ion-icon></a>`;
+      button.innerHTML = `Add<ion-icon class="iconBag" name="bag-handle-outline"></ion-icon>`;
+      button.setAttribute("data-id", jacket.id);
+      button.setAttribute("data-title", jacket.title);
+      button.setAttribute("data-image", jacket.image);
+      button.setAttribute("data-price", jacket.price);
+
       button.addEventListener("click", function (event) {
         event.preventDefault();
 
@@ -109,69 +120,28 @@ async function displayJackets() {
     showError(error.message);
   }
 }
-
 function addItemToCart(id, title, image, price) {
-  document.addEventListener("DOMContentLoaded", () => {
-    const savedCartData = JSON.parse(localStorage.getItem("cart"));
-
-    if (
-      !savedCartData ||
-      !Array.isArray(savedCartData) ||
-      savedCartData.length === 0
-    ) {
-      const emptyCartMessage = document.getElementById("emptyCartMessage");
-      if (emptyCartMessage) {
-        emptyCartMessage.style.display = "block";
-      }
-    } else {
-      displayCartProducts(savedCartData);
-    }
-  });
-
-  function addItemToCart(productId, productTitle, productImage, productPrice) {
-    const product = {
-      id: productId,
-      title: productTitle,
-      image: productImage,
-      price: parseFloat(productPrice),
-      quantity: 1,
-    };
-
-    const cartItem = cart.find((item) => item.id === parseInt(productId));
-
-    if (cartItem) {
-      cartItem.quantity++;
-    } else {
-      cart.push(product); // Push the product object
-    }
-
-    saveCartToLocalStorage();
-
-    updateCartTotal();
-  }
-
   const cartItem = cart.find((item) => item.id === parseInt(id));
-
-  if (!product) {
-    showError("Product not found");
-    return;
-  }
 
   if (cartItem) {
     cartItem.quantity++;
+    cartItem.cartPrice += cartItem.price;
   } else {
-    cart.push({
+    const newItem = {
       id: parseInt(id),
-      title,
-      image,
+      title: title,
+      image: image,
       price: parseFloat(price),
       quantity: 1,
-    });
+      cartPrice: parseFloat(price),
+    };
+    badgeCount++;
+    cart.push(newItem);
   }
 
   saveCartToLocalStorage();
-
   updateCartTotal();
+  updateBadge();
 }
 
 function saveCartToLocalStorage() {
@@ -184,16 +154,11 @@ function removeItemFromCart(productId) {
   if (index !== -1) {
     cart.splice(index, 1);
 
+    badgeCount--;
+    updateBadge();
     saveCartToLocalStorage();
-
     updateCartTotal();
   }
-}
-
-function updateCartTotal() {
-  const totalElement = document.querySelector(".totalPrice");
-  const total = calculateTotal();
-  totalElement.textContent = `Total: $${total.toFixed(2)}`;
 }
 
 function calculateTotal() {
@@ -207,12 +172,25 @@ function loadCartFromLocalStorage() {
   }
 }
 
+function updateCartTotal() {
+  const totalElement = document.querySelector(".totalPrice");
+  const total = calculateTotal();
+}
+
+function updateBadge() {
+  const badge = document.querySelector(".badge");
+  if (badge) {
+    badge.textContent = badgeCount;
+    badge.style.display = badgeCount > 0 ? "block" : "none";
+  }
+}
+
 function showLoadingIndicator() {
   const loading = document.querySelector(".resultsContainer");
   loading.innerHTML = `<span>Loading...</span>`;
 }
 
-loadCartFromLocalStorage();
 displayJackets();
+loadCartFromLocalStorage();
 updateCartTotal();
-document.addEventListener("DOMContentLoaded", initialize);
+updateBadge();
