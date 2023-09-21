@@ -68,7 +68,15 @@ async function fetchDetail() {
       btnConfirm.classList.add("btnConfirm");
       btnConfirm.innerHTML = `Add to bag <ion-icon class="iconBag" name="bag-handle-outline"></ion-icon>`;
       btnConfirm.addEventListener("click", () => {
-        window.location.href = `checkout.html?id=${jacketDetail.id}&title=${jacketDetail.title}`;
+        // Add the selected item to the cart
+        const itemId = jacketDetail.id;
+        const itemTitle = jacketDetail.title;
+        const itemImage = jacketDetail.image;
+        const itemPrice = onSaleJ ? saleJ : priceJ;
+
+        addItemToCart(itemId, itemTitle, itemImage, itemPrice);
+
+        window.location.href = "checkout.html";
       });
 
       const color = document.createElement("span");
@@ -107,6 +115,46 @@ async function fetchDetail() {
   } catch (error) {
     showError(error.message);
   }
+
+  function addItemToCart(id, title, image, price) {
+    const savedCart = localStorage.getItem("cart");
+    let cart = [];
+    if (savedCart) {
+      cart = JSON.parse(savedCart);
+    }
+
+    const cartItem = cart.find((item) => item.id === parseInt(id));
+
+    if (cartItem) {
+      cartItem.quantity++;
+      cartItem.cartPrice += parseFloat(price);
+    } else {
+      const newItem = {
+        id: parseInt(id),
+        title: title,
+        image: image,
+        price: parseFloat(price),
+        quantity: 1,
+        cartPrice: parseFloat(price),
+      };
+      // If the item is not in the cart, add it
+      cart.push(newItem);
+    }
+
+    // Save the updated cart to local storage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    function updateBadge() {
+      // Your code for updating the badge count here
+      const badge = document.querySelector(".badge");
+      if (badge) {
+        badge.textContent = badgeCount;
+        badge.style.display = badgeCount > 0 ? "block" : "none";
+      }
+    }
+    updateBadge();
+  }
+
   function showLoadingIndicator() {
     const loading = document.querySelector(".product-cart");
     loading.innerHTML = `<span>Loading...</span>`;

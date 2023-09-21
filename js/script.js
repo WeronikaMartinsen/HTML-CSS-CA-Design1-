@@ -153,8 +153,8 @@ function removeItemFromCart(productId) {
 
   if (index !== -1) {
     cart.splice(index, 1);
-
     badgeCount--;
+
     updateBadge();
     saveCartToLocalStorage();
     updateCartTotal();

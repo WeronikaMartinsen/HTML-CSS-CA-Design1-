@@ -603,6 +603,7 @@ input:hover {
   border-radius: 10px;
   margin: 1em;
   gap: 1em;
+  cursor: pointer;
   position: relative;
 }
 .image {
