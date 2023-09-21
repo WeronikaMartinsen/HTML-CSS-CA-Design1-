@@ -14,6 +14,14 @@ function getJacketTitleFromQuery() {
   return urlParams.get("title");
 }
 
+function updateBadge() {
+  const badge = document.querySelector(".badge");
+  if (badge) {
+    badge.textContent = badgeCount;
+    badge.style.display = badgeCount > 0 ? "block" : "none";
+  }
+}
+
 async function fetchDetail() {
   showLoadingIndicator();
   const itemId = getJacketIdFromQuery();
@@ -68,7 +76,6 @@ async function fetchDetail() {
       btnConfirm.classList.add("btnConfirm");
       btnConfirm.innerHTML = `Add to bag <ion-icon class="iconBag" name="bag-handle-outline"></ion-icon>`;
       btnConfirm.addEventListener("click", () => {
-        // Add the selected item to the cart
         const itemId = jacketDetail.id;
         const itemTitle = jacketDetail.title;
         const itemImage = jacketDetail.image;
@@ -137,22 +144,11 @@ async function fetchDetail() {
         quantity: 1,
         cartPrice: parseFloat(price),
       };
-      // If the item is not in the cart, add it
+
       cart.push(newItem);
     }
 
-    // Save the updated cart to local storage
     localStorage.setItem("cart", JSON.stringify(cart));
-
-    function updateBadge() {
-      // Your code for updating the badge count here
-      const badge = document.querySelector(".badge");
-      if (badge) {
-        badge.textContent = badgeCount;
-        badge.style.display = badgeCount > 0 ? "block" : "none";
-      }
-    }
-    updateBadge();
   }
 
   function showLoadingIndicator() {
