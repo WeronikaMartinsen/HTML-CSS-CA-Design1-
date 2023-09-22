@@ -1,10 +1,10 @@
 :root {
-  --background-color: #f2f2f2;
-  --hover-color: #b5b4bf;
-  --active-color: rgb(74, 74, 74);
+  --background-color: #b5b4bf;
+  --hover-color: #73675c;
+  --active-color: #73675c;
   --headings-color: #1f1410;
   --paragraph-color: #b5b4bf;
-  --background-color-default: #b5b4bf;
+  --background-color-default: #bfb5a8;
   --heading-family: "Ibarra Real Nova", serif;
   --paragraph-family: "Roboto", sans-serif;
 
@@ -46,7 +46,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin: 0.5em 2em 0.5em 2em;
+  margin: 0.3em 1em 0.3em 1em;
 }
 .icon {
   display: flex;
@@ -519,10 +519,10 @@ input:hover {
   padding: 0.4em;
 }
 .normalPrice {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 .jacketSale {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 600;
   color: red;
   text-align: right;
@@ -825,7 +825,7 @@ li {
   margin-top: 3.75em;
   height: 12.5em;
   width: 100%;
-  background: linear-gradient(to top, #b5b4bf, #ffffff);
+  background: linear-gradient(to top, #bfb5a8, #ffffff);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -942,7 +942,7 @@ li {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid var(--background-color-default);
+  border: 1px solid var(--background-color-default);
   border-radius: 0.313em;
   width: 80%;
   padding: 1em 0.4em 0.4em;
@@ -1057,7 +1057,6 @@ li {
 .small-asset {
   width: 35%;
   padding: 1em;
-  border: 1px solid var(--background-color-default);
   border-radius: 0.313em;
   display: flex;
   justify-content: center;
@@ -1085,12 +1084,15 @@ li {
   font-size: 14px;
   padding: 5px;
 }
+a {
+  text-decoration: none;
+}
 .checkout-span {
   font-size: 12px;
 }
 .btn-confirm {
   background-color: var(--headings-color);
-  color: var(--background-color);
+  color: white;
   text-align: center;
   padding: 0.8em 1.2em 0.8em 1.2em;
   text-decoration: none;
@@ -1198,8 +1200,7 @@ li {
   font-size: 1.2em;
   font-weight: 700;
   padding: 1em;
-  margin-bottom: 2em;
-  border: 2px solid var(--background-color-default);
+  border: 1px solid var(--background-color-default);
   border-radius: 0.313em;
 }
 .totalPrice {
@@ -1221,8 +1222,8 @@ li {
 }
 .btn-confirm-order {
   width: 10em;
-  background-color: var(--headings-color);
-  color: var(--background-color);
+  background-color: black;
+  color: white;
   text-align: center;
   padding: 0.8em 2em 0.8em 2em;
   text-decoration: none;
@@ -1232,14 +1233,12 @@ li {
   font-family: var(--button-font-family);
   border-style: none;
 }
-.btn-confirm-order:hover {
-  background-color: var(--background-color-default);
-  color: var(--headings-color);
-}
+.btn-confirm-order:hover,
 .btn-confirm-order:active {
-  background-color: var(--background-color-default);
-  color: var(--headings-color);
+  background-color: var(--active-color);
+  color: black;
 }
+
 .confirmation-div {
   display: flex;
   flex-direction: column;
@@ -1281,6 +1280,7 @@ li {
 }
 
 /************************About us*************************/
+
 .h1-about {
   font-size: 1.5em;
   margin-top: 1.5em;
@@ -1410,16 +1410,16 @@ li {
   margin-top: 30px;
   width: 100%;
   border: none;
+  color: white;
+  cursor: pointer;
 }
-.btn-contact:hover {
-  background-color: var(--background-color);
-  color: var(--headings-color);
-  border: none;
-}
+.btn-contact:hover,
 .btn-contact:active {
   background-color: var(--active-color);
   color: white;
+  border: none;
 }
+
 .label-text-contact {
   margin-top: 20px;
   margin-bottom: 0.5em;
