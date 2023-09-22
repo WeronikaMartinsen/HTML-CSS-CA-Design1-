@@ -736,6 +736,13 @@ input:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#emptyCartMessage {
+  text-align: center;
+  margin: 4em;
 }
 
 .imageDetail {
