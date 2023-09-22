@@ -366,6 +366,8 @@ select {
   text-decoration: none;
   outline: none;
   border: 1px solid;
+  background-color: white;
+  color: black;
 }
 
 .imageDiv {
