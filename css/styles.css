@@ -862,13 +862,12 @@ li {
   height: var(--button-height-default);
   color: white;
   border: none;
+  cursor: pointer;
 }
-.btn-sign-up:hover {
-  background-color: var(--background-color);
-  color: var(--headings-color);
-}
+.btn-sign-up:hover,
 .btn-sign-up:active {
   background-color: var(--active-color);
+  color: white;
 }
 
 .cart-container {
