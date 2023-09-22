@@ -181,20 +181,17 @@ h1 {
   font-weight: 500;
   font-family: var(--button-font-family);
   border-style: none;
-  color: var(--headings-color);
-  background-color: var(--background-color);
+  color: black;
+  background-color: white;
   text-align: center;
   padding: 0.8em 1.7em 0.8em 1.7em;
   text-decoration: none;
 }
-.btn-cta:hover {
-  background-color: var(--hover-color);
-  box-shadow: 5px 5px 10px 2px var(--headings-color);
-}
+.btn-cta:hover,
 .btn-cta:active {
   background-color: var(--hover-color);
-  box-shadow: 5px 5px 10px 2px var(--headings-color);
 }
+
 .a-btn-cta {
   background-color: var(--background-color);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
