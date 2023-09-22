@@ -365,6 +365,7 @@ select {
   border-radius: var(--button-border-radius-default);
   text-decoration: none;
   outline: none;
+  border: 1px solid;
 }
 
 .imageDiv {
