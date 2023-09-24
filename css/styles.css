@@ -186,6 +186,7 @@ h1 {
   text-align: center;
   padding: 0.8em 1.7em 0.8em 1.7em;
   text-decoration: none;
+  cursor: pointer;
 }
 .btn-cta:hover,
 .btn-cta:active {
@@ -1100,6 +1101,7 @@ a {
   font-weight: 500;
   font-family: var(--button-font-family);
   border-style: none;
+  cursor: pointer;
 }
 .btn-confirm:hover {
   background-color: var(--background-color-default);

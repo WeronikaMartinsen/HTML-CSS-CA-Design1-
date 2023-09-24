@@ -87,7 +87,7 @@ async function displayJackets() {
 
       const button = document.createElement("button");
       button.classList.add("btnAdd");
-      button.innerHTML = `Add<ion-icon class="iconBag" name="bag-handle-outline"></ion-icon>`;
+      button.innerHTML = `Add to bag <ion-icon class="iconBag" name="bag-handle-outline"></ion-icon>`;
       button.setAttribute("data-id", jacket.id);
       button.setAttribute("data-title", jacket.title);
       button.setAttribute("data-image", jacket.image);
