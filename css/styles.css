@@ -1242,7 +1242,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 4em;
+  margin: 1em;
 }
 .big {
   width: 70px;
