@@ -556,13 +556,14 @@ input:hover {
 
 .badge {
   position: absolute;
-  background: #ff6600;
-  top: -6px;
-  right: -12px;
-  border-radius: 50%;
+  background: black;
+  top: 3px;
+  right: -2px;
+  padding: 4px 6px;
   text-align: center;
-  padding: 0.5em;
-  font-size: 14px;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.6em;
 }
 .bag-link {
   position: relative;
@@ -855,7 +856,7 @@ li {
   color: var(--headings-color);
 }
 .btn-sign-up {
-  background-color: var(--headings-color);
+  background-color: black;
   border-radius: var(--button-border-radius-default);
   width: var(--button-width-default);
   height: var(--button-height-default);
@@ -1234,15 +1235,14 @@ a {
 .btn-confirm-order:hover,
 .btn-confirm-order:active {
   background-color: var(--active-color);
-  color: black;
+  color: white;
 }
 
 .confirmation-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 6em;
-  margin-bottom: 6em;
+  margin: 4em;
 }
 .big {
   width: 70px;
