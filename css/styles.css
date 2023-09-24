@@ -987,7 +987,10 @@ li {
 .btnMinusPlus {
   background-color: var(--headings-color);
   color: white;
-  border-radius: var(--button-border-radius-default);
+  padding: 5px 8px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 0.7em;
 }
 
 .h1-checkout {
