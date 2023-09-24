@@ -913,6 +913,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 2em 4em;
 }
 
 .checkoutDiv {
@@ -922,20 +923,19 @@ li {
   align-items: center;
 }
 .cartContainer {
-  width: 81%;
+  width: 100%;
 }
 
 .checkoutCart {
   display: flex;
   justify-content: center;
-  border: 2px solid black;
-  width: 100%;
   padding: 1em 0;
   border: 1px solid var(--background-color-default);
   border-radius: 0.313em;
   font-weight: 800;
   font-size: 1.1em;
   background-color: var(--background-color-default);
+  width: 100%;
 }
 .cart-row {
   display: flex;
@@ -944,7 +944,7 @@ li {
   align-items: center;
   border: 1px solid var(--background-color-default);
   border-radius: 0.313em;
-  width: 80%;
+  width: 100%;
   padding: 1em 0.4em 0.4em;
   gap: 5em;
 }
