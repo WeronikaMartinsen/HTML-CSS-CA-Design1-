@@ -1,5 +1,6 @@
+let cart = [];
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Retrieve cart data from local storage
   const savedCartData = JSON.parse(localStorage.getItem("cart"));
 
   if (
@@ -11,9 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (emptyCartMessage) {
       emptyCartMessage.style.display = "block";
     }
+    clearCart();
   } else {
-    displayCartProducts(savedCartData);
-    updateCartTotal(savedCartData);
+    cart = savedCartData;
+    displayCartProducts(cart);
+    updateCartTotal(cart);
+    updateBadgeCount(cart);
+    ready(cart);
   }
 });
 
@@ -71,7 +76,7 @@ function displayCartProducts(cartData) {
     buttonMinus.innerText = "-";
     buttonMinus.addEventListener("click", () => {
       const updatedQuantity = updateQuantity(quantityInput, -1);
-      productDetail.quantity = updatedQuantity; // Update the quantity in cartData
+      productDetail.quantity = updatedQuantity;
       updateCartPrice(
         cartData,
         productDetail.id,
@@ -79,6 +84,7 @@ function displayCartProducts(cartData) {
         productDetail.price
       );
       updateCartTotal(cartData);
+      updateBadgeCount();
     });
 
     const buttonPlus = document.createElement("button");
@@ -94,13 +100,18 @@ function displayCartProducts(cartData) {
         productDetail.price
       );
       updateCartTotal(cartData);
+      updateBadgeCount();
     });
 
     const btnRemove = document.createElement("button");
     btnRemove.classList.add("btn-confirm", "btnRemove");
     btnRemove.innerHTML = "REMOVE";
-    btnRemove.addEventListener("click", () => {
-      removeCartItem(productDetail.id, cartData);
+    btnRemove.addEventListener("click", (event) => {
+      const productId = productDetail.id; // Get the product ID from the product detail
+      console.log("Remove button clicked");
+      console.log("Product ID:", productId);
+      removeItemFromCart(productId);
+      updateBadgeCount();
     });
 
     quantityDiv.appendChild(buttonMinus);
@@ -116,34 +127,61 @@ function displayCartProducts(cartData) {
     checkoutContainer.appendChild(productDiv);
   });
 
-  ready();
+  ready(cartData);
 }
 
-function ready() {
-  const removeCardButtons = document.getElementsByClassName("btnRemove");
-  for (let i = 0; i < removeCardButtons.length; i++) {
-    const button = removeCardButtons[i];
-    button.addEventListener("click", () => {
-      const productId = button.getAttribute("data-id");
-      removeCartItem(productId);
-    });
-  }
+function ready(cartData) {
+  const checkoutContainer = document.querySelector(".checkoutDiv");
 
-  const quantityInputs = document.getElementsByClassName("quantityInput");
-  for (let i = 0; i < quantityInputs.length; i++) {
-    const input = quantityInputs[i];
-    input.addEventListener("change", () => {
-      updateQuantity(input, 0);
-      updateCartTotal(cartData);
-    });
+  checkoutContainer.addEventListener("click", (event) => {
+    if (event.target.classList.contains("btnRemove")) {
+      const productId = event.target.getAttribute("data-id");
+      removeItemFromCart(productId);
+      updateBadgeCount();
+    }
+  });
+}
+function updateBadgeCount() {
+  const badgeCountElement = document.querySelector(".badge");
+
+  if (badgeCountElement) {
+    const totalCount = cart.reduce((total, item) => total + item.quantity, 0);
+    if (totalCount === 0) {
+      badgeCountElement.style.display = "none";
+    } else {
+      badgeCountElement.style.display = "block";
+      badgeCountElement.textContent = totalCount.toString();
+    }
   }
 }
 
-function removeCartItem(productId, cartData) {
-  const updatedCartData = cartData.filter((item) => item.id !== productId);
-  displayCartProducts(updatedCartData);
-  updateCartTotal(updatedCartData);
-  saveCartToLocalStorage(updatedCartData);
+const quantityInputs = document.getElementsByClassName("quantityInput");
+for (let i = 0; i < quantityInputs.length; i++) {
+  const input = quantityInputs[i];
+  input.addEventListener("change", () => {
+    const productId = input.getAttribute("data-id");
+    const updatedQuantity = updateQuantity(input, 0, productId);
+    updateCartPrice(cart, productId, updatedQuantity, cartItem.price);
+    updateCartTotal(cart);
+    updateBadgeCount();
+  });
+}
+
+function removeItemFromCart(productId) {
+  const index = cart.findIndex((item) => item.id === productId);
+
+  if (index !== -1) {
+    cart.splice(index, 1);
+
+    saveCartToLocalStorage(cart);
+    updateCartTotal(cart);
+    updateBadgeCount();
+    displayCartProducts(cart);
+  }
+
+  if (cart.length === 0) {
+    clearCart();
+  }
 }
 
 function updateCartPrice(cartData, productId, quantity, unitPrice) {
@@ -171,23 +209,49 @@ function updateQuantity(input, change) {
     return 1;
   } else {
     input.value = newValue;
+    const productId = input.getAttribute("data-id");
+    const cartItem = cart.find((item) => item.id === parseInt(productId));
+    if (cartItem) {
+      cartItem.quantity = newValue; // Update the quantity in cartData
+      updateCartPrice(cart, productId, newValue, cartItem.price);
+      updateCartTotal(cart);
+      updateBadgeCount(); // Update the badge count when changing quantity
+    }
     return newValue;
   }
 }
 
 function updateCartTotal(cartData) {
+  console.log("Updating cart total...");
   const totalElement = document.querySelector(".totalPrice");
   const total = calculateTotal(cartData);
+  console.log("Total:", total);
 
-  const formattedTotal = total.toFixed(2);
-  totalElement.innerHTML = formattedTotal + " ,-";
+  if (totalElement) {
+    totalElement.textContent = `Total Price: $${total.toFixed(2)}`;
+  }
 }
 
 function calculateTotal(cartData) {
+  if (!cartData || !Array.isArray(cartData)) {
+    return 0; // Return 0 if cartData is not defined or not an array
+  }
+
   return cartData.reduce(
     (total, item) => total + item.price * item.quantity,
     0
   );
+}
+function clearCart() {
+  if (!Array.isArray(cart)) {
+    cart = [];
+  } else {
+    cart.length = 0;
+  }
+
+  saveCartToLocalStorage(cart);
+  updateCartTotal(cart);
+  updateBadgeCount();
 }
 
 function saveCartToLocalStorage(cartData) {

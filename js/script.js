@@ -135,14 +135,14 @@ function addItemToCart(id, title, image, price) {
       quantity: 1,
       cartPrice: parseFloat(price),
     };
-    /*    badgeCount++; */
+
     cart.push(newItem);
   }
 
   saveCartToLocalStorage();
   updateCartTotal();
-  /*   updateBadge();
-   */
+  updateBadgeCount();
+
   window.alert("Item added to the cart!");
 }
 
@@ -155,9 +155,8 @@ function removeItemFromCart(productId) {
 
   if (index !== -1) {
     cart.splice(index, 1);
-    /*  badgeCount--;
 
-    updateBadge(); */
+    updateBadgeCount();
     saveCartToLocalStorage();
     updateCartTotal();
   }
@@ -179,14 +178,16 @@ function updateCartTotal() {
   const total = calculateTotal();
 }
 
-/* function updateBadge() {
+function updateBadgeCount() {
   const badge = document.querySelector(".badge");
+  badgeCount = cart.reduce((total, item) => total + item.quantity, 0);
+  badge.textContent = badgeCount;
   if (badgeCount > 0) {
     badge.style.display = "block";
   } else {
     badge.style.display = "none";
   }
-} */
+}
 
 function showLoadingIndicator() {
   const loading = document.querySelector(".resultsContainer");
@@ -196,4 +197,4 @@ function showLoadingIndicator() {
 displayJackets();
 loadCartFromLocalStorage();
 updateCartTotal();
-/* updateBadge(); */
+updateBadgeCount();
