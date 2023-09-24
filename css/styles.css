@@ -913,7 +913,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2em 4em;
+  margin: 2em;
 }
 
 .checkoutDiv {
@@ -944,8 +944,8 @@ li {
   align-items: center;
   border: 1px solid var(--background-color-default);
   border-radius: 0.313em;
-  width: 100%;
-  padding: 1em 0.4em 0.4em;
+  width: 98%;
+  padding: 1em 0.6em 0.4em;
   gap: 5em;
 }
 .cartPrice {
@@ -1206,6 +1206,7 @@ a {
   padding: 1em;
   border: 1px solid var(--background-color-default);
   border-radius: 0.313em;
+  text-align: center;
 }
 .totalPrice {
   margin-left: 0.4em;
