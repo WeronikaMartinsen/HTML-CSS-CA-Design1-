@@ -1478,8 +1478,7 @@ a {
 .login {
   display: flex;
   align-self: center;
-  margin-top: 10em;
-  margin-bottom: 10em;
+  margin: 5em;
 }
 
 .pageInProgress {
