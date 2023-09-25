@@ -160,7 +160,7 @@ header {
   position: relative;
 }
 .hero-image {
-  height: 38em;
+  height: 35em;
   width: 100%;
   object-fit: cover;
 }
@@ -206,14 +206,14 @@ h1 {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
 }
 .hero-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 5em;
+  margin-bottom: 4em;
 }
 .feature {
   display: flex;
@@ -506,7 +506,7 @@ input:hover {
 .copyright-text {
   border-top: 1px solid #b5b4bf;
   padding: 1em;
-  color: #88878e;
+  color: black;
   font-size: 0.67em;
 }
 .payment-icon {
