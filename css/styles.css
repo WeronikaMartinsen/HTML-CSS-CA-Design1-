@@ -190,15 +190,11 @@ h1 {
 }
 .btn-cta:hover,
 .btn-cta:active {
-  background-color: var(--hover-color);
+  background-color: black;
+  color: white;
+  transition: 0.4s;
 }
 
-.a-btn-cta {
-  background-color: var(--background-color);
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
-    -4px -4px 8px rgba(255, 255, 255, 0.2);
-  font-weight: 800;
-}
 .hero-header-wrapper {
   position: absolute;
   left: 0;
