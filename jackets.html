@@ -38,9 +38,11 @@
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
+    
 <script defer src="js/navbar.js"></script>
     <script defer src="js/script.js" type="module"></script>
-    <!-- <script defer src="js/store.js"></script> -->
+    
+    
     <script>
       (function (h, o, t, j, a, r) {
         h.hj =
@@ -76,10 +78,10 @@
           <span class="icon-text">Log in</span>
         </div>
         <div class="icon">
-          <a href="favorites.html"
+          <a href="favorites.html" class="heart-link"
             ><ion-icon class="nav-icons" name="heart-outline"></ion-icon
-          ></a>
-          <a href="favorites.html" class="icon-text">Favorites</a>
+          ><span class="heart">0</span></a>
+          <span class="icon-text">Favorites</span>
         </div>
         <div class="icon">
           <a href="checkout.html"  class="bag-link">

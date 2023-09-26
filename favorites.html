@@ -39,7 +39,8 @@
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
     <script defer src="js/navbar.js"></script>
-    <script defer src="js/favorites.js" type="module"></script>
+    <script defer src="js/favorites.js"></script>
+    <script defer src="js/script.js"></script>
     
     <script>
       (function (h, o, t, j, a, r) {
@@ -77,13 +78,13 @@
             <span class="icon-text">Log in</span>
           </div>
           <div class="icon">
-            <a href="favorites.html"
+            <a href="favorites.html" class="heart-link"
               ><ion-icon class="nav-icons" name="heart-outline"></ion-icon
-            ></a>
-            <a href="favorites.html" class="icon-text">Favorites</a>
+            ><span class="heart">0</span></a>
+            <span class="icon-text">Favorites</span>
           </div>
           <div class="icon">
-            <a href="checkout.html"  class="bag-link">
+            <a href="checkout.html" class="bag-link">
               <ion-icon class="nav-icons bag" name="bag-outline">
               </ion-icon> <span class="badge">0</span>
             </a>
@@ -104,13 +105,30 @@
 
     <div class="extra-box">Buy now. Pay later. Klarna.</div>
 
-    <div class="pageInProgress"> <h1 class="black">Page in progres.. </h1></div>
-   
-    <div class="containerFav">
-  
-      <div class="resultsContainer"></div>
+<div class="emptyCartMessage"></div>
+<h1 class="extraMargin">Favorites products</h1>
+   <div class="favContainer"></div>
+   <section class="sign-up-break">
+    <h3 class="h3-product-detail-sign-up">Sign up and save 25%</h3>
+    <span class="sign-up-text"
+      >Subscribe to our newsletter and get 15% off on your first order</span
+    >
+    <div class="btn-input-div">
+      <input
+        aria-expanded="true"
+        aria-label="input"
+        type="text"
+        role="combobox"
+        class="sign-up-input"
+        name="sign-up"
+        placeholder="Enter your Email"
+      />
+      <button class="btn-sign-up">Sign up</button>
     </div>
-    <script src="js/favorites.js" type="module"></script>
+    <p class="sign-up-paragraph">
+      You will be able to unsubscribe any time. Read our policy.
+    </p>
+  </section>
     <footer>
       <div class="footer-box">
       <div class="footer-box-1">

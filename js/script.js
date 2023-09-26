@@ -10,6 +10,9 @@ function showError(message) {
 
 const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
 const jacketsContainer = document.querySelector(".resultsContainer");
+
+let cartFav = [];
+let heartCount = 0;
 let cart = [];
 let badgeCount = 0;
 
@@ -44,6 +47,28 @@ async function displayJackets() {
       const addToBag = document.createElement("i");
       addToBag.innerHTML = `<ion-icon name="heart-outline"></ion-icon>`;
       addToBag.classList.add("addToBag");
+      addToBag.setAttribute("data-id", jacket.id);
+      addToBag.setAttribute("data-title", jacket.title);
+      addToBag.setAttribute("data-image", jacket.image);
+      addToBag.setAttribute("data-price", jacket.price);
+
+      addToBag.addEventListener("click", function (event) {
+        event.preventDefault();
+        const productId = addToBag.getAttribute("data-id");
+        const productTitle = addToBag.getAttribute("data-title");
+        const productImage = addToBag.getAttribute("data-image");
+        const productPrice = addToBag.getAttribute("data-price");
+        if (cartFav.find((item) => item.id === parseInt(productId))) {
+          removeFavItemFromCart(parseInt(productId));
+        } else {
+          addItemToFavorite(
+            productId,
+            productTitle,
+            productImage,
+            productPrice
+          );
+        }
+      });
 
       const imageBox = document.createElement("div");
       imageBox.classList.add("imageBox");
@@ -92,7 +117,6 @@ async function displayJackets() {
       button.setAttribute("data-title", jacket.title);
       button.setAttribute("data-image", jacket.image);
       button.setAttribute("data-price", jacket.price);
-
       button.addEventListener("click", function (event) {
         event.preventDefault();
 
@@ -120,6 +144,7 @@ async function displayJackets() {
     showError(error.message);
   }
 }
+
 function addItemToCart(id, title, image, price) {
   const cartItem = cart.find((item) => item.id === parseInt(id));
 
@@ -146,6 +171,35 @@ function addItemToCart(id, title, image, price) {
   window.alert("Item added to the cart!");
 }
 
+function addItemToFavorite(id, title, image, price) {
+  const existingItem = cartFav.find((item) => item.id === parseInt(id));
+
+  if (existingItem) {
+    const updatedItem = { ...existingItem };
+    updatedItem.quantity++;
+    cartFav.push(updatedItem);
+  } else {
+    const newFavItem = {
+      id: parseInt(id),
+      title: title,
+      image: image,
+      price: price,
+      quantity: 1,
+    };
+    cartFav.push(newFavItem);
+  }
+
+  saveCartFavToLocalStorage();
+  updateHeartCount();
+  window.alert("Item added to favorite!");
+  displayFavoriteItems();
+  toggleHeartVisibility();
+}
+
+function saveCartFavToLocalStorage() {
+  localStorage.setItem("cartFav", JSON.stringify(cartFav));
+}
+
 function saveCartToLocalStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
@@ -162,8 +216,34 @@ function removeItemFromCart(productId) {
   }
 }
 
+function removeFavItemFromCart(productId) {
+  const indexFav = cartFav.findIndex((item) => item.id === productId);
+
+  if (indexFav !== -1) {
+    cartFav.splice(indexFav, 1);
+
+    saveCartFavToLocalStorage();
+    updateHeartCount();
+    displayFavoriteItems();
+    toggleHeartVisibility();
+  }
+}
+
+function toggleHeartVisibility() {
+  const heart = document.querySelector(".heart");
+  if (cartFav.length > 0) {
+    heart.style.display = "block";
+  } else {
+    heart.style.display = "none";
+  }
+}
+
 function calculateTotal() {
   return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+}
+
+function calculateFavTotal() {
+  return cartFav.reduce((total, item) => total + item.price * item.quantity, 0);
 }
 
 function loadCartFromLocalStorage() {
@@ -189,12 +269,31 @@ function updateBadgeCount() {
   }
 }
 
+function updateHeartCount() {
+  const heart = document.querySelector(".heart");
+  const savedCartFav = localStorage.getItem("cartFav");
+
+  if (savedCartFav) {
+    cartFav = JSON.parse(savedCartFav);
+    const heartCount = cartFav.reduce(
+      (total, item) => total + item.quantity,
+      0
+    );
+    heart.textContent = heartCount;
+  }
+}
+
 function showLoadingIndicator() {
   const loading = document.querySelector(".resultsContainer");
   loading.innerHTML = `<span>Loading...</span>`;
 }
 
-displayJackets();
-loadCartFromLocalStorage();
-updateCartTotal();
-updateBadgeCount();
+document.addEventListener("DOMContentLoaded", function () {
+  displayJackets();
+  loadCartFromLocalStorage();
+
+  updateCartTotal();
+  updateBadgeCount();
+  updateHeartCount();
+  toggleHeartVisibility();
+});

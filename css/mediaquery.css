@@ -393,6 +393,9 @@
 /***********************Small tablet*******************************/
 
 @media (max-width: 680px) {
+  .favContainer {
+    flex-wrap: wrap;
+  }
   .contact-box-2 {
     width: 28em;
   }

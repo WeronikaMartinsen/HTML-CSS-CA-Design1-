@@ -1,10 +1,10 @@
 :root {
-  --background-color: #b5b4bf;
+  --background-color: #f7f7f7;
   --hover-color: #73675c;
   --active-color: #73675c;
   --headings-color: #1f1410;
   --paragraph-color: #b5b4bf;
-  --background-color-default: #bfb5a8;
+  --background-color-default: #efede9;
   --heading-family: "Ibarra Real Nova", serif;
   --paragraph-family: "Roboto", sans-serif;
 
@@ -547,6 +547,13 @@ input:hover {
   justify-content: center;
   align-items: center;
 }
+.heart {
+  position: relative;
+}
+
+.heart-icon.active {
+  color: red;
+}
 .bag {
   position: relative;
 }
@@ -562,9 +569,25 @@ input:hover {
   color: white;
   font-size: 0.6em;
 }
+.heart-link {
+  position: relative;
+  display: inline-block;
+}
 .bag-link {
   position: relative;
   display: inline-block;
+}
+
+.heart {
+  position: absolute;
+  background: var(--active-color);
+  top: 3px;
+  right: -2px;
+  padding: 4px 7px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.6em;
 }
 
 .btnAdd {
@@ -1493,4 +1516,40 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+/********************************Favorite*******************************/
+
+.favContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  margin: 2em;
+}
+.favImage {
+  height: 10em;
+  margin-bottom: 0.3em;
+}
+.addToBagButton {
+  margin-top: 1em;
+  width: 100%;
+  background-color: black;
+  padding: 0.3em;
+  border-radius: var(--button-border-radius-default);
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+}
+.favItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10em;
+  text-align: center;
+}
+.favPrice {
+  margin-left: auto;
 }
