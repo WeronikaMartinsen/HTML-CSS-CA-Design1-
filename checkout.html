@@ -96,7 +96,7 @@
     <main>
       <div class="extra-box">Buy now. Pay later. Klarna.</div>
       <section class="payment-progress">
-        <h1 class="extraMargin">Checkout</h1>
+        <h1 class="extraMargin">Shopping bag</h1>
       <div class="checkout-stage">
         <div class="checkout-box-column">
           <ion-icon
@@ -124,9 +124,12 @@
       </div>
       </section>
 <section class="payment-information">
-  <h1 class="black" id="emptyCartMessage" style="display: none;">
-    Your shopping bag is empty.
-  </h1>
+  <div class="empty-cart-message">
+     <h1 class="black">
+      Your shopping bag is empty.
+    </h1>
+    <button class="btnShopping" onclick="window.location.href = 'jackets.html'">Go shopping</button>
+  </div>
 
 <div class="checkoutContainer">
   <div class="cartContainer">  <div class="checkoutCart">
@@ -140,7 +143,7 @@
 
 </div>
 <div class="buttonBox">
-  <a href="payment.html"><button class="btnConfirm">Go to checkout <ion-icon class="arrowIcon" name="chevron-forward-outline"></ion-icon></button></a>
+  <a href="payment.html"><button class="btnConfirm">Checkout <ion-icon class="arrowIcon" name="chevron-forward-outline"></ion-icon></button></a>
   </div>
 
 </section>

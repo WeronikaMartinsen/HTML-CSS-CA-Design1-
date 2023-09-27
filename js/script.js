@@ -1,3 +1,5 @@
+const addToBag = document.createElement("i");
+
 function showError(message) {
   const errorContainer = document.querySelector(".resultsContainer");
 
@@ -65,9 +67,11 @@ async function displayJackets() {
             productId,
             productTitle,
             productImage,
-            productPrice
+            productPrice,
+            addToBag
           );
         }
+        toggleHeartIcon(addToBag);
       });
 
       const imageBox = document.createElement("div");
@@ -192,8 +196,8 @@ function addItemToFavorite(id, title, image, price) {
   saveCartFavToLocalStorage();
   updateHeartCount();
   window.alert("Item added to favorite!");
-  displayFavoriteItems();
-  toggleHeartVisibility();
+  const addToBagIcon = addToBag.querySelector("ion-icon");
+  toggleHeartIcon(true, addToBagIcon);
 }
 
 function saveCartFavToLocalStorage() {
@@ -226,15 +230,16 @@ function removeFavItemFromCart(productId) {
     updateHeartCount();
     displayFavoriteItems();
     toggleHeartVisibility();
+    const addToBagIcon = addToBag.querySelector("ion-icon");
+    toggleHeartIcon(false, addToBagIcon);
   }
 }
 
-function toggleHeartVisibility() {
-  const heart = document.querySelector(".heart");
-  if (cartFav.length > 0) {
-    heart.style.display = "block";
+function toggleHeartIcon(isBlackHeart, icon) {
+  if (isBlackHeart) {
+    icon.setAttribute("name", "heart"); // Use filled heart icon
   } else {
-    heart.style.display = "none";
+    icon.setAttribute("name", "heart-outline"); // Use outline heart icon
   }
 }
 
