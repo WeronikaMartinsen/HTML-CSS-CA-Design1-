@@ -157,7 +157,7 @@ function updateBadgeCount() {
 
   if (badgeCountElement) {
     const totalCount = cart.reduce((total, item) => total + item.quantity, 0);
-    if (totalCount === 0) {
+    if (totalCount < 1) {
       badgeCountElement.style.display = "none";
       handleEmptyCart();
     } else {

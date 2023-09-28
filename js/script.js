@@ -175,29 +175,37 @@ function addItemToCart(id, title, image, price) {
   window.alert("Item added to the cart!");
 }
 
-function addItemToFavorite(id, title, image, price) {
-  const existingItem = cartFav.find((item) => item.id === parseInt(id));
+function addItemToFavorite(id, title, image, price, addToBagElement) {
+  // Check if the id is valid (not null or undefined)
+  if (id !== null && id !== undefined) {
+    const existingItem = cartFav.find((item) => item.id === parseInt(id));
 
-  if (existingItem) {
-    const updatedItem = { ...existingItem };
-    updatedItem.quantity++;
-    cartFav.push(updatedItem);
+    if (existingItem) {
+      const updatedItem = { ...existingItem };
+      updatedItem.quantity++;
+      cartFav.push(updatedItem);
+    } else {
+      const newFavItem = {
+        id: parseInt(id),
+        title: title,
+        image: image,
+        price: price,
+        quantity: 1,
+      };
+      cartFav.push(newFavItem);
+    }
+
+    saveCartFavToLocalStorage();
+    updateHeartCount();
+    window.alert("Item added to favorite!");
+
+    // Toggle the heart icon based on whether the item is in cartFav
+    const addToBagIcon = addToBagElement.querySelector("ion-icon");
+    toggleHeartIcon(true, addToBagIcon);
   } else {
-    const newFavItem = {
-      id: parseInt(id),
-      title: title,
-      image: image,
-      price: price,
-      quantity: 1,
-    };
-    cartFav.push(newFavItem);
+    // Handle the case where the id is null or undefined (e.g., show an error message)
+    showError("Invalid item ID.");
   }
-
-  saveCartFavToLocalStorage();
-  updateHeartCount();
-  window.alert("Item added to favorite!");
-  const addToBagIcon = addToBag.querySelector("ion-icon");
-  toggleHeartIcon(true, addToBagIcon);
 }
 
 function saveCartFavToLocalStorage() {
@@ -300,5 +308,4 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCartTotal();
   updateBadgeCount();
   updateHeartCount();
-  toggleHeartVisibility();
 });

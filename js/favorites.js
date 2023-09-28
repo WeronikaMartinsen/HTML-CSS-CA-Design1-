@@ -1,16 +1,20 @@
 let cartFav = [];
+let isFavoritesLoaded = false;
 
 function displayFavoriteItems() {
   const favContainer = document.querySelector(".favContainer");
   const emptyCartMessage = document.querySelector(".empty-cart-message");
   const savedHeart = localStorage.getItem("cartFav");
 
-  if (savedHeart) {
-    cartFav = JSON.parse(savedHeart);
+  if (!isFavoritesLoaded) {
+    if (savedHeart) {
+      cartFav = JSON.parse(savedHeart);
+    }
+
+    isFavoritesLoaded = true;
 
     if (cartFav.length > 0) {
       emptyCartMessage.style.display = "none";
-      /*    heading.style.display = "block"; */
 
       cartFav.forEach((favItem) => {
         const favItemDiv = createFavoriteItemElement(favItem, favContainer);
@@ -18,15 +22,10 @@ function displayFavoriteItems() {
       });
     } else {
       emptyCartMessage.style.display = "block";
-      /*    heading.style.display = "none"; */
     }
   } else {
     emptyCartMessage.style.display = "block";
   }
-}
-
-function saveCartFavToLocalStorage() {
-  localStorage.setItem("cartFav", JSON.stringify(cartFav));
 }
 
 function createFavoriteItemElement(favItem, favContainer) {
@@ -73,27 +72,16 @@ function createFavoriteItemElement(favItem, favContainer) {
       cartPrice: parseFloat(itemPrice),
     };
 
-    // Add the item to the cart
     addItemToCart(cartItem);
-
     removeItemFromFavorites(itemId);
     favContainer.removeChild(favItemDiv);
+    updateHeartCount();
   });
 
-  function addItemToCart(cartItem) {
-    const existingItem = cart.find((item) => item.id === cartItem.id);
-
-    if (existingItem) {
-      existingItem.quantity++;
-      existingItem.cartPrice += cartItem.price;
-    } else {
-      cart.push(cartItem);
-    }
-
-    saveCartToLocalStorage(cart);
-    updateCartTotal(cart);
-    updateBadgeCount();
-  }
+  favItemDiv.appendChild(favItemTitle);
+  favItemDiv.appendChild(favItemImage);
+  favItemDiv.appendChild(favPrice);
+  favItemDiv.appendChild(addToBagButton);
 
   const removeFromFavoritesButton = document.createElement("i");
   removeFromFavoritesButton.innerHTML =
@@ -103,13 +91,10 @@ function createFavoriteItemElement(favItem, favContainer) {
   removeFromFavoritesButton.addEventListener("click", () => {
     const itemId = favItemDiv.getAttribute("data-id");
     removeItemFromFavorites(itemId);
-    favContainer.removeChild(favItemDiv); // Remove the item from the DOM
+    favContainer.removeChild(favItemDiv);
+    updateHeartCount();
   });
 
-  favItemDiv.appendChild(favItemTitle);
-  favItemDiv.appendChild(favItemImage);
-  favItemDiv.appendChild(favPrice);
-  favItemDiv.appendChild(addToBagButton);
   favItemDiv.appendChild(removeFromFavoritesButton);
 
   return favItemDiv;
@@ -120,11 +105,10 @@ function removeItemFromFavorites(itemId) {
 
   if (index !== -1) {
     cartFav.splice(index, 1);
-
-    saveCartFavToLocalStorage();
     updateHeartCount();
+    saveCartFavToLocalStorage();
 
-    if (cartFav.length === 0) {
+    if (cartFav.length < 1) {
       const emptyCartMessage = document.querySelector(".empty-cart-message");
       if (emptyCartMessage) {
         emptyCartMessage.style.display = "block";
@@ -134,11 +118,22 @@ function removeItemFromFavorites(itemId) {
 }
 
 function updateHeartCount() {
-  const heartCountElement = document.querySelector(".heart-count");
+  const heartCountElement = document.querySelector(".heart");
   if (heartCountElement) {
-    heartCountElement.textContent = cartFav.length.toString();
+    if (cartFav.length > 1) {
+      heartCountElement.textContent = cartFav.length.toString();
+      heartCountElement.style.display = "block";
+    } else {
+      heartCountElement.style.display = "none";
+    }
   }
 }
 
 displayFavoriteItems();
 updateHeartCount();
+
+function saveCartFavToLocalStorage() {
+  // Filter out items with null id before saving to localStorage
+  const validCartFav = cartFav.filter((item) => item.id !== null);
+  localStorage.setItem("cartFav", JSON.stringify(validCartFav));
+}
