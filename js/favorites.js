@@ -133,7 +133,6 @@ displayFavoriteItems();
 updateHeartCount();
 
 function saveCartFavToLocalStorage() {
-  // Filter out items with null id before saving to localStorage
   const validCartFav = cartFav.filter((item) => item.id !== null);
   localStorage.setItem("cartFav", JSON.stringify(validCartFav));
 }

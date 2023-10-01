@@ -92,28 +92,35 @@
   </header>
   <section class="container-for-sign-in-box">
     <div class="sign-up-box login">
-        <h3>Sign up to your account</h3>
+        <h3>Sign in</h3>
         <input
           class="input-sing-up-box"
           type="text"
           id="name"
           name="name"
-          placeholder="Your name"
+          placeholder="Enter e-mail"
         />
         <input
           class="input-sing-up-box"
           type="text"
           id="name"
           name="name"
-          placeholder="Email address"
+          placeholder="Enter password"
         />
-        <button onclick="showAlert()" class="button-shop-now width">Sign up</button>
+        <span class="marginRight">Forgot password?</span>
+        <button onclick="showAlert()" class="button-shop-now maxwidth">Sign in</button>
         <script>
           function showAlert() {
               alert("You are log in now!");
           }
       </script>
-
+        <span><ion-icon name="checkmark-outline"></ion-icon> Priority access to collections & sales</span>
+        <span><ion-icon name="checkmark-outline"></ion-icon> VIP deals</span>
+        <span><ion-icon name="checkmark-outline"></ion-icon> Quick Checkout</span>
+        
+      <h4 class="extraMarginTop">Not a member yet?</h4>
+      <button class="button-shop-now maxwidth">Sign up</button>
+  
     </div>
   </section>
   <section class="sign-up-break">

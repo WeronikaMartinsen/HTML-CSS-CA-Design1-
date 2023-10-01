@@ -168,6 +168,21 @@ header {
   margin-top: 1em;
   color: black;
 }
+.extraMarginTop {
+  border-top: 0.5px solid #b5b4bf;
+  padding: 1em;
+  margin-top: 3em;
+  margin-bottom: 0;
+}
+.marginRight {
+  font-size: 0.7em;
+  margin-left: auto;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.marginRight:hover {
+  color: #73675c;
+}
 h1 {
   font-family: ibarra real nova;
   font-weight: 700;
@@ -321,8 +336,7 @@ h2 {
 }
 .button-shop-now:hover,
 .button-shop-now:active {
-  background-color: var(--active-color);
-  color: black;
+  box-shadow: 0 5px 15px var(--hover-color);
 }
 
 .man-paragraph {
@@ -448,15 +462,15 @@ select {
   display: flex;
   align-items: center;
   background: var(--background-color-default);
-  height: 25em;
-  width: 31.25em;
+  height: 35em;
+  width: 28em;
   border-radius: 0.93em;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   gap: 1.25em;
-  padding-left: 1.87em;
-  padding-right: 1.87em;
+  padding: 2em;
+  text-align: center;
 }
 .width {
   width: 60%;
@@ -468,7 +482,7 @@ select {
   border-style: none;
 }
 #name {
-  width: 25em;
+  width: 100%;
   height: 3em;
   border-radius: 0.625em;
   border-style: none;
@@ -1509,6 +1523,10 @@ a {
 
 .pageInProgress {
   margin: 10em;
+}
+
+.maxwidth {
+  width: 100%;
 }
 
 /********************Payment*****************************************/

@@ -412,11 +412,7 @@
   .nav-div3 {
     margin-right: 2.5em;
   }
-  .sign-up-box {
-    padding: 0;
-    width: 28em;
-    height: 22em;
-  }
+
   h1 {
     font-size: 2em;
   }
@@ -507,11 +503,6 @@
   }
   .icon-inner {
     width: 50%;
-  }
-  .sign-up-box {
-    padding: 0;
-    width: 27em;
-    height: 20em;
   }
 
   .product-cart-asset {
@@ -759,9 +750,7 @@
   .contact-conf-h1 {
     font-size: 1.7em;
   }
-  .sign-up-box {
-    width: 20em;
-  }
+
   #name {
     width: 20em;
   }
@@ -849,6 +838,9 @@
 /***********************Small mobile*******************************/
 
 @media (max-width: 375px) {
+  .sign-up-box {
+    width: 80%;
+  }
   .payment-item-1 {
     width: 19em;
   }

@@ -36,6 +36,7 @@ async function displayJackets() {
   try {
     const jackets = await getJackets();
     jacketsContainer.innerHTML = "";
+    console.log(jackets);
 
     for (let i = 0; i < jackets.length; i++) {
       const jacket = jackets[i];
@@ -176,7 +177,6 @@ function addItemToCart(id, title, image, price) {
 }
 
 function addItemToFavorite(id, title, image, price, addToBagElement) {
-  // Check if the id is valid (not null or undefined)
   if (id !== null && id !== undefined) {
     const existingItem = cartFav.find((item) => item.id === parseInt(id));
 
@@ -199,11 +199,9 @@ function addItemToFavorite(id, title, image, price, addToBagElement) {
     updateHeartCount();
     window.alert("Item added to favorite!");
 
-    // Toggle the heart icon based on whether the item is in cartFav
     const addToBagIcon = addToBagElement.querySelector("ion-icon");
     toggleHeartIcon(true, addToBagIcon);
   } else {
-    // Handle the case where the id is null or undefined (e.g., show an error message)
     showError("Invalid item ID.");
   }
 }
@@ -233,10 +231,8 @@ function removeFavItemFromCart(productId) {
 
   if (indexFav !== -1) {
     cartFav.splice(indexFav, 1);
-
     saveCartFavToLocalStorage();
     updateHeartCount();
-    displayFavoriteItems();
     toggleHeartVisibility();
     const addToBagIcon = addToBag.querySelector("ion-icon");
     toggleHeartIcon(false, addToBagIcon);
@@ -244,10 +240,12 @@ function removeFavItemFromCart(productId) {
 }
 
 function toggleHeartIcon(isBlackHeart, icon) {
-  if (isBlackHeart) {
-    icon.setAttribute("name", "heart"); // Use filled heart icon
-  } else {
-    icon.setAttribute("name", "heart-outline"); // Use outline heart icon
+  if (icon) {
+    if (isBlackHeart) {
+      icon.setAttribute("name", "heart");
+    } else {
+      icon.setAttribute("name", "heart-outline");
+    }
   }
 }
 
@@ -285,6 +283,9 @@ function updateBadgeCount() {
 function updateHeartCount() {
   const heart = document.querySelector(".heart");
   const savedCartFav = localStorage.getItem("cartFav");
+
+  console.log("savedCartFav:", savedCartFav); // Check if cartFav is retrieved from localStorage
+  console.log("cartFav:", cartFav);
 
   if (savedCartFav) {
     cartFav = JSON.parse(savedCartFav);
