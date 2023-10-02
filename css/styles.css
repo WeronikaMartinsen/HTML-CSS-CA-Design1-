@@ -253,7 +253,7 @@ h1 {
   width: 1.5em;
   height: 1.5em;
   background-color: var(--background-color-default);
-  border: 0.313em solid var(--background-color-default);
+  color: black;
   border-radius: 100%;
   padding: 0.8em;
   align-self: center;
@@ -286,7 +286,7 @@ h1 {
 
 .component-cart:hover,
 .component-cart:active {
-  scale: 1.15;
+  scale: 1.02;
   transition: 0.5s;
 }
 .component1 {
@@ -403,11 +403,16 @@ select {
 }
 .section-break {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
   align-items: center;
   justify-content: center;
-  margin: 5em;
+  margin: 5em 0;
+  border: 3px solid var(--background-color-default);
+  padding: 1em;
 }
 .section-break-box {
   display: flex;
