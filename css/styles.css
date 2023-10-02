@@ -480,7 +480,7 @@ select {
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  gap: 1.25em;
+  gap: 1em;
   padding: 2em;
   text-align: center;
 }
