@@ -500,7 +500,7 @@ select {
   border-style: none;
 }
 .input-sing-up-box {
-  padding-left: 1.25em;
+  padding: 0.8em;
 }
 input:hover {
   border-color: var(--hover-color);
