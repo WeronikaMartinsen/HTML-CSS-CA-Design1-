@@ -522,14 +522,7 @@ select {
 input:hover {
   border-color: var(--hover-color);
 }
-/* h3 {
-  font-size: 1.75em;
-  font-family: var(--paragraph-color);
-  font-weight: 700;
-  margin: 0;
-  margin-bottom: 1.25em;
-}
- */
+
 .footer-box {
   color: #333;
   font-size: 0.75em;
@@ -543,6 +536,10 @@ input:hover {
 }
 .jacketTitle {
   font-size: 0.7em;
+}
+.textAlign {
+  text-align: center;
+  margin: 2em;
 }
 .copyright-text {
   border-top: 1px solid #b5b4bf;
