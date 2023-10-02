@@ -461,9 +461,7 @@
   .product-details-heading {
     font-size: 1.6em;
   }
-  .hero-header {
-    margin-left: 1em;
-  }
+
   h2 {
     font-size: 2.5em;
   }
@@ -856,9 +854,6 @@
     padding-right: 20px;
   }
 
-  .hero-header {
-    margin: 3em;
-  }
   .feature {
     gap: 25px;
     justify-content: center;

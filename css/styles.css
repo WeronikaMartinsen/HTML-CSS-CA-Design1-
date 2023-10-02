@@ -160,7 +160,7 @@ header {
   position: relative;
 }
 .hero-image {
-  height: 35em;
+  height: 30em;
   width: 100%;
   object-fit: cover;
 }
@@ -184,8 +184,6 @@ header {
   color: #73675c;
 }
 h1 {
-  font-family: ibarra real nova;
-  font-weight: 700;
   font-size: 1.4em;
   padding: 1em;
   text-align: center;
@@ -212,9 +210,16 @@ h1 {
 }
 
 .white {
+  font-size: 1.2em;
   color: var(--background-color-default);
-  color: var(--background-color-default);
-  text-shadow: 4px 4px 8px rgba(1, 1, 1, 0.5);
+  font-weight: 400;
+  background-color: black;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+}
+.white:hover,
+.white:active {
+  text-decoration: underline;
 }
 
 .hero-header-wrapper {
@@ -231,7 +236,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 .feature {
   display: flex;
