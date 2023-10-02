@@ -414,6 +414,18 @@ select {
   border: 3px solid var(--background-color-default);
   padding: 1em;
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .section-break-box {
   display: flex;
   justify-content: center;
@@ -1487,7 +1499,7 @@ a {
 .label-text-contact {
   font-size: 0.7em;
   margin-right: auto;
-  margin-bottom: 0;
+  margin-bottom: 1.4em;
 }
 .contact-input {
   cursor: pointer;
