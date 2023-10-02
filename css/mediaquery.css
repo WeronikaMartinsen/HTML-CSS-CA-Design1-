@@ -740,13 +740,6 @@
   .contact-conf-h1 {
     font-size: 1.7em;
   }
-
-  #name {
-    width: 20em;
-  }
-  #name-input {
-    width: 20em;
-  }
 }
 @media (max-width: 434px) {
   .payment-item-2 {
