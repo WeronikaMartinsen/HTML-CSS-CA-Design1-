@@ -273,8 +273,8 @@ h1 {
   border: 0.1em solid white;
   height: 20em;
   width: 13em;
-  gap: 1em;
-  padding: 1em;
+  gap: 0.5em;
+  padding: 0.5em;
   margin: 1em;
   cursor: pointer;
   border-radius: var(--button-border-radius-default);
@@ -1196,8 +1196,8 @@ a {
   align-self: flex-start;
   margin-left: 20px;
 }
-.unique-6 {
-  text-align: end;
+.unique-h6 {
+  text-align: center;
   font-size: 16px;
   padding-top: 5px;
 }
@@ -1421,7 +1421,8 @@ a {
   display: flex;
   flex-direction: column;
   text-align: start;
-  border: 1px solid var(--background-color-default);
+  border: 1px solid var(--hover-color);
+  border-radius: var(--button-border-radius-default);
 }
 .contact-h6 {
   margin-bottom: 5px;
@@ -1446,6 +1447,7 @@ a {
   align-content: center;
 }
 .maps {
+  border: 0.5px solid var(--hover-color);
   border-radius: 5px;
   align-self: center;
 }
@@ -1477,15 +1479,15 @@ a {
 
 .label-text-contact {
   margin-top: 20px;
-  margin-bottom: 0.5em;
+  margin-left: 1em;
 }
 .contact-input {
+  cursor: pointer;
   padding: 1em;
-  height: 2em;
   min-width: 80%;
   margin: 1em;
   border-radius: var(--button-border-radius-default);
-  border: 1px solid var(--background-color-default);
+  border: 0.1em solid var(--hover-color);
 }
 
 .contact-input:hover {
