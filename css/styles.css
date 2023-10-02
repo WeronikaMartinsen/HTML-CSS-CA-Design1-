@@ -1424,6 +1424,7 @@ a {
   text-align: start;
   border: 1px solid var(--hover-color);
   border-radius: var(--button-border-radius-default);
+  background-color: #efede9;
 }
 .contact-h6 {
   margin-bottom: 5px;
