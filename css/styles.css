@@ -179,6 +179,8 @@ header {
   margin-left: auto;
   text-decoration: underline;
   cursor: pointer;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .marginRight:hover {
   color: #73675c;
@@ -480,7 +482,6 @@ select {
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  gap: 1em;
   padding: 2em;
   text-align: center;
 }
@@ -1478,8 +1479,9 @@ a {
 }
 
 .label-text-contact {
-  margin-top: 20px;
-  margin-left: 1em;
+  font-size: 0.7em;
+  margin-right: auto;
+  margin-bottom: 0;
 }
 .contact-input {
   cursor: pointer;
@@ -1540,7 +1542,15 @@ a {
 }
 
 .maxwidth {
+  margin: 1em;
   width: 100%;
+}
+.color {
+  color: var(--background-color-default);
+}
+.marginLeft {
+  margin-left: 1.2em;
+  margin-bottom: 0;
 }
 
 /********************Payment*****************************************/
