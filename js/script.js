@@ -88,7 +88,7 @@ async function displayJackets() {
 
       const jacketTitle = document.createElement("div");
       jacketTitle.classList.add("jacketTitle");
-      jacketTitle.innerHTML = `<h4>${jacket.title}</h4>`;
+      jacketTitle.innerHTML = `<h2>${jacket.title}</h2>`;
 
       const jacketText = document.createElement("div");
       jacketText.classList.add("jacketText");

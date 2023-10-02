@@ -541,12 +541,14 @@ input:hover {
   align-content: center;
   height: max-content;
 }
-
+.jacketTitle {
+  font-size: 0.7em;
+}
 .copyright-text {
   border-top: 1px solid #b5b4bf;
   padding: 1em;
   color: black;
-  font-size: 0.67em;
+  font-size: 11px;
 }
 .payment-icon {
   height: 4em;
