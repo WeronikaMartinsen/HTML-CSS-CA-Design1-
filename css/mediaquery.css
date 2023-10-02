@@ -342,12 +342,7 @@
     z-index: 1;
     text-align: center;
   }
-  .navbar-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.4em;
-    text-decoration: none;
-  }
+
   .navbar-logo {
     width: 40%;
   }
@@ -413,9 +408,6 @@
     margin-right: 2.5em;
   }
 
-  h1 {
-    font-size: 2em;
-  }
   .image-1-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
