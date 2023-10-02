@@ -194,9 +194,6 @@
   .jacket-price-new {
     font-size: 1.2em;
   }
-  h2 {
-    font-size: 3em;
-  }
 
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
@@ -461,10 +458,6 @@
   .product-details-heading {
     font-size: 1.6em;
   }
-
-  h2 {
-    font-size: 2.5em;
-  }
 }
 
 @media (max-width: 600px) {
@@ -621,9 +614,7 @@
     grid-template-columns: 1fr;
     column-gap: 1em;
   }
-  h2 {
-    margin-top: 1em;
-  }
+
   .section-break {
     display: flex;
     flex-direction: column;

@@ -329,12 +329,11 @@ h1 {
 .btnHomePage:active {
   text-decoration: underline;
 }
-h2 {
-  font-family: var(--heading-family);
-  color: var(--headings-color);
-  font-size: 3em;
-  font-weight: 800;
-  margin: 0;
+
+.alignText {
+  font-size: 1.3em;
+  text-align: center;
+  margin: 0.3em;
 }
 .button-shop-now {
   background-color: black;
@@ -1434,7 +1433,7 @@ a {
 }
 .contact-box-2 {
   width: 50%;
-  padding: 2em;
+  padding: 1em 2em;
   justify-content: center;
   display: flex;
   flex-direction: column;
