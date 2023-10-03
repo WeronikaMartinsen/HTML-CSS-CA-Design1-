@@ -6,7 +6,6 @@ function showError(message) {
   if (errorContainer) {
     errorContainer.innerHTML = `<h3>Error: ${message}</h3>`;
   } else {
-    console.error("Error container not found in the DOM.");
   }
 }
 

@@ -109,8 +109,10 @@ function removeItemFromFavorites(itemId) {
     saveCartFavToLocalStorage();
 
     if (cartFav.length < 1) {
+      console.log("Cart is empty"); // Add this line for debugging
       const emptyCartMessage = document.querySelector(".empty-cart-message");
       if (emptyCartMessage) {
+        console.log("Showing empty cart message"); // Add this line for debugging
         emptyCartMessage.style.display = "block";
       }
     }

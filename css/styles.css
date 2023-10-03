@@ -45,15 +45,17 @@ header {
   background-color: white;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  margin: 0.3em 1em 0.3em 1em;
+  align-items: center;
+  margin: 0.5em 1em 0.5em 1em;
 }
 .icon {
+  width: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+
+  text-align: center;
 }
 
 .navbar {
@@ -65,7 +67,7 @@ header {
   padding: 10px 20px;
 }
 .navbar-logo {
-  width: 16em;
+  width: 10em;
   margin-right: auto;
 }
 .navbar-toggle {
@@ -76,7 +78,7 @@ header {
   font-size: 3em;
 }
 #logo {
-  width: 75%;
+  width: 100%;
 }
 
 .navbar-logo a {
@@ -139,19 +141,44 @@ header {
   margin-top: 0.62em;
   position: relative;
 }
+.searchBar {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  padding-left: 1em;
+  width: 80%;
+}
+.searchBarInput {
+  text-decoration: none;
+  width: 70%;
+  background-color: var(--background-color-default);
+  border: none;
+  height: 2.2em;
+  padding-left: 3em;
+  color: var(--active-color);
+  position: relative;
+}
+.lupa {
+  padding-left: 1em;
+  position: absolute;
+  color: var(--active-color);
+}
 .nav-icons {
   margin-top: 0.5em;
-  width: 1.7em;
-  height: 1.7em;
+  width: 1.4em;
+  height: 1.4em;
   text-align: center;
   justify-self: center;
   color: var(--headings-color);
 }
+
 .nav-icons:hover {
   color: var(--hover-color);
 }
 .icon-text {
-  font-size: 0.7em;
+  font-size: 0.6em;
   text-align: center;
   color: var(--headings-color);
   text-decoration: none;
@@ -537,10 +564,7 @@ input:hover {
 .jacketTitle {
   font-size: 0.7em;
 }
-.textAlign {
-  text-align: center;
-  margin: 2em;
-}
+
 .copyright-text {
   border-top: 1px solid #b5b4bf;
   padding: 1em;

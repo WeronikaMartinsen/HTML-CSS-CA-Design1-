@@ -351,14 +351,6 @@
     background-color: black;
     margin-top: 2em;
   }
-  .icon {
-    padding: 0.5em;
-  }
-  .icons {
-    margin: 0.3em;
-    justify-content: center;
-    align-items: center;
-  }
 
   .navbar-menu li {
     margin: 10px 0;

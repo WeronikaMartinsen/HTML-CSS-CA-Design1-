@@ -57,8 +57,9 @@ function displayCartProducts(cartData) {
     const quantityInput = document.createElement("input");
     quantityInput.classList.add("quantityInput");
     quantityInput.value = productDetail.quantity;
-    quantityInput.type = "number";
+    quantityInput.type = "text";
     quantityInput.name = "input";
+    quantityInput.readOnly = true;
     quantityInput.addEventListener("change", () => {
       const updatedQuantity = parseInt(quantityInput.value);
       updateCartPrice(
