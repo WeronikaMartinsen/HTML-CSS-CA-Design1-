@@ -347,8 +347,7 @@
     display: flex;
     gap: 3em;
     padding: 3em;
-    background-color: black;
-    margin-top: 2em;
+    background-color: var(--background-color-default);
   }
 
   .navbar-menu li {
@@ -632,6 +631,8 @@
   }
   .newSearch {
     display: block;
+    max-width: 100%;
+    margin: 0.3em;
   }
 }
 
