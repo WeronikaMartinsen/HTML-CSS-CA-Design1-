@@ -171,7 +171,7 @@
 
 @media (max-width: 810px) {
   .icon {
-    width: 3em;
+    width: 4em;
   }
   .jacket-name {
     font-size: 0.9em;
@@ -561,6 +561,9 @@
   }
 }
 @media (max-width: 540px) {
+  .icon {
+    width: 3em;
+  }
   #logo {
     width: 80%;
   }
