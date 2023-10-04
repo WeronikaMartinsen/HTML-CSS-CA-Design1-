@@ -46,15 +46,14 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 0.5em 1em 0.5em 1em;
+  margin: 1em 1em 0.5em 1em;
 }
 .icon {
-  width: 5em;
+  width: 6em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
 }
 
@@ -69,6 +68,7 @@ header {
 .navbar-logo {
   width: 10em;
   margin-right: auto;
+  display: inline-block;
 }
 .navbar-toggle {
   display: none;
@@ -143,25 +143,41 @@ header {
 }
 .searchBar {
   display: flex;
-
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
   padding-left: 1em;
-  width: 80%;
+  width: 87%;
+}
+.newSearch {
+  display: none;
+  padding: 0;
+}
+.newInput {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 .searchBarInput {
   text-decoration: none;
-  width: 70%;
+  width: 100%;
   background-color: var(--background-color-default);
   border: none;
   height: 2.2em;
   padding-left: 3em;
   color: var(--active-color);
   position: relative;
+  margin: 0;
 }
 .lupa {
   padding-left: 1em;
+  position: absolute;
+  color: var(--active-color);
+}
+#lupa {
+  left: 15px;
+  top: 69px;
   position: absolute;
   color: var(--active-color);
 }

@@ -170,6 +170,9 @@
 /***********************Tablet *******************************/
 
 @media (max-width: 810px) {
+  .icon {
+    width: 2.5em;
+  }
   .jacket-name {
     font-size: 0.9em;
   }
@@ -340,10 +343,6 @@
     text-align: center;
   }
 
-  .navbar-logo {
-    width: 40%;
-  }
-
   .navbar-menu.active {
     display: flex;
     gap: 3em;
@@ -358,7 +357,7 @@
   .navbar-toggle {
     display: flex;
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
   }
 
   .active .bar:nth-child(1) {
@@ -371,6 +370,15 @@
 
   .active .bar:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+  }
+  .icons {
+    margin: 0.3em 0.3em 0 0.3em;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .box-none {
+    display: none;
   }
 }
 
@@ -553,6 +561,10 @@
   }
 }
 @media (max-width: 540px) {
+  #logo {
+    width: 80%;
+  }
+
   .checkout-icon {
     width: 2.7em;
   }
@@ -612,6 +624,12 @@
     flex-direction: column;
     margin: 2em;
   }
+  .searchBar {
+    display: none;
+  }
+  .newSearch {
+    display: block;
+  }
 }
 
 @media (max-width: 500px) {
@@ -661,7 +679,6 @@
   .image-1 {
     justify-content: center;
     align-self: center;
-    width: 21em;
   }
 
   .feature {
