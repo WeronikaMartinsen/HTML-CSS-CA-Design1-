@@ -148,20 +148,10 @@ header {
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
-  padding-left: 1em;
   width: 87%;
+  padding-left: 0.8em;
 }
-.newSearch {
-  display: none;
-  padding: 0;
-  max-width: 100%;
-}
-.newInput {
-  width: 100%;
-  position: relative;
-  padding: 0;
-  margin: 0;
-}
+
 .searchBarInput {
   text-decoration: none;
   width: 100%;
@@ -172,6 +162,17 @@ header {
   color: var(--active-color);
   position: relative;
   margin: 0;
+}
+
+.newInput {
+  width: 90%;
+  position: relative;
+  height: 3em;
+}
+.newSearch {
+  display: none;
+  width: 100%;
+  padding: 0;
 }
 .lupa {
   padding-left: 1em;
@@ -190,8 +191,8 @@ header {
   border: 0;
 }
 #lupa {
-  left: 17px;
-  top: 76px;
+  left: 20px;
+  top: 80px;
   position: absolute;
   color: var(--active-color);
 }
