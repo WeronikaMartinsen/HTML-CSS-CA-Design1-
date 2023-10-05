@@ -669,7 +669,7 @@ input:hover {
   text-align: center;
   border-radius: 50%;
   color: white;
-  font-size: 0.6em;
+  font-size: 10px;
 }
 .heart-link {
   position: relative;
@@ -1106,6 +1106,8 @@ li {
   align-items: center;
 }
 .btnMinusPlus {
+  font-weight: 700;
+  border: none;
   background-color: var(--headings-color);
   color: white;
   padding: 5px 8px;
