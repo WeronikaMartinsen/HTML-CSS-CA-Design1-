@@ -150,6 +150,7 @@ header {
   align-items: center;
   width: 87%;
   padding-left: 0.8em;
+  color: var(--active-color);
 }
 
 .searchBarInput {
