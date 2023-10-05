@@ -159,20 +159,20 @@ header {
   border: none;
   height: 2.2em;
   padding-left: 3em;
-  color: var(--active-color);
   position: relative;
   margin: 0;
   text-align: start;
   font-size: 0.8em;
+  color: var(--active-color);
 }
 
 .newInput {
   position: relative;
   height: 3em;
+  color: var(--active-color);
 }
 .newSearch {
   display: none;
-
   padding: 0;
 }
 .lupa {
