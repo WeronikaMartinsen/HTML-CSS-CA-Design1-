@@ -162,16 +162,17 @@ header {
   color: var(--active-color);
   position: relative;
   margin: 0;
+  text-align: start;
+  font-size: 0.8em;
 }
 
 .newInput {
-  width: 90%;
   position: relative;
   height: 3em;
 }
 .newSearch {
   display: none;
-  width: 100%;
+
   padding: 0;
 }
 .lupa {
