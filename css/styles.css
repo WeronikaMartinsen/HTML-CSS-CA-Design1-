@@ -350,6 +350,7 @@ h1 {
   transition: 0.5s;
 }
 .component1 {
+  flex-wrap: wrap;
   background: linear-gradient(
     to left,
     var(--background-color-default),
@@ -357,12 +358,12 @@ h1 {
   );
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   align-content: center;
-  height: 14em;
-  gap: 0.4em;
-  padding: 3em;
+  height: max-content;
+  gap: 0.2em;
+  padding: 1em;
 }
 .heart-icon-home-page {
   position: absolute;
@@ -376,7 +377,7 @@ h1 {
   font-size: 1.25em;
   padding: 0em;
   color: var(--headings-color);
-  margin: 2em;
+  margin: 1em;
 }
 .btnHomePage {
   font-size: 1em;
@@ -398,7 +399,7 @@ h1 {
 .button-shop-now {
   background-color: black;
   text-align: center;
-  padding: 0.8em 1.8em;
+  padding: 0.8em 4em;
   text-decoration: none;
   border-radius: var(--button-border-radius-default);
   font-size: 0.8em;
@@ -660,7 +661,7 @@ input:hover {
   position: relative;
 }
 .sale {
-  background-color: #e24848;
+  background-color: #fc3939;
   padding: 1em;
   margin-bottom: 2em;
   margin-top: 0;
