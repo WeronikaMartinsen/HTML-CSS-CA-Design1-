@@ -1425,7 +1425,10 @@ a {
 }
 
 /************************About us*************************/
-
+.marginNone {
+  margin: 1em 0 0 0;
+  padding: 0;
+}
 .h1-about {
   font-size: 1.5em;
   margin-top: 1.5em;
