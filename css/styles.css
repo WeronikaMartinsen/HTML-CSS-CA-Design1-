@@ -1745,3 +1745,6 @@ a {
 .btnShopping:active {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
+.fontSmall {
+  font-size: 1.1em;
+}
