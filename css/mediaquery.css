@@ -151,14 +151,6 @@
     padding-top: 3em;
     padding-bottom: 3em;
   }
-
-  .component1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: max-content;
-    justify-items: center;
-  }
   .product-cart {
     display: block;
   }
@@ -552,11 +544,6 @@
   }
   .btn-contact-conf {
     width: 20em;
-  }
-  .component1 {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
   }
 }
 @media (max-width: 540px) {

@@ -394,7 +394,7 @@ h1 {
 .alignText {
   font-size: 1.3em;
   text-align: center;
-  margin: 0.3em;
+  margin: 1em;
 }
 .button-shop-now {
   background-color: black;
@@ -471,7 +471,8 @@ select {
   align-items: center;
   justify-content: center;
   margin: 5em 0;
-  border: 3px solid var(--background-color-default);
+  border-top: 3px solid var(--background-color-default);
+  border-bottom: 3px solid var(--background-color-default);
   padding: 1em;
 }
 
