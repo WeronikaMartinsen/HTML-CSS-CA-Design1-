@@ -107,9 +107,7 @@ function displayCartProducts(cartData) {
     btnRemove.classList.add("btn-confirm", "btnRemove");
     btnRemove.innerHTML = "REMOVE";
     btnRemove.addEventListener("click", (event) => {
-      const productId = productDetail.id; // Get the product ID from the product detail
-      console.log("Remove button clicked");
-      console.log("Product ID:", productId);
+      const productId = productDetail.id;
       removeItemFromCart(productId);
       updateBadgeCount();
     });
@@ -231,10 +229,8 @@ function updateQuantity(input, change) {
 }
 
 function updateCartTotal(cartData) {
-  console.log("Updating cart total...");
   const totalElement = document.querySelector(".totalPrice");
   const total = calculateTotal(cartData);
-  console.log("Total:", total);
 
   if (totalElement) {
     totalElement.textContent = `Total Price: $${total.toFixed(2)}`;

@@ -35,7 +35,6 @@ async function displayJackets() {
   try {
     const jackets = await getJackets();
     jacketsContainer.innerHTML = "";
-    console.log(jackets);
 
     for (let i = 0; i < jackets.length; i++) {
       const jacket = jackets[i];
@@ -282,9 +281,6 @@ function updateBadgeCount() {
 function updateHeartCount() {
   const heart = document.querySelector(".heart");
   const savedCartFav = localStorage.getItem("cartFav");
-
-  console.log("savedCartFav:", savedCartFav); // Check if cartFav is retrieved from localStorage
-  console.log("cartFav:", cartFav);
 
   if (savedCartFav) {
     cartFav = JSON.parse(savedCartFav);
