@@ -1,0 +1,13 @@
+.products-cms {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product {
+  border: 1px solid gray;
+  padding: 1em;
+}
+
+.product img {
+  width: 100%;
+}
