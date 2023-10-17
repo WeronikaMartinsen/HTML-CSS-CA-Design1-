@@ -24,14 +24,15 @@ function createHTML(products) {
       ? "display: block; color: red;"
       : "display: none;";
     const regularPriceStyle = onSale ? "text-decoration: line-through;" : "";
-    const saleIcon = onSale ? "★ " : "";
+    const saleIcon = onSale ? "Sale" : "";
 
     productContainer.innerHTML += `<div class="product">${saleIcon} 
-    <img src="${product.images[0].src}" alt="${product.name}">
-    <h3>${product.name}</h3>
-    <span style="${regularPriceStyle}">${regularPrice} $</span>
-    <span style="${salePriceStyle}"class="salePrice">${salePrice} $</span>
-    <span>${product.short_description}</span>
+    <div class="imgDiv"><img src="${product.images[0].src}" alt="${product.name}"></div>
+    <h4>${product.name}</h4>
+    <div class="priceDiv"><span style="${regularPriceStyle}">${regularPrice} $</span>
+    <span style="${salePriceStyle}"class="salePrice">${salePrice} $</span></div>
+    <span class="spanStyle">${product.short_description}</span>
+    <button class="btnCms">Add to cart</button>
 
     </div>`;
   });
