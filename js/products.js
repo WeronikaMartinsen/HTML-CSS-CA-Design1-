@@ -15,6 +15,8 @@ getProducts();
 
 function createHTML(products) {
   products.forEach(function (product) {
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("product");
     console.log(products);
     const onSale = product.on_sale;
     const salePrice = product.prices.sale_price;
@@ -25,6 +27,10 @@ function createHTML(products) {
       : "display: none;";
     const regularPriceStyle = onSale ? "text-decoration: line-through;" : "";
     const saleIcon = onSale ? "Sale" : "";
+    const productId = product.id;
+    productDiv.addEventListener("click", () => {
+      window.location.href = `products-details-cms.html?id=${productId}`;
+    });
 
     productContainer.innerHTML += `<div class="product">${saleIcon} 
     <div class="imgDiv"><img src="${product.images[0].src}" alt="${product.name}"></div>

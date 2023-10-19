@@ -18,8 +18,6 @@
 .product img {
   max-width: 100%; /* Ensure the image doesn't exceed the container width */
   max-height: 100%;
-  padding: 1em;
-  margin: 1em;
 }
 
 .sale-icon {

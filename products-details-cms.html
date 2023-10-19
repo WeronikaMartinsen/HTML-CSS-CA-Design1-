@@ -7,7 +7,7 @@
       name="description"
       content="Here is the payment site when you can purchase how you can pay for the selected item."
     />
-    <title>RainyDays/Products CMS</title>
+    <title id="title-cms">RainyDays/Product Details CMS</title>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/mediaquery.css" rel="stylesheet" />
 
@@ -36,6 +36,7 @@
     <script defer src="js/navbar.js"></script>
     <script defer src="js/script.js"></script>
     <script defer src="js/payment.js"></script>
+    <script defer src="js/product-detail-cms-js.js"></script>
 
   </head>
   <body>
@@ -85,39 +86,8 @@
           </ul>
         </nav>
       </div>
-
   </header>
-  <div class="paymentContainer">
-    <h1 class="extraMargin">Select payment</h1>
-    <div class="payment-item-1">
-      <div class="checkoutCart">
-        PAYMENT
-          </div>
-    <div class="icon-payment">
-    <div class="icon-div-1">
-    <ion-icon class="icon-payment-1" name="card-outline"></ion-icon>  
-    <span class="payment-span">Visa</span></div>
-    <div class="icon-div-1"> <ion-icon class="icon-payment-1" name="logo-paypal"></ion-icon><span class="payment-span">PayPay</span></div>
-    <div class="icon-div-1"><ion-icon class="icon-payment-1" name="wallet-outline"></ion-icon><span class="payment-span">Master Card</span></div>
-    </div>
-    <div class="input-order">
-    <label class="label-text" for="Card Number">Card number:</label>
-    <input class="payment-input" type="text" name="input" placeholder="3536 4565 6567 3543">
-    <label class="label-text" for="Card Number">Cardholder Name:</label>
-    <input class="payment-input" type="text" name="input" placeholder="Weronika Martinsen">
-    <label class="label-text" for="Card Number">Valid Throught:</label>
-    <input class="payment-input" type="text" name="input" placeholder="12/26">
-    <label class="label-text" for="Card Number">CVV:</label>
-    <input class="payment-input" type="text" name="input"  placeholder=" &#8226; &#8226; &#8226; ">
-    <div class="input-span">
-    <input type="checkbox" class="menu-checkbox" />
-    <label for="menu-chechbox"><i class="fas fa-bars"></i></label>
-    <span class="checkout-span">Save my payment details for my next purchases.</span></div>
-    <a href="confirmation.html" class="btnConfirm clearBadge">Confirm your order</a>  
-  </div>
-    </div>
-    </div>
-  </div>
+  <div class="productDetails"></div>
   <section class="sign-up-break">
     <h3 class="h3-product-detail-sign-up">Sign up and save 25%</h3>
     <span class="sign-up-text"
