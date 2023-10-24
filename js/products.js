@@ -17,7 +17,12 @@ function createHTML(products) {
   products.forEach(function (product) {
     const productDiv = document.createElement("div");
     productDiv.classList.add("product");
-    console.log(products);
+    productDiv.addEventListener("click", () => {
+      console.log("Clicked on a product");
+      const productId = product.id;
+      const productTitle = product.name;
+      window.location.href = `products-details-cms.html?id=${productId}&title-cms=${productTitle}`;
+    });
     const onSale = product.on_sale;
     const salePrice = product.prices.sale_price;
     const regularPrice = product.prices.regular_price;
@@ -27,19 +32,48 @@ function createHTML(products) {
       : "display: none;";
     const regularPriceStyle = onSale ? "text-decoration: line-through;" : "";
     const saleIcon = onSale ? "Sale" : "";
-    const productId = product.id;
-    productDiv.addEventListener("click", () => {
-      window.location.href = `products-details-cms.html?id=${productId}`;
-    });
 
-    productContainer.innerHTML += `<div class="product">${saleIcon} 
-    <div class="imgDiv"><img src="${product.images[0].src}" alt="${product.name}"></div>
-    <h4>${product.name}</h4>
-    <div class="priceDiv"><span style="${regularPriceStyle}">${regularPrice} $</span>
-    <span style="${salePriceStyle}"class="salePrice">${salePrice} $</span></div>
-    <span class="spanStyle">${product.short_description}</span>
-    <button class="btnCms">Add to cart</button>
+    const saleIconDiv = document.createElement("div");
+    saleIconDiv.className = `sale-icon ${onSale ? "on-sale" : "not-on-sale"}`;
+    saleIconDiv.textContent = saleIcon;
 
-    </div>`;
+    const imgDiv = document.createElement("div");
+    const img = document.createElement("img");
+    img.src = product.images[0].src;
+    img.alt = product.name;
+    imgDiv.appendChild(img);
+
+    const productTitle = document.createElement("h4");
+    productTitle.innerHTML = `${product.name}`;
+
+    const priceDiv = document.createElement("div");
+    priceDiv.classList.add("priceDiv");
+    const regularPriceSpan = document.createElement("span");
+    regularPriceSpan.style.cssText = regularPriceStyle;
+    regularPriceSpan.innerHTML = `${regularPrice} $`;
+    priceDiv.appendChild(regularPriceSpan);
+
+    const salePriceSpan = document.createElement("span");
+    salePriceSpan.style.cssText = salePriceStyle;
+    salePriceSpan.className = "salePrice";
+    salePriceSpan.innerHTML = `${salePrice} $`;
+    priceDiv.appendChild(salePriceSpan);
+
+    const span = document.createElement("span");
+    span.className = "spanStyle";
+    span.innerHTML = `${product.description}`;
+
+    const button = document.createElement("button");
+    button.className = "btnCms";
+    button.textContent = "Add to cart";
+
+    productDiv.appendChild(saleIconDiv);
+    productDiv.appendChild(imgDiv);
+    productDiv.appendChild(productTitle);
+    productDiv.appendChild(priceDiv);
+    productDiv.appendChild(span);
+    productDiv.appendChild(button);
+
+    productContainer.appendChild(productDiv);
   });
 }

@@ -1,4 +1,4 @@
-const detailsContainer = document.querySelector(".productDetails");
+/* const detailsContainer = document.querySelector(".productDetails");
 
 const titleContainer = document.getElementById("title-cms");
 
@@ -17,26 +17,23 @@ function showError(message) {
 
 async function fetchDetail() {
   const itemId = getJacketIdFromQuery();
-  const title = getJacketTitleFromQuery();
   if (!itemId) {
-    throw new Error(
-      `API loading failed. ID not founded in the query parameter.`
-    );
+      showError("API loading failed. ID not found in the query parameter.");
+      return;
   }
 
   try {
-    const response = await fetch(
-      `http://weronika-martinsen.local/wp-json/wc/store/products/${itemId}`
-    );
-    const jacketDetail = await response.json();
-    if (!response.ok) {
-      throw new Error("Fetch jacket with ID failed.");
-    }
-    const titleContainer = document.getElementById("title-cms");
-    titleContainer.textContent = title;
-    createHtml(jacketDetail);
+      const response = await fetch(`https://www.rainy-days.no/wp-json/wc/store/products/${itemId}`);
+      if (!response.ok) {
+          showError("Fetch jacket with ID failed.");
+          return;
+      }
+      const jacketDetail = await response.json();
+
+      titleContainer.textContent = jacketDetail.name;
+      createHtml(jacketDetail);
   } catch (error) {
-    showError(error.message);
+      showError(error.message);
   }
 }
 function createHtml(jacketDetail) {
@@ -77,3 +74,43 @@ function createHtml(jacketDetail) {
 }
 
 fetchDetail();
+ */
+const detailsContainer = document.querySelector(".productDetails");
+
+function getProductIdFromQuery() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+  return id;
+}
+
+async function fetchProductDetails() {
+  const productId = getProductIdFromQuery();
+  if (!productId) {
+    console.error("Product ID not found in the query parameter.");
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `https://www.rainy-days.no/wp-json/wc/store/products/${productId}`
+    );
+    if (!response.ok) {
+      console.error("Failed to fetch product details.");
+      return;
+    }
+
+    const productDetail = await response.json();
+
+    createHtml(productDetail);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+function createHtml(productDetail) {
+  productDetail.forEach(function (product) {
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("cart");
+  });
+}
+fetchProductDetails();
