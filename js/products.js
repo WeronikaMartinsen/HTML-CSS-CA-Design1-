@@ -1,4 +1,4 @@
-const url = "http://weronika-martinsen.local/wp-json/wc/store/products/";
+const url = "https://www.rainy-days.no/wp-json/wc/store/products/";
 const productContainer = document.querySelector(".products-cms");
 
 async function getProducts() {
