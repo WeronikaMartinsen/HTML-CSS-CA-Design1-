@@ -376,6 +376,9 @@
 /***********************Small tablet*******************************/
 
 @media (max-width: 680px) {
+  .detailCart {
+    flex-direction: column;
+  }
   .favContainer {
     flex-wrap: wrap;
   }
