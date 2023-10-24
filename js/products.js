@@ -38,12 +38,14 @@ function createHTML(products) {
     saleIconDiv.textContent = saleIcon;
 
     const imgDiv = document.createElement("div");
+    imgDiv.classList.add("imgDiv");
     const img = document.createElement("img");
     img.src = product.images[0].src;
     img.alt = product.name;
     imgDiv.appendChild(img);
 
-    const productTitle = document.createElement("h4");
+    const productTitle = document.createElement("h5");
+    productTitle.classList.add("titleStyle");
     productTitle.innerHTML = `${product.name}`;
 
     const priceDiv = document.createElement("div");

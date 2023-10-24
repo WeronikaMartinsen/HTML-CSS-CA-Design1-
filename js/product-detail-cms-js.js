@@ -1,80 +1,3 @@
-/* const detailsContainer = document.querySelector(".productDetails");
-
-const titleContainer = document.getElementById("title-cms");
-
-function getJacketIdFromQuery() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get("id");
-  return id;
-}
-function getJacketTitleFromQuery() {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get("title-cms");
-}
-function showError(message) {
-  console.error(message);
-}
-
-async function fetchDetail() {
-  const itemId = getJacketIdFromQuery();
-  if (!itemId) {
-      showError("API loading failed. ID not found in the query parameter.");
-      return;
-  }
-
-  try {
-      const response = await fetch(`https://www.rainy-days.no/wp-json/wc/store/products/${itemId}`);
-      if (!response.ok) {
-          showError("Fetch jacket with ID failed.");
-          return;
-      }
-      const jacketDetail = await response.json();
-
-      titleContainer.textContent = jacketDetail.name;
-      createHtml(jacketDetail);
-  } catch (error) {
-      showError(error.message);
-  }
-}
-function createHtml(jacketDetail) {
-  const imageDivDetail = document.createElement("div");
-  const div2 = document.createElement("div");
-  div2.classList.add("div2");
-
-  imageDivDetail.classList.add("imageDivDetail");
-  const image = document.createElement("img");
-  image.classList.add("imageDetail");
-  image.src = jacketDetail.image;
-  image.alt = jacketDetail.description;
-
-  const title = document.createElement("h3");
-  title.innerHTML = jacketDetail.title;
-
-  const description = document.createElement("span");
-  description.innerHTML = jacketDetail.description;
-
-  const divPrice = document.createElement("div");
-  divPrice.classList.add("divPrice");
-  const priceJ = jacketDetail.price;
-  const saleJ = jacketDetail.discountedPrice;
-  const onSaleJ = jacketDetail.onSale;
-  if (!onSaleJ) {
-    divPrice.innerHTML = `<span class="normalPrice">${priceJ} ,-</span>`;
-  } else {
-    divPrice.innerHTML = `<span class="oldPrice">${priceJ} ,-</span>
-    <span class="jacketSale">${saleJ} ,-</span>`;
-  }
-
-  imageDivDetail.appendChild(image);
-  imageDivDetail.appendChild(title);
-  imageDivDetail.appendChild(description);
-  imageDivDetail.appendChild(divPrice);
-
-  return imageDivDetail;
-}
-
-fetchDetail();
- */
 const detailsContainer = document.querySelector(".productDetails");
 
 function getProductIdFromQuery() {
@@ -107,10 +30,47 @@ async function fetchProductDetails() {
   }
 }
 
-function createHtml(productDetail) {
-  productDetail.forEach(function (product) {
-    const productDiv = document.createElement("div");
-    productDiv.classList.add("cart");
-  });
+function createHtml(jacketDetail) {
+  console.log(jacketDetail);
+  const detailCart = document.createElement("div");
+  detailCart.classList.add("detailCart");
+
+  const imageDiv = document.createElement("div");
+  imageDiv.classList.add("imageDivLeft");
+  const image = document.createElement("img");
+  image.classList.add("imgDetail");
+  image.src = jacketDetail.images[0].src;
+  image.alt = jacketDetail.description;
+
+  const detailInfo = document.createElement("div");
+  detailInfo.classList.add("detailInfo");
+
+  const title = document.createElement("h3");
+  title.innerHTML = jacketDetail.name;
+
+  const description = document.createElement("span");
+  description.innerHTML = jacketDetail.description;
+
+  const divPrice = document.createElement("div");
+  divPrice.classList.add("divPrice");
+  const priceJ = jacketDetail.prices.regular_price;
+  const saleJ = jacketDetail.prices.sale_price;
+  const onSaleJ = jacketDetail.on_sale;
+  if (!onSaleJ) {
+    divPrice.innerHTML = `<span class="normalPrice">${priceJ} ,-</span>`;
+  } else {
+    divPrice.innerHTML = `<span class="oldPrice">${priceJ} ,-</span>
+    <span class="jacketSale">${saleJ} ,-</span>`;
+  }
+
+  imageDiv.appendChild(image);
+  detailInfo.appendChild(title);
+  detailInfo.appendChild(description);
+  detailInfo.appendChild(divPrice);
+
+  detailsContainer.appendChild(detailCart);
+  detailCart.appendChild(imageDiv);
+  detailCart.appendChild(detailInfo);
 }
+
 fetchProductDetails();

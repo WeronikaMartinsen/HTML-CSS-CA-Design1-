@@ -1,0 +1,24 @@
+.detailCart {
+  display: flex;
+  margin: 2em;
+  padding: 1em;
+  gap: 1em;
+  background-color: #efede9;
+}
+.imageDivLeft {
+  flex: 40%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.detailInfo {
+  flex: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+}
+.imgDetail {
+  height: 20em;
+}
