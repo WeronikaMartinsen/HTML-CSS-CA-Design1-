@@ -22,3 +22,11 @@
 .imgDetail {
   height: 20em;
 }
+.btnAddToBag {
+  width: 80%;
+  padding: 1em;
+  margin: 2em;
+  background-color: black;
+  color: white;
+  border: none;
+}

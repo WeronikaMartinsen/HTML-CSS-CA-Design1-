@@ -63,10 +63,18 @@ function createHtml(jacketDetail) {
     <span class="jacketSale">${saleJ} ,-</span>`;
   }
 
+  const btnAddToBag = document.createElement("button");
+  btnAddToBag.classList.add("btnAddToBag");
+  btnAddToBag.textContent = "Add to bag";
+  btnAddToBag.addEventListener("click", function () {
+    alert("Product added to the bag!");
+  });
+
   imageDiv.appendChild(image);
   detailInfo.appendChild(title);
   detailInfo.appendChild(description);
   detailInfo.appendChild(divPrice);
+  detailInfo.appendChild(btnAddToBag);
 
   detailsContainer.appendChild(detailCart);
   detailCart.appendChild(imageDiv);
