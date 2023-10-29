@@ -5,9 +5,14 @@ function getProductIdFromQuery() {
   const id = urlParams.get("id");
   return id;
 }
+function getJacketTitleFromQuery() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("title");
+}
 
 async function fetchProductDetails() {
   const productId = getProductIdFromQuery();
+  const title = getJacketTitleFromQuery();
   if (!productId) {
     console.error("Product ID not found in the query parameter.");
     return;
@@ -21,7 +26,8 @@ async function fetchProductDetails() {
       console.error("Failed to fetch product details.");
       return;
     }
-
+    const titleContainer = document.getElementById("title");
+    titleContainer.textContent = title;
     const productDetail = await response.json();
 
     createHtml(productDetail);
@@ -31,7 +37,6 @@ async function fetchProductDetails() {
 }
 
 function createHtml(jacketDetail) {
-  console.log(jacketDetail);
   const detailCart = document.createElement("div");
   detailCart.classList.add("detailCart");
 
