@@ -1,18 +1,21 @@
 .detailCart {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 2em;
   padding: 1em;
-
-  background-color: #efede9;
+  border: 2px solid #efede9;
+  width: 80%;
 }
 .imageDivLeft {
-  flex: 40%;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  width: 50%;
 }
+
 .detailInfo {
-  flex: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +23,10 @@
   text-align: right;
 }
 .imgDetail {
-  height: 20em;
+  width: 100%;
+}
+.divPrice {
+  margin-top: 0;
 }
 .btnAddToBag {
   width: 80%;
