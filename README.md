@@ -1,6 +1,6 @@
 ![Image Alt text](/images/RainyDays-readme.png "Screenshot of RainyDays.")
 
-# :hello: Rainy-Days - online shop
+# :wave: Hello!
 
 Welcome to my first project, a web application that showcases my journey from learning HTML and CSS to integrating dynamic content using JavaScript and an API from a headless CMS.
 
@@ -20,7 +20,7 @@ Welcome to my first project, a web application that showcases my journey from le
 - Log in
 - Favorites
 
-## :about: About
+## About
 
 I had the incredible opportunity to bring Rain Jacket Haven to life, an immersive online shopping experience dedicated to elevating rainwear. This project allowed me to merge my love for web development with a commitment to user-centric design.
 
@@ -56,7 +56,7 @@ npm run start
 
 ```
 
-# :join: Contributing
+# :globe_with_meridians: Contributing
 
 You are welcome to contribute to this project! Contributions are essential for the growth and improvement of the project. Please take a moment to review the following guidelines before getting started.
 
@@ -107,7 +107,7 @@ Follow the project's coding style and conventions.
 Write clear and concise code with appropriate comments where necessary.
 Test your changes thoroughly before submitting a pull request.
 
-# :contact: Contact me
+# :mailbox_with_mail: Contact me
 
 Reach out to me for collaboration or just to say hello!
 
@@ -123,6 +123,6 @@ Reach out to me for collaboration or just to say hello!
 - Icons: https://ionic.io/ionicons
 - Fonts: https://fonts.google.com/
 
-## :live: Live Project
+## Live Project
 
 - Netlify: https://classy-rabanadas-8c360c.netlify.app/
