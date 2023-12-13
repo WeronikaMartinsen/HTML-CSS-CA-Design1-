@@ -1,6 +1,6 @@
 ![Image Alt text](/images/RainyDays-readme.png "Screenshot of RainyDays.")
 
-# Rainy-Days - online shop
+# :hello: Rainy-Days - online shop
 
 Welcome to my first project, a web application that showcases my journey from learning HTML and CSS to integrating dynamic content using JavaScript and an API from a headless CMS.
 
@@ -10,6 +10,25 @@ Welcome to my first project, a web application that showcases my journey from le
 - **JavaScript Integration:** Explore the integration of JavaScript to enhance the interactivity of the application.
 - **Dynamic Content:** Fetch and display content dynamically from a headless CMS API.
 - **Live Demo:** Visit the [live demo](https://classy-rabanadas-8c360c.netlify.app/) to experience the project.
+
+## Table of Contents
+
+- Homepage
+- About Me
+- Contact
+- Jackets (products)
+- Log in
+- Favorites
+
+## :about: About
+
+I had the incredible opportunity to bring Rain Jacket Haven to life, an immersive online shopping experience dedicated to elevating rainwear. This project allowed me to merge my love for web development with a commitment to user-centric design.
+
+# Build with:
+
+<p align="left"><a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a><a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
+  </a> </p>
 
 ## Installing
 
@@ -28,7 +47,7 @@ npm install
 
 ```
 
-## Running
+## :running: Running
 
 3. To run the app, use the following command:
 
@@ -37,26 +56,7 @@ npm run start
 
 ```
 
-## Table of Contents
-
-- Homepage
-- About Me
-- Contact
-- Jackets (products)
-- Log in
-- Favorites
-
-## About
-
-I had the incredible opportunity to bring Rain Jacket Haven to life, an immersive online shopping experience dedicated to elevating rainwear. This project allowed me to merge my love for web development with a commitment to user-centric design.
-
-# Build with:
-
-<p align="left"><a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a><a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
-  </a> </p>
-
-# Contributing
+# :join: Contributing
 
 You are welcome to contribute to this project! Contributions are essential for the growth and improvement of the project. Please take a moment to review the following guidelines before getting started.
 
@@ -97,10 +97,7 @@ git commit -m "Add a concise and clear commit message"
 
 ## Bug Reports
 
-If you find a bug or encounter an issue, please help us by following these steps:
-
-1. Check if the issue has already been reported by searching the issues.
-2. If not, create a new issue with a descriptive title and detailed description.
+If you find a bug or encounter an issue, please report it to me!
 
 ## Code Contributions
 
@@ -110,7 +107,7 @@ Follow the project's coding style and conventions.
 Write clear and concise code with appropriate comments where necessary.
 Test your changes thoroughly before submitting a pull request.
 
-# Contact me
+# :contact: Contact me
 
 Reach out to me for collaboration or just to say hello!
 
@@ -126,6 +123,6 @@ Reach out to me for collaboration or just to say hello!
 - Icons: https://ionic.io/ionicons
 - Fonts: https://fonts.google.com/
 
-## Live Project
+## :live: Live Project
 
 - Netlify: https://classy-rabanadas-8c360c.netlify.app/
