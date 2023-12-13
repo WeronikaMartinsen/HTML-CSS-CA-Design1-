@@ -129,7 +129,3 @@ Reach out to me for collaboration or just to say hello!
 ## Live Project
 
 - Netlify: https://classy-rabanadas-8c360c.netlify.app/
-
-```
-
-```
